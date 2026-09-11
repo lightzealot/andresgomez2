@@ -4,6 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'AndresgomezOS — Portafolio',
   description: 'El sistema creativo de Andrés Gómez: estrategia, diseño, desarrollo y automatización con inteligencia artificial.',
+  icons: { icon: '/andresgomezos-logo.png' },
 };
 
 export default function RootLayout({
