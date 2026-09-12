@@ -33,7 +33,6 @@ export default function Home() {
   const [portfolioMenu, setPortfolioMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [themeReady, setThemeReady] = useState(false);
-  const [videoBlocked, setVideoBlocked] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [bootStep, setBootStep] = useState(0);
   const [booting, setBooting] = useState(true);
@@ -73,7 +72,11 @@ export default function Home() {
     const video = videoRef.current;
     if (!video) return;
     const playVideo = () => {
-      video.play().then(() => setVideoBlocked(false)).catch(() => setVideoBlocked(true));
+      video.defaultMuted = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute('muted', '');
+      void video.play().catch(() => undefined);
     };
     const resumeVisibleVideo = () => { if (document.visibilityState === 'visible') playVideo(); };
     video.addEventListener('canplay', playVideo);
@@ -86,7 +89,7 @@ export default function Home() {
   }, [booting]);
 
   return <>{booting && <div className="boot-screen" role="status" aria-live="polite">
-    <div className="boot-video-wrap"><video ref={videoRef} className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto" onPlaying={() => setVideoBlocked(false)}/>{videoBlocked && <button className="video-play" onClick={() => videoRef.current?.play()}>Activar animación</button>}</div>
+    <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture/></div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomezOS</strong><span>AI creative system · build 2026.09</span></div></div>
       <div className="boot-log">
