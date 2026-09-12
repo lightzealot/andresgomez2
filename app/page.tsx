@@ -1,6 +1,7 @@
 'use client';
-import { ArrowUp, BriefcaseBusiness, ExternalLink, Folder, Mail, Menu, MessageSquare, PanelLeftClose, Search, UserRound, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ArrowUp, BriefcaseBusiness, ExternalLink, Folder, Mail, Menu, MessageSquare, Moon, PanelLeftClose, Search, Sun, UserRound, X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Switch } from '@/components/ui/switch';
 
 type Section = 'inicio' | 'proyectos' | 'sobre-mi' | 'contacto';
 const nav = [
@@ -30,6 +31,10 @@ export default function Home() {
   const [active, setActive] = useState<Section>('inicio');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [portfolioMenu, setPortfolioMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
+  const [videoBlocked, setVideoBlocked] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [bootStep, setBootStep] = useState(0);
   const [booting, setBooting] = useState(true);
   const goTo = (section: Section) => { setActive(section); setMobileOpen(false); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); };
@@ -50,8 +55,38 @@ export default function Home() {
     return () => window.clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const saved = window.localStorage.getItem('andresgomezos-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(saved ? saved === 'dark' : prefersDark);
+    setThemeReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!themeReady) return;
+    document.documentElement.classList.toggle('dark', darkMode);
+    window.localStorage.setItem('andresgomezos-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode, themeReady]);
+
+  useEffect(() => {
+    if (!booting) return;
+    const video = videoRef.current;
+    if (!video) return;
+    const playVideo = () => {
+      video.play().then(() => setVideoBlocked(false)).catch(() => setVideoBlocked(true));
+    };
+    const resumeVisibleVideo = () => { if (document.visibilityState === 'visible') playVideo(); };
+    video.addEventListener('canplay', playVideo);
+    document.addEventListener('visibilitychange', resumeVisibleVideo);
+    playVideo();
+    return () => {
+      video.removeEventListener('canplay', playVideo);
+      document.removeEventListener('visibilitychange', resumeVisibleVideo);
+    };
+  }, [booting]);
+
   return <>{booting && <div className="boot-screen" role="status" aria-live="polite">
-    <div className="boot-video-wrap" aria-hidden="true"><video className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto"/></div>
+    <div className="boot-video-wrap"><video ref={videoRef} className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto" onPlaying={() => setVideoBlocked(false)}/>{videoBlocked && <button className="video-play" onClick={() => videoRef.current?.play()}>Activar animación</button>}</div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomezOS</strong><span>AI creative system · build 2026.09</span></div></div>
       <div className="boot-log">
@@ -78,7 +113,7 @@ export default function Home() {
     </aside>
     {mobileOpen && <button className="scrim" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}/>} 
     <section className="conversation">
-      <header className="topbar"><div className="window-controls" aria-hidden="true"><span/><span/><span/></div><button className="model-selector" onClick={() => { setMobileOpen(true); setPortfolioMenu(open => !open); }} aria-expanded={portfolioMenu} aria-label="Abrir menú de portfolio.ai">portfolio.ai <span>⌄</span></button><div className="topbar-actions"><span className="system-time">Sistema en línea</span><button className="contact-pill" onClick={() => goTo('contacto')}>Hablemos</button></div></header>
+      <header className="topbar"><div className="window-controls" aria-hidden="true"><span/><span/><span/></div><button className="model-selector" onClick={() => { setMobileOpen(true); setPortfolioMenu(open => !open); }} aria-expanded={portfolioMenu} aria-label="Abrir menú de portfolio.ai">portfolio.ai <span>⌄</span></button><div className="topbar-actions"><label className="theme-toggle" title={darkMode ? 'Usar tema claro' : 'Usar tema oscuro'}><Sun size={14}/><Switch size="sm" checked={darkMode} onCheckedChange={setDarkMode} aria-label="Alternar tema claro y oscuro"/><Moon size={14}/></label><span className="system-time">Sistema en línea</span><button className="contact-pill" onClick={() => goTo('contacto')}>Hablemos</button></div></header>
       {portfolioMenu && <div className="portfolio-menu">{nav.map(item => { const Icon = item.icon; return <button key={item.id} onClick={() => { goTo(item.id); setPortfolioMenu(false); }}><Icon size={16}/><span>{item.label}</span></button>; })}<button onClick={() => { goTo('contacto'); setPortfolioMenu(false); }}><Mail size={16}/><span>Contacto</span></button></div>}
       <div className="thread">
         <section id="inicio" className="welcome section-block"><div className="assistant-avatar profile-photo">AG</div><div><p className="eyebrow">Andrés Gómez / creador digital</p><h1>Aprende inteligencia artificial sin complicarte.</h1><p className="lead">Si estás comenzando, aquí aprenderás a conversar con una IA, convertir tus ideas en imágenes y automatizar tareas que hoy haces manualmente.</p><div className="starter-map"><article><span>01</span><div><strong>Habla con la IA</strong><p>Escribe instrucciones claras y consigue respuestas que puedas usar.</p></div></article><article><span>02</span><div><strong>Crea con tus ideas</strong><p>Genera textos, imágenes y conceptos aunque no tengas experiencia técnica.</p></div></article><article><span>03</span><div><strong>Ahorra tiempo</strong><p>Conecta herramientas y construye tu primera automatización.</p></div></article></div><div className="profile-topics"><span>🧠 Prompts</span><span>🎨 Imágenes</span><span>⚙ Automatización</span><span>🤖 Agentes</span></div><div className="system-status"><span>RUTA ACTIVA</span><strong>De cero a crear con IA</strong></div><div className="quick-actions"><button onClick={() => goTo('proyectos')}>Empezar desde cero <ArrowUp size={15}/></button><button onClick={() => goTo('sobre-mi')}>Conoce a Andrés</button></div></div></section>
