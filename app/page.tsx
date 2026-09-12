@@ -109,7 +109,7 @@ export default function Home() {
         {nav.map(item => { const Icon = item.icon; return <button key={item.id} className={`nav-item ${active === item.id ? 'active' : ''}`} onClick={() => goTo(item.id)}><Icon size={17}/><span>{item.label}</span></button>; })}
       </nav>
       <div className="recent"><p className="nav-label">Proyectos recientes</p><button onClick={() => goTo('proyectos')}><Folder size={15}/> IA desde cero</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Prompts que funcionan</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Primera automatización</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Herramientas IA gratis</button></div>
-      <div className="sidebar-footer"><span className="sidebar-user-icon"><UserRound size={16}/></span><div><strong>Andrés Gómez</strong><span>Aprende IA sin complicarte</span></div></div>
+      <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Aprende IA sin complicarte</span></div></div>
     </aside>
     {mobileOpen && <button className="scrim" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}/>} 
     <section className="conversation">
