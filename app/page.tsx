@@ -19,13 +19,11 @@ const projects = [
 ];
 
 const bootSteps = [
-  'Iniciando núcleo de AndresgomezOS',
-  'Conectando modelos de lenguaje',
-  'Montando memoria y contexto',
-  'Cargando agentes especializados',
-  'Activando skills de investigación',
-  'Preparando automatizaciones',
-  'Sistema listo',
+  'Inicializando núcleo',
+  'Conectando inteligencia',
+  'Cargando conocimiento',
+  'Activando creación',
+  'Montando automatizaciones',
 ];
 
 export default function Home() {
@@ -119,11 +117,11 @@ export default function Home() {
   };
 
   return <>{booting && <div className={`boot-screen ${bootLeaving ? 'is-leaving' : ''}`} role="status" aria-live="polite">
-    <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture/></div>
+    <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/ia.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture/></div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomezOS</strong><span>AI creative system · build 2026.09</span></div></div>
       <div className="boot-log">
-        {bootSteps.slice(0, bootStep + 1).map((step, index) => <div key={step} className={index === bootStep ? 'current' : 'complete'}><span>{index === bootStep && index < bootSteps.length - 1 ? '›' : '✓'}</span><p>{step}</p><small>{index < bootStep || bootStep === bootSteps.length - 1 ? 'OK' : '...'}</small></div>)}
+        {bootSteps.slice(0, bootStep + 1).map((step, index) => <div key={step} className={index === bootStep ? 'current' : 'complete'}><span>{index === bootStep && index < bootSteps.length - 1 ? '[›]' : '[✓]'}</span><p>{step}</p><small>{index < bootStep || bootStep === bootSteps.length - 1 ? 'OK' : '...'}</small></div>)}
       </div>
       <div className="boot-progress"><span style={{ width: `${((bootStep + 1) / bootSteps.length) * 100}%` }}/></div>
       <div className="boot-footer"><span>{Math.round(((bootStep + 1) / bootSteps.length) * 100)}%</span><button onClick={closeBoot}>Omitir arranque</button></div>
