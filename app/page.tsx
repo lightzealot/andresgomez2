@@ -1,7 +1,6 @@
 'use client';
 import { ArrowUp, BriefcaseBusiness, ExternalLink, Folder, Mail, Menu, MessageSquare, PanelLeftClose, Search, UserRound, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { BootRobot } from '@/components/BootRobot';
 
 type Section = 'inicio' | 'proyectos' | 'sobre-mi' | 'contacto';
 const nav = [
@@ -52,7 +51,7 @@ export default function Home() {
   }, []);
 
   return <>{booting && <div className="boot-screen" role="status" aria-live="polite">
-    <BootRobot />
+    <div className="boot-video-wrap" aria-hidden="true"><video className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto"/></div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomezOS</strong><span>AI creative system · build 2026.09</span></div></div>
       <div className="boot-log">
