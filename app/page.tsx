@@ -38,6 +38,9 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [bootStep, setBootStep] = useState(0);
   const [booting, setBooting] = useState(true);
+  const [bootLeaving, setBootLeaving] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
   const goTo = (section: Section) => { setActive(section); setMobileOpen(false); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); };
 
   useEffect(() => {
@@ -47,7 +50,10 @@ export default function Home() {
       setBootStep(current => {
         if (current >= bootSteps.length - 1) {
           window.clearInterval(timer);
-          window.setTimeout(() => setBooting(false), reducedMotion ? 80 : 760);
+          window.setTimeout(() => {
+            setBootLeaving(true);
+            window.setTimeout(() => setBooting(false), reducedMotion ? 80 : 700);
+          }, reducedMotion ? 80 : 760);
           return current;
         }
         return current + 1;
@@ -90,7 +96,12 @@ export default function Home() {
     };
   }, [booting]);
 
-  return <>{booting && <div className="boot-screen" role="status" aria-live="polite">
+  const closeBoot = () => {
+    setBootLeaving(true);
+    window.setTimeout(() => setBooting(false), 700);
+  };
+
+  return <>{booting && <div className={`boot-screen ${bootLeaving ? 'is-leaving' : ''}`} role="status" aria-live="polite">
     <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/robot.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture/></div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomezOS</strong><span>AI creative system · build 2026.09</span></div></div>
@@ -98,7 +109,7 @@ export default function Home() {
         {bootSteps.slice(0, bootStep + 1).map((step, index) => <div key={step} className={index === bootStep ? 'current' : 'complete'}><span>{index === bootStep && index < bootSteps.length - 1 ? '›' : '✓'}</span><p>{step}</p><small>{index < bootStep || bootStep === bootSteps.length - 1 ? 'OK' : '...'}</small></div>)}
       </div>
       <div className="boot-progress"><span style={{ width: `${((bootStep + 1) / bootSteps.length) * 100}%` }}/></div>
-      <div className="boot-footer"><span>{Math.round(((bootStep + 1) / bootSteps.length) * 100)}%</span><button onClick={() => setBooting(false)}>Omitir arranque</button></div>
+      <div className="boot-footer"><span>{Math.round(((bootStep + 1) / bootSteps.length) * 100)}%</span><button onClick={closeBoot}>Omitir arranque</button></div>
     </div>
   </div>}
   <main className={`portfolio-shell ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
@@ -113,6 +124,7 @@ export default function Home() {
         {nav.map(item => { const Icon = item.icon; return <button key={item.id} className={`nav-item ${active === item.id ? 'active' : ''}`} onClick={() => goTo(item.id)}><Icon size={17}/><span>{item.label}</span></button>; })}
       </nav>
       <div className="recent"><p className="nav-label">Labs | Playground</p><button onClick={() => goTo('proyectos')}><Folder size={15}/> IA desde cero</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Prompts que funcionan</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Primera automatización</button><button onClick={() => goTo('proyectos')}><Folder size={15}/> Herramientas IA gratis</button></div>
+      <form className="newsletter" onSubmit={event => { event.preventDefault(); if (newsletterEmail.trim()) setSubscribed(true); }}><div className="newsletter-title"><Mail size={15}/><strong>Newsletter</strong></div>{subscribed ? <p className="newsletter-success">Listo. Te avisaré cuando haya algo nuevo.</p> : <><p>Una idea práctica de IA, sin llenar tu bandeja.</p><div className="newsletter-field"><input type="email" required value={newsletterEmail} onChange={event => setNewsletterEmail(event.target.value)} placeholder="tu@email.com" aria-label="Correo para el newsletter"/><button type="submit" aria-label="Suscribirme"><ArrowUp size={15}/></button></div></>}</form>
       <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Aprende IA sin complicarte</span></div></div>
     </aside>
     {mobileOpen && <button className="scrim" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}/>} 
