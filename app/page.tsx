@@ -96,6 +96,23 @@ export default function Home() {
     };
   }, [booting]);
 
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('.response-block'));
+    document.documentElement.classList.add('reveal-ready');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    sections.forEach(section => observer.observe(section));
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove('reveal-ready');
+    };
+  }, []);
+
   const closeBoot = () => {
     setBootLeaving(true);
     window.setTimeout(() => setBooting(false), 700);

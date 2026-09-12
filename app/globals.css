@@ -59,3 +59,7 @@
 .boot-screen{transition:opacity .7s ease,filter .7s ease,visibility 0s linear .7s}.boot-screen.is-leaving{visibility:hidden;opacity:0;filter:blur(8px)}.boot-screen.is-leaving .boot-terminal{transform:translateY(-8px);opacity:0}.boot-terminal{transition:transform .65s ease,opacity .55s ease}
 .sidebar-collapsed .newsletter{display:none}
 @media(max-width:760px){.sidebar-collapsed .newsletter{display:block}}
+
+/* Chat-like scroll sequence */
+.reveal-ready .response-block .user-prompt{opacity:0;transform:translate3d(24px,8px,0);transition:opacity .28s ease,transform .34s cubic-bezier(.2,.75,.3,1)}.reveal-ready .response-block .assistant-response{opacity:0;transform:translate3d(-20px,10px,0);transition:opacity .34s ease .1s,transform .42s cubic-bezier(.2,.75,.3,1) .1s}.reveal-ready .response-block.is-visible .user-prompt,.reveal-ready .response-block.is-visible .assistant-response{opacity:1;transform:translate3d(0,0,0)}
+@media(prefers-reduced-motion:reduce){.response-block .user-prompt,.response-block .assistant-response{opacity:1!important;transform:none!important;transition:none!important}}
