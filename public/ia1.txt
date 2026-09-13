@@ -1,0 +1,126 @@
+╔══════════════════════════════════════════════════════════════╗
+║                 A N D R E S G O M E Z O S                    ║
+║                    GUÍA RÁPIDA DE IA                         ║
+║                       DESDE CERO                             ║
+╚══════════════════════════════════════════════════════════════╝
+
+Una estructura sencilla para empezar a obtener mejores respuestas de una IA.
+
+
+┌─ 01 ─────────────────────────────────────────────────────────┐
+│  NO NECESITAS APRENDER 20 HERRAMIENTAS                      │
+└──────────────────────────────────────────────────────────────┘
+
+Si estás empezando con inteligencia artificial, empieza con una sola herramienta y úsala para resolver un problema real. Puedes comenzar, por ejemplo, con ChatGPT.
+
+
+┌─ 02 ─────────────────────────────────────────────────────────┐
+│  EL ERROR MÁS COMÚN                                         │
+└──────────────────────────────────────────────────────────────┘
+
+Muchas personas escriben algo como:
+
+> “Hazme un correo para un cliente.”
+
+La IA puede responder, pero tiene muy poca información para saber exactamente qué necesitas.
+
+
+┌─ 03 ─────────────────────────────────────────────────────────┐
+│  USA ESTA ESTRUCTURA                                        │
+└──────────────────────────────────────────────────────────────┘
+
+[ 1 ]  QUÉ NECESITAS
+
+Explícale claramente qué quieres conseguir.
+
+Ejemplo:
+> “Necesito responderle a un cliente.”
+
+
+[ 2 ]  CONTEXTO
+
+Dale la información que necesita para entender la situación.
+
+Ejemplo:
+> “El cliente está molesto porque su pedido lleva dos días de retraso.”
+
+
+[ 3 ]  RESULTADO
+
+Dile cómo quieres recibir la respuesta.
+
+Ejemplo:
+> “Quiero que la respuesta sea profesional, amable y corta.”
+
+
+┌─ 04 ─────────────────────────────────────────────────────────┐
+│  AHORA JÚNTALO TODO                                         │
+└──────────────────────────────────────────────────────────────┘
+
+En lugar de:
+
+> “Hazme un correo para un cliente.”
+
+Prueba:
+
+> “Necesito responderle a un cliente que está molesto porque su pedido lleva
+> dos días de retraso. Quiero una respuesta profesional, amable y corta.”
+
+              ┌──────────────────┐
+              │   QUÉ NECESITO   │
+              └────────┬─────────┘
+                       │
+              ┌────────▼─────────┐
+              │     CONTEXTO     │
+              └────────┬─────────┘
+                       │
+              ┌────────▼─────────┐
+              │     RESULTADO    │
+              └──────────────────┘
+
+
+┌─ 05 ─────────────────────────────────────────────────────────┐
+│  PLANTILLA PARA COPIAR                                      │
+└──────────────────────────────────────────────────────────────┘
+
++--------------------------------------------------------------+
+| Necesito [LO QUE QUIERO CONSEGUIR].                          |
+| El contexto es [INFORMACIÓN IMPORTANTE].                     |
+| Quiero que el resultado sea [CÓMO QUIERO LA RESPUESTA].      |
+| Si necesitas más información para responder correctamente,  |
+| pregúntame antes de continuar.                               |
++--------------------------------------------------------------+
+
+
+┌─ 06 ─────────────────────────────────────────────────────────┐
+│  PRUÉBALO TÚ                                                │
+└──────────────────────────────────────────────────────────────┘
+
+Piensa en una tarea que haces frecuentemente: escribir un correo, organizar información, aprender algo, resumir un documento o generar ideas.
+
+Primero pídeselo a la IA como lo harías normalmente. Después vuelve a hacerlo utilizando QUÉ NECESITO + CONTEXTO + RESULTADO y compara las dos respuestas.
+
+
+┌─ 07 ─────────────────────────────────────────────────────────┐
+│  QUÉ DEBES RECORDAR                                         │
+└──────────────────────────────────────────────────────────────┘
+
+Aprender inteligencia artificial no empieza memorizando herramientas. Empieza preguntándote: “¿Qué problema quiero resolver?”
+
+                [ UNA HERRAMIENTA ]
+                         +
+                  [ UN PROBLEMA ]
+                         =
+                 [ UN RESULTADO REAL ]
+
+
+┌─ 08 ─────────────────────────────────────────────────────────┐
+│  SIGUIENTE PASO                                             │
+└──────────────────────────────────────────────────────────────┘
+
+Ahora que sabes cómo empezar, la siguiente pregunta es: ¿qué herramientas de IA debería aprender primero?
+
+
+┌──────────────────────────────────────────────────────────────┐
+│  FIN DE LA GUÍA                            andresgomezOS     │
+└──────────────────────────────────────────────────────────────┘
