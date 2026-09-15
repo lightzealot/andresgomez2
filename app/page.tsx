@@ -36,13 +36,24 @@ export default function Home() {
   const [themeReady, setThemeReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [bootStep, setBootStep] = useState(0);
-  const [booting, setBooting] = useState(true);
+  const [booting, setBooting] = useState(false);
+  const [introChecked, setIntroChecked] = useState(false);
   const [bootLeaving, setBootLeaving] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const goTo = (section: Section) => { setActive(section); setMobileOpen(false); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); };
 
   useEffect(() => {
+    const introSeen = window.sessionStorage.getItem('andresgomez-intro-seen') === 'true';
+    if (!introSeen) {
+      window.sessionStorage.setItem('andresgomez-intro-seen', 'true');
+      setBooting(true);
+    }
+    setIntroChecked(true);
+  }, []);
+
+  useEffect(() => {
+    if (!booting) return;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const delay = reducedMotion ? 90 : 650;
     const timer = window.setInterval(() => {
@@ -59,7 +70,7 @@ export default function Home() {
       });
     }, delay);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [booting]);
 
   useEffect(() => {
     const saved = window.localStorage.getItem('andresgomezos-theme');
@@ -117,8 +128,10 @@ export default function Home() {
     window.setTimeout(() => setBooting(false), 700);
   };
 
+  if (!introChecked) return null;
+
   return <>{booting && <div className={`boot-screen ${bootLeaving ? 'is-leaving' : ''}`} role="status" aria-live="polite">
-    <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/ia.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture/></div>
+    <div className="boot-video-wrap" aria-hidden="true"><video ref={videoRef} className="boot-video" src="/ia2.mp4" autoPlay muted playsInline preload="auto" disablePictureInPicture/></div>
     <div className="boot-terminal">
       <div className="boot-brand"><span className="boot-logo"><img src="/andresgomezos-logo.png" alt=""/></span><div><strong>AndresGomez[OS]</strong><span>AI creative system · build 2026.09</span></div></div>
       <div className="boot-log">

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, ExternalLink, FileText, FolderOpen, Library, Menu, Moon, Sun, X } from 'lucide-react';
+import { ArrowLeft, ExternalLink, FileText, FolderOpen, House, Library, Menu, Moon, Sun, X } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Switch } from '@/components/ui/switch';
@@ -29,7 +29,7 @@ export default function RecursosPage() {
     <button className="mobile-menu" onClick={() => setMenuOpen(true)} aria-label="Abrir menú"><Menu size={20}/></button>
     <aside className={`sidebar resources-sidebar ${menuOpen ? 'is-open' : ''}`}>
       <div className="sidebar-top"><Link className="brand" href="/" aria-label="Volver al inicio"><span className="brand-mark"><img src="/andresgomezos-logo.png" alt=""/></span><span className="brand-name">AndresGomez[OS]</span></Link><button className="icon-button mobile-close" onClick={() => setMenuOpen(false)} aria-label="Cerrar menú"><X size={19}/></button></div>
-      <nav aria-label="Navegación de recursos"><p className="nav-label">Biblioteca</p><Link className="nav-item active" href="/recursos"><Library size={17}/><span>Todos los recursos</span></Link><a className="nav-item" href="#guias"><FileText size={17}/><span>Guías y archivos</span></a></nav>
+      <nav aria-label="Navegación de recursos"><p className="nav-label">Explorar</p><Link className="nav-item" href="/"><House size={17}/><span>Inicio</span></Link><p className="nav-label resources-nav-label">Biblioteca</p><Link className="nav-item active" href="/recursos"><Library size={17}/><span>Todos los recursos</span></Link><a className="nav-item" href="#guias"><FileText size={17}/><span>Guías y archivos</span></a></nav>
       <div className="resources-note"><span>ACCESO CLIENTE</span><p>Material seleccionado para consultar, guardar y compartir.</p></div>
       <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Recursos para crear con IA</span></div></div>
     </aside>
