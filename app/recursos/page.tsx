@@ -28,7 +28,7 @@ export default function RecursosPage() {
   return <main className="portfolio-shell resources-shell">
     <button className="mobile-menu" onClick={() => setMenuOpen(true)} aria-label="Abrir menú"><Menu size={20}/></button>
     <aside className={`sidebar resources-sidebar ${menuOpen ? 'is-open' : ''}`}>
-      <div className="sidebar-top"><Link className="brand" href="/" aria-label="Volver al inicio"><span className="brand-mark"><img src="/andresgomezos-logo.png" alt=""/></span><span className="brand-name">AndresGomezOS</span></Link><button className="icon-button mobile-close" onClick={() => setMenuOpen(false)} aria-label="Cerrar menú"><X size={19}/></button></div>
+      <div className="sidebar-top"><Link className="brand" href="/" aria-label="Volver al inicio"><span className="brand-mark"><img src="/andresgomezos-logo.png" alt=""/></span><span className="brand-name">AndresGomez[OS]</span></Link><button className="icon-button mobile-close" onClick={() => setMenuOpen(false)} aria-label="Cerrar menú"><X size={19}/></button></div>
       <nav aria-label="Navegación de recursos"><p className="nav-label">Biblioteca</p><Link className="nav-item active" href="/recursos"><Library size={17}/><span>Todos los recursos</span></Link><a className="nav-item" href="#guias"><FileText size={17}/><span>Guías y archivos</span></a></nav>
       <div className="resources-note"><span>ACCESO CLIENTE</span><p>Material seleccionado para consultar, guardar y compartir.</p></div>
       <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Recursos para crear con IA</span></div></div>
@@ -37,13 +37,13 @@ export default function RecursosPage() {
     <section className="conversation resources-conversation">
       <header className="topbar"><div className="window-controls" aria-hidden="true"><span/><span/><span/></div><strong className="resources-top-title">recursos.ai</strong><div className="topbar-actions"><div className="theme-toggle" title={darkMode ? 'Usar tema claro' : 'Usar tema oscuro'}><Sun size={14}/><Switch size="sm" checked={darkMode} onCheckedChange={setDarkMode} aria-label="Alternar tema claro y oscuro"/><Moon size={14}/></div><Link className="contact-pill resources-back" href="/"><ArrowLeft size={14}/> Portfolio</Link></div></header>
       <div className="resources-main">
-        <div className="resources-heading"><div className="assistant-avatar section-avatar"><FolderOpen size={15}/></div><div><p className="eyebrow">Biblioteca de cliente · actualizada continuamente</p><h1>Recursos para llevar tus ideas a la práctica.</h1><p className="lead">Guías, archivos y videos reunidos en un solo lugar. Abre lo que necesites o guárdalo para consultarlo después.</p></div></div>
+        <div className="resources-heading"><div className="assistant-avatar section-avatar"><FolderOpen size={15}/></div><div><p className="eyebrow">Biblioteca de cliente · actualizada continuamente</p><h1>Recursos para llevar tus ideas a la práctica.</h1><p className="lead">Guías y archivos reunidos en un solo lugar. Abre lo que necesites o guárdalo para consultarlo después.</p></div></div>
         <section id="guias" className="resources-section" aria-labelledby="resources-title"><div className="resources-section-head"><div><span>01</span><h2 id="resources-title">Biblioteca</h2></div><p>{resources.length} recursos disponibles</p></div><div className="resources-grid">
           {resources.map(resource => { const Icon = resource.icon; return <a key={resource.title} className="resource-card" href={resource.href} target="_blank" rel="noreferrer"><div className="resource-card-top"><span className="resource-icon"><Icon size={19}/></span><span className="resource-type">{resource.type}</span><span className="resource-action"><ExternalLink size={16}/></span></div><div><h3>{resource.title}</h3><p>{resource.description}</p></div><span className="resource-meta">{resource.meta}</span></a>; })}
           <article className="resource-card resource-card-empty" aria-label="Próximamente más recursos"><div className="resource-card-top"><span className="resource-icon"><Library size={19}/></span><span className="resource-type">Próximamente</span></div><div><h3>La biblioteca sigue creciendo</h3><p>Aquí aparecerán las nuevas plantillas, guías y herramientas que prepare para mis clientes.</p></div><span className="resource-meta">NUEVOS RECURSOS · EN PREPARACIÓN</span></article>
         </div></section>
       </div>
-      <footer className="os-dock"><span>AndresgomezOS</span><span>Biblioteca de recursos</span></footer>
+      <footer className="os-dock"><span>AndresGomez[OS]</span><span>Biblioteca de recursos</span></footer>
     </section>
   </main>;
 }

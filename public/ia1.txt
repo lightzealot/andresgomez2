@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════╗
-║                 A N D R E S G O M E Z O S                    ║
+║                 A N D R E S G O M E Z [ O S ]                ║
 ║                    GUÍA RÁPIDA DE IA                         ║
 ║                       DESDE CERO                             ║
 ╚══════════════════════════════════════════════════════════════╝
@@ -122,5 +122,5 @@ Ahora que sabes cómo empezar, la siguiente pregunta es: ¿qué herramientas de 
 
 
 ┌──────────────────────────────────────────────────────────────┐
-│  FIN DE LA GUÍA                            andresgomezOS     │
+│  FIN DE LA GUÍA                          AndresGomez[OS]     │
 └──────────────────────────────────────────────────────────────┘
