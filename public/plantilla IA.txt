@@ -1,94 +1,132 @@
-PLANTILLA PARA PEDIRLE MEJORES RESULTADOS A CUALQUIER IA
+╔══════════════════════════════════════════════════════════════╗
+║       PLANTILLA PARA OBTENER MEJORES RESULTADOS CON IA      ║
+╚══════════════════════════════════════════════════════════════╝
+
 Por Andrés Gómez · @andyontrade
+
 
 No necesitas palabras mágicas ni instrucciones complicadas.
 La IA responde mejor cuando entiende tres cosas:
 
-1. SITUACIÓN: ¿Qué está pasando?
-2. OBJETIVO: ¿Qué necesitas conseguir?
-3. FORMATO: ¿Cómo quieres recibir la respuesta?
+  01  SITUACIÓN  →  ¿Qué está pasando?
+  02  OBJETIVO   →  ¿Qué necesitas conseguir?
+  03  FORMATO    →  ¿Cómo quieres recibir la respuesta?
 
 
-PLANTILLA PARA COPIAR Y PEGAR
+──────────────────────────────────────────────────────────────
+  PLANTILLA PRINCIPAL · COPIA, COMPLETA Y PEGA
+──────────────────────────────────────────────────────────────
 
 Estoy en esta situación:
-[Explica brevemente qué está pasando y añade los datos importantes].
+[Explica brevemente qué está pasando e incluye los datos importantes].
 
 Necesito conseguir:
-[Escribe el resultado que esperas].
+[Describe con claridad el resultado que esperas].
 
 Quiero que la respuesta sea:
-[Indica el formato, el tono, la extensión o el nivel de dificultad].
+[Indica el formato, el tono, la extensión y el nivel de dificultad].
 
-Antes de responder, si te falta un dato importante, hazme las preguntas necesarias.
+Antes de responder, si te falta un dato importante, hazme las
+preguntas necesarias.
 
 
-VERSIÓN RÁPIDA
+──────────────────────────────────────────────────────────────
+  VERSIÓN RÁPIDA
+──────────────────────────────────────────────────────────────
 
 Contexto: [¿Qué está pasando?]
-Objetivo: [¿Qué necesitas?]
-Formato: [¿Cómo quieres la respuesta?]
+Objetivo: [¿Qué necesitas conseguir?]
+Formato:  [¿Cómo quieres recibir la respuesta?]
 
 
-EJEMPLO 1: ESCRIBIR UN CORREO
+══════════════════════════════════════════════════════════════
+  EJEMPLOS
+══════════════════════════════════════════════════════════════
+
+01 · ESCRIBIR UN CORREO
 
 Instrucción básica:
-"Hazme un correo."
+«Hazme un correo».
 
 Instrucción mejorada:
-"Un cliente lleva cinco días sin responder una propuesta que le envié. Escribe un correo breve, amable y profesional para hacer seguimiento. No quiero que suene insistente y debe terminar con una pregunta clara."
+«Un cliente lleva cinco días sin responder una propuesta que le envié.
+Escribe un correo breve, amable y profesional para hacer seguimiento.
+No quiero que suene insistente y debe terminar con una pregunta clara».
 
 
-EJEMPLO 2: CREAR CONTENIDO
+02 · CREAR CONTENIDO
 
-"Tengo una cuenta de Instagram donde enseño inteligencia artificial a personas que están comenzando. Dame cinco ideas de Reels fáciles de grabar. Para cada una incluye un hook corto, la enseñanza principal y un CTA. Usa un lenguaje sencillo y evita tecnicismos."
-
-
-EJEMPLO 3: APRENDER UN TEMA
-
-"Estoy comenzando a aprender inteligencia artificial y todavía no entiendo qué es un modelo de lenguaje. Explícamelo con palabras sencillas, usando una comparación de la vida diaria y un ejemplo práctico. Limita la respuesta a cinco párrafos."
+«Tengo una cuenta de Instagram donde enseño inteligencia artificial a
+personas que están comenzando. Dame cinco ideas de Reels fáciles de
+grabar. Para cada una incluye un hook corto, la enseñanza principal y
+un CTA. Usa un lenguaje sencillo y evita tecnicismos».
 
 
-EJEMPLO 4: ORGANIZAR UNA TAREA
+03 · APRENDER UN TEMA
 
-"Tengo que preparar una presentación de diez minutos para explicar una idea de negocio. Ayúdame a organizarla en cinco secciones. Para cada sección indica el mensaje principal y lo que debería mostrar en pantalla."
-
-
-SI LA PRIMERA RESPUESTA NO TE CONVENCE
-
-No tienes que comenzar otra conversación. Puedes continuar con frases como:
-
-- Hazlo más corto y directo.
-- Explícalo con palabras más sencillas.
-- Dame un ejemplo aplicado a mi caso.
-- Cambia el tono para que suene más cercano.
-- Organízalo en pasos.
-- Dame tres opciones diferentes.
-- Elimina las repeticiones.
-- ¿Qué información te falta para mejorar la respuesta?
-- Revisa tu respuesta y dime qué podría estar equivocado o incompleto.
+«Estoy comenzando a aprender inteligencia artificial y todavía no
+entiendo qué es un modelo de lenguaje. Explícamelo con palabras
+sencillas, usando una comparación de la vida diaria y un ejemplo
+práctico. Limita la respuesta a cinco párrafos».
 
 
-ANTES DE ENVIAR TU INSTRUCCIÓN, REVISA
+04 · ORGANIZAR UNA TAREA
 
-[ ] ¿Expliqué la situación?
-[ ] ¿Dije exactamente qué necesito?
-[ ] ¿Indiqué cómo quiero la respuesta?
-[ ] ¿Incluí los datos que pueden cambiar el resultado?
-[ ] ¿Evité compartir información privada o confidencial?
-
-
-IMPORTANTE
-
-No compartas contraseñas, números de identificación, datos bancarios, información médica sensible, secretos empresariales ni información privada de otras personas.
-
-La IA puede equivocarse. Verifica nombres, cifras, fechas y decisiones importantes antes de utilizar la respuesta.
+«Tengo que preparar una presentación de diez minutos para explicar una
+idea de negocio. Ayúdame a organizarla en cinco secciones. Para cada
+sección indica el mensaje principal y lo que debería mostrar en
+pantalla».
 
 
-RECUERDA
+──────────────────────────────────────────────────────────────
+  SI LA PRIMERA RESPUESTA NO TE CONVENCE
+──────────────────────────────────────────────────────────────
 
-Una buena instrucción no tiene que sonar técnica.
-Solo debe ayudar a la IA a entender tu situación, tu objetivo y el resultado que esperas.
+No necesitas comenzar otra conversación. Continúa con frases como:
 
-Pregunta. Aprende. Crea. Mejora.
-Andrés Gómez · @andyontrade
+  → Hazlo más corto y directo.
+  → Explícalo con palabras más sencillas.
+  → Dame un ejemplo aplicado a mi caso.
+  → Cambia el tono para que suene más cercano.
+  → Organízalo en pasos.
+  → Dame tres opciones diferentes.
+  → Elimina las repeticiones.
+  → ¿Qué información te falta para mejorar la respuesta?
+  → Revisa tu respuesta y dime qué podría estar equivocado o incompleto.
+
+
+──────────────────────────────────────────────────────────────
+  LISTA DE VERIFICACIÓN
+──────────────────────────────────────────────────────────────
+
+Antes de enviar tu instrucción, comprueba:
+
+  [ ] Expliqué la situación.
+  [ ] Dije exactamente qué necesito.
+  [ ] Indiqué cómo quiero recibir la respuesta.
+  [ ] Incluí los datos que pueden cambiar el resultado.
+  [ ] Evité compartir información privada o confidencial.
+
+
+┌──────────────────────────────────────────────────────────────┐
+│  IMPORTANTE                                                  │
+└──────────────────────────────────────────────────────────────┘
+
+No compartas contraseñas, números de identificación, datos bancarios,
+información médica sensible, secretos empresariales ni información
+privada de otras personas.
+
+La IA puede equivocarse. Verifica nombres, cifras, fechas y decisiones
+importantes antes de utilizar la respuesta.
+
+
+──────────────────────────────────────────────────────────────
+  RECUERDA
+──────────────────────────────────────────────────────────────
+
+Una buena instrucción no tiene que sonar técnica. Solo debe ayudar a
+la IA a entender tu situación, tu objetivo y el resultado que esperas.
+
+                 Pregunta · Aprende · Crea · Mejora
+
+                    Andrés Gómez · @andyontrade
