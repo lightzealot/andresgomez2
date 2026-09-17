@@ -6,9 +6,6 @@ GUÍA RÁPIDA DE COMANDOS
 Cada ficha incluye el comando, qué resultado produce y los usos para los
 que funciona mejor.
 
-Fuente: guía “+30 atajos para crear imágenes con IA”, de Cristian Pozo B.
-Selección: primeros 30 atajos de los 32 incluidos en la guía original.
-
 
 01 /productexplosion
 --------------------
