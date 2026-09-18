@@ -1,0 +1,106 @@
+GUÍA RÁPIDA: GOOGLE FLOW PARA PRINCIPIANTES
+Revisada: 18 de septiembre de 2026
+
+¿QUÉ ES GOOGLE FLOW?
+
+Google Flow es un estudio creativo con inteligencia artificial pensado para crear y desarrollar contenido visual. Permite generar imágenes, crear clips de video, reutilizar personajes u objetos como referencias, organizar recursos y construir secuencias con varios clips.
+
+No es un chatbot tradicional. En lugar de limitarse a responder preguntas, su función principal es convertir una idea escrita y referencias visuales en imágenes, escenas y videos.
+
+
+¿QUÉ PUEDES HACER?
+
+1. Crear imágenes desde una descripción.
+2. Convertir una idea o imagen en un clip de video.
+3. Usar referencias para mantener personajes, objetos o estilos.
+4. Probar movimientos, encuadres y perspectivas de cámara.
+5. Extender y editar clips existentes.
+6. Organizar varios clips en una secuencia con Scenebuilder.
+7. Guardar un fotograma de un video y reutilizarlo como referencia.
+
+
+IMPORTANTE SOBRE EL ACCESO
+
+Google Flow funciona con límites de uso y créditos de IA. El acceso disponible depende del país, de la cuenta y del plan de Google AI. Los planes Google AI Pro y Google AI Ultra incluyen acceso con distintos límites, y los créditos adicionales pueden tener costo.
+
+Por eso, no debe presentarse como una herramienta completamente gratuita. Antes de generar contenido, revisa en tu cuenta cuántos créditos tienes y cuánto consume el modelo seleccionado.
+
+
+CÓMO CREAR TU PRIMER PROYECTO
+
+1. Entra en https://flow.google.com/ e inicia sesión con tu cuenta personal de Google.
+2. Crea un proyecto nuevo.
+3. Decide qué quieres producir: una imagen o un video.
+4. Escribe una instrucción describiendo la escena.
+5. Añade referencias si necesitas conservar un personaje, producto, objeto o estilo.
+6. Selecciona las opciones disponibles, como orientación, duración o cantidad de resultados.
+7. Genera el contenido y revisa el resultado.
+8. Ajusta una sola variable por intento: cámara, iluminación, acción, estilo o composición.
+9. Guarda los mejores resultados dentro del proyecto.
+10. Si tienes varios clips, ordénalos y recórtalos en Scenebuilder antes de descargarlos.
+
+
+FÓRMULA SENCILLA PARA ESCRIBIR UN PROMPT
+
+[Sujeto] + [acción] + [lugar] + [tipo de plano] + [movimiento de cámara] + [iluminación] + [estilo]
+
+Ejemplo:
+
+“Un creador de contenido trabajando frente a un portátil en un estudio moderno, plano medio, la cámara se acerca lentamente, iluminación azul y naranja, estilo cinematográfico realista.”
+
+
+3 PROMPTS PARA PROBAR
+
+PROMPT 1 — IMAGEN PROFESIONAL
+
+“Retrato editorial de un creador de tecnología frente a un escritorio minimalista, expresión segura y natural, iluminación lateral suave, fondo oscuro con detalles azules, fotografía profesional, textura realista, composición vertical.”
+
+PROMPT 2 — VIDEO DE PRODUCTO
+
+“Un teléfono inteligente sobre una mesa negra, luces de estudio recorren sus bordes mientras la cámara gira lentamente alrededor del producto, reflejos controlados, fondo oscuro, estética publicitaria premium, movimiento suave y realista.”
+
+PROMPT 3 — ESCENA PARA REEL
+
+“Un creador trabaja en su portátil dentro de un avión. Las paredes del avión desaparecen gradualmente y queda sentado sobre las nubes mientras continúa trabajando con tranquilidad. Plano medio, cámara acercándose lentamente, luz cálida de amanecer, estilo cinematográfico realista.”
+
+
+CÓMO MEJORAR UN RESULTADO SIN EMPEZAR DE CERO
+
+No cambies todo el prompt al mismo tiempo. Identifica el problema y corrige únicamente esa parte.
+
+- Si el encuadre está mal: especifica primer plano, plano medio o plano general.
+- Si la escena se mueve demasiado: pide cámara fija o movimiento lento.
+- Si el personaje cambia: usa la misma referencia y describe los rasgos que deben conservarse.
+- Si el resultado parece artificial: pide iluminación natural, textura realista y movimiento físicamente coherente.
+- Si no ocurre la acción correcta: describe una sola acción, en orden y sin instrucciones contradictorias.
+
+
+ERRORES COMUNES
+
+- Escribir instrucciones demasiado generales.
+- Pedir muchas acciones distintas en un solo clip.
+- Cambiar personaje, cámara, ambiente y estilo en cada intento.
+- No usar referencias cuando la consistencia es importante.
+- Gastar créditos repitiendo la misma generación sin analizar qué falló.
+- Dar por hecho que el primer resultado será el definitivo.
+
+
+TAREA PRÁCTICA
+
+1. Elige una idea sencilla de 5 a 8 segundos.
+2. Escribe el prompt con la fórmula de esta guía.
+3. Genera una primera versión.
+4. Detecta un solo aspecto que quieras mejorar.
+5. Realiza una segunda generación cambiando únicamente ese aspecto.
+
+El objetivo no es conseguir perfección en el primer intento. Es aprender a dirigir la herramienta mediante pruebas controladas.
+
+
+FUENTES OFICIALES
+
+- Google Flow: https://flow.google.com/
+- Presentación oficial de Flow: https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/
+- Centro de ayuda de Google Flow: https://support.google.com/labs/
+- Créditos de IA de Google One: https://support.google.com/googleone/answer/16287445
+
+Nota: las funciones, modelos, disponibilidad y límites pueden cambiar. Revisa siempre la información mostrada dentro de tu cuenta.

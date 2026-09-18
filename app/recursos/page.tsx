@@ -8,6 +8,8 @@ const resources = [
   { type: 'Lectura', title: 'IA: primer paso', description: 'Una guía de inicio para entender la inteligencia artificial y comenzar con una base clara.', meta: 'TXT · Lectura en línea', href: '/ia1.txt', icon: FileText },
   { type: 'Plantilla', title: 'Plantilla para pedirle mejores resultados a cualquier IA', description: 'Una estructura sencilla y reutilizable para explicar tu situación, definir el objetivo y pedir el formato que necesitas.', meta: 'TXT · LECTURA EN LÍNEA', href: '/3.txt', icon: FileText },
   { type: 'Guía', title: '30 atajos para crear imágenes con IA', description: 'Una colección práctica de comandos para transformar productos, escenas y personajes con estilos visuales listos para explorar.', meta: 'TXT · LECTURA EN LÍNEA', href: '/codigos.txt', icon: FileText },
+  { type: 'Plantilla', title: 'Plantilla para crear imágenes en Google Flow', description: 'Una fórmula reutilizable para definir sujeto, escena, estilo visual, iluminación y encuadre en cada prompt.', meta: 'TXT · LECTURA EN LÍNEA', href: '/plantilla-prompt-google-flow.txt', icon: FileText },
+  { type: 'Guía', title: 'Google Flow para principiantes', description: 'Una guía rápida para conocer Flow, crear imágenes y videos, trabajar con referencias y organizar secuencias.', meta: 'TXT · LECTURA EN LÍNEA', href: '/guia-google-flow-para-principiantes.txt', icon: FileText },
 ];
 
 export default function RecursosPage() {
