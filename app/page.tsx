@@ -40,6 +40,8 @@ export default function Home() {
   const [bootLeaving, setBootLeaving] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
+  const [newsletterMessage, setNewsletterMessage] = useState('');
   const [openLabs, setOpenLabs] = useState<string[]>(['resource-01']);
   const goTo = (section: Section) => { setActive(section); setMobileOpen(false); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); };
   const openLab = (number: string) => {
@@ -136,6 +138,28 @@ export default function Home() {
     window.setTimeout(() => setBooting(false), 700);
   };
 
+  const subscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setNewsletterStatus('submitting');
+    setNewsletterMessage('');
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: newsletterEmail }),
+      });
+      const data = await response.json() as { status?: string; error?: string };
+      if (!response.ok) throw new Error(data.error || 'No pudimos completar la suscripción.');
+      setSubscribed(true);
+      setNewsletterMessage(data.status === 'already-subscribed' ? 'Este correo ya estaba suscrito.' : 'Listo. Te avisaré cuando haya algo nuevo.');
+      setNewsletterStatus('idle');
+    } catch (error) {
+      setNewsletterStatus('error');
+      setNewsletterMessage(error instanceof Error ? error.message : 'No pudimos completar la suscripción.');
+    }
+  };
+
   if (!introChecked) return null;
 
   return <>{booting && <div className={`boot-screen ${bootLeaving ? 'is-leaving' : ''}`} role="status" aria-live="polite">
@@ -162,7 +186,7 @@ export default function Home() {
         <a className="nav-item" href="/recursos"><Library size={17}/><span>Recursos</span></a>
       </nav>
       <div className="recent"><p className="nav-label">Labs | Playground</p>{projects.map(project => <button key={project.number} className={openLabs.includes(`resource-${project.number}`) ? 'active' : ''} onClick={() => openLab(project.number)}><Folder size={15}/>{project.title}</button>)}</div>
-      <form className="newsletter" onSubmit={event => { event.preventDefault(); if (newsletterEmail.trim()) setSubscribed(true); }}><div className="newsletter-title"><Mail size={15}/><strong>Newsletter</strong></div>{subscribed ? <p className="newsletter-success">Listo. Te avisaré cuando haya algo nuevo.</p> : <><p>Una idea práctica de IA, sin llenar tu bandeja.</p><div className="newsletter-field"><input type="email" required value={newsletterEmail} onChange={event => setNewsletterEmail(event.target.value)} placeholder="tu@email.com" aria-label="Correo para el newsletter"/><button type="submit" aria-label="Suscribirme"><ArrowUp size={15}/></button></div></>}</form>
+      <form className="newsletter" onSubmit={subscribe}><div className="newsletter-title"><Mail size={15}/><strong>Newsletter</strong></div>{subscribed ? <p className="newsletter-success" role="status">{newsletterMessage}</p> : <><p>Una idea práctica de IA, sin llenar tu bandeja.</p><div className="newsletter-field"><input type="email" required autoComplete="email" value={newsletterEmail} onChange={event => { setNewsletterEmail(event.target.value); setNewsletterStatus('idle'); setNewsletterMessage(''); }} placeholder="tu@email.com" aria-label="Correo para el newsletter" aria-describedby={newsletterMessage ? 'newsletter-message' : undefined}/><button type="submit" disabled={newsletterStatus === 'submitting'} aria-label={newsletterStatus === 'submitting' ? 'Guardando suscripción' : 'Suscribirme'}><ArrowUp size={15}/></button></div>{newsletterMessage && <p id="newsletter-message" className="newsletter-error" role="alert">{newsletterMessage}</p>}</>}</form>
       <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Aprende IA sin complicarte</span></div></div>
     </aside>
     {mobileOpen && <button className="scrim" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}/>} 
