@@ -144,7 +144,7 @@ export default function Home() {
     setNewsletterMessage('');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/newsletter-form.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
