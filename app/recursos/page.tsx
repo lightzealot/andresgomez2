@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Switch } from '@/components/ui/switch';
 
 const resources = [
+  { type: 'Guía práctica', title: '10 ideas fáciles para automatizar con ChatGPT', description: 'Diez recordatorios listos para copiar, adaptar y programar: contenido, estudio, pendientes, finanzas y más.', meta: 'TXT · 10 MENSAJES LISTOS PARA COPIAR', href: '/recurso-10-ideas-recordatorios-ia.txt', icon: FileText },
   { type: 'Lectura', title: 'IA: primer paso', description: 'Una guía de inicio para entender la inteligencia artificial y comenzar con una base clara.', meta: 'TXT · Lectura en línea', href: '/ia1.txt', icon: FileText },
   { type: 'Plantilla', title: 'Plantilla para pedirle mejores resultados a cualquier IA', description: 'Una estructura sencilla y reutilizable para explicar tu situación, definir el objetivo y pedir el formato que necesitas.', meta: 'TXT · LECTURA EN LÍNEA', href: '/3.txt', icon: FileText },
   { type: 'Guía', title: '30 atajos para crear imágenes con IA', description: 'Una colección práctica de comandos para transformar productos, escenas y personajes con estilos visuales listos para explorar.', meta: 'TXT · LECTURA EN LÍNEA', href: '/codigos.txt', icon: FileText },

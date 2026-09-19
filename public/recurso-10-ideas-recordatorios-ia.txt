@@ -1,0 +1,98 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10 IDEAS FÁCILES PARA EMPEZAR A AUTOMATIZAR CON CHATGPT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RECURSO PARA QUIENES COMENTAN «AUTO»
+
+Una automatización sencilla puede ser un recordatorio que se repite.
+Tú eliges qué debes hacer y cuándo quieres que ChatGPT te avise.
+
+IMPORTANTE: ChatGPT te recuerda la acción; no la realiza por ti.
+
+
+01  CÓMO EMPEZAR
+────────────────────────────────────────────────────────────
+
+1. Abre ChatGPT y entra en Programadas / Scheduled, si esa
+   opción está disponible en tu cuenta.
+
+2. Crea una tarea recurrente con uno de los mensajes de abajo.
+   Puedes copiarlo y adaptar la frecuencia.
+
+3. Confirma que la tarea quedó programada y revisa la zona
+   horaria de tu cuenta.
+
+4. Activa las notificaciones push o por correo desde:
+   Configuración > Notificaciones.
+
+
+02  10 MENSAJES LISTOS PARA COPIAR
+────────────────────────────────────────────────────────────
+
+[01] CONTENIDO
+     “Todos los lunes por la mañana, recuérdame planear el
+     contenido de la semana.”
+
+[02] ESTUDIO
+     “Cada día entre semana por la tarde, recuérdame estudiar
+     inteligencia artificial durante 20 minutos.”
+
+[03] PENDIENTES
+     “Todos los viernes por la tarde, recuérdame revisar los
+     pendientes que dejé abiertos esta semana.”
+
+[04] FINANZAS PERSONALES
+     “El primer lunes de cada mes por la mañana, recuérdame
+     revisar mis gastos y actualizar mi presupuesto.”
+
+[05] RESPONDER MENSAJES
+     “Cada día entre semana por la tarde, recuérdame responder
+     los mensajes importantes que dejé pendientes.”
+
+[06] ORGANIZAR LA SEMANA
+     “Todos los domingos por la tarde, recuérdame elegir mis
+     tres prioridades para la próxima semana.”
+
+[07] PROYECTOS
+     “Todos los miércoles por la mañana, recuérdame revisar qué
+     avance hice en mi proyecto personal.”
+
+[08] COPIA DE SEGURIDAD
+     “El primer viernes de cada mes por la tarde, recuérdame
+     comprobar que mis archivos importantes tengan copia de
+     seguridad.”
+
+[09] PUBLICAR CONTENIDO
+     “Todos los martes por la mañana, recuérdame revisar y
+     publicar el contenido que preparé.”
+
+[10] APRENDER ALGO NUEVO
+     “Todos los sábados por la mañana, recuérdame practicar una
+     herramienta nueva de IA durante 30 minutos.”
+
+
+03  HAZ CADA MENSAJE MÁS ÚTIL
+────────────────────────────────────────────────────────────
+
+Añade el objetivo concreto de la tarea. Por ejemplo:
+
+“Recuérdame revisar mis pendientes y elegir el primero que
+debo resolver.”
+
+Si necesitas un aviso a una hora específica, comprueba que tu
+plan permita programar horarios exactos.
+
+
+NOTA IMPORTANTE
+────────────────────────────────────────────────────────────
+
+La disponibilidad de Programadas depende de la cuenta, la
+aplicación y su versión. Las cuentas gratuitas pueden usar
+franjas flexibles —como mañana, tarde o noche—; los horarios
+exactos requieren un plan de pago elegible. También existen
+límites de tareas activas según el plan.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AndresGomez[OS] · Recursos para crear con IA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
