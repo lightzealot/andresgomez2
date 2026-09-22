@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Switch } from '@/components/ui/switch';
 
 const resources = [
+  { type: 'Guía práctica', title: 'Sistema de 60 minutos para crear una semana de contenido con IA', description: 'Un método paso a paso para convertir una idea en Reels, carrusel, historias, captions y un calendario semanal listo para producir.', meta: 'TXT · SISTEMA PASO A PASO', href: '/sistema-60-minutos-contenido-ia.txt', icon: FileText },
   { type: 'Guía práctica', title: '10 ideas fáciles para automatizar con ChatGPT', description: 'Diez recordatorios listos para copiar, adaptar y programar: contenido, estudio, pendientes, finanzas y más.', meta: 'TXT · 10 MENSAJES LISTOS PARA COPIAR', href: '/recurso-10-ideas-recordatorios-ia.txt', icon: FileText },
   { type: 'Lectura', title: 'IA: primer paso', description: 'Una guía de inicio para entender la inteligencia artificial y comenzar con una base clara.', meta: 'TXT · Lectura en línea', href: '/ia1.txt', icon: FileText },
   { type: 'Plantilla', title: 'Plantilla para pedirle mejores resultados a cualquier IA', description: 'Una estructura sencilla y reutilizable para explicar tu situación, definir el objetivo y pedir el formato que necesitas.', meta: 'TXT · LECTURA EN LÍNEA', href: '/3.txt', icon: FileText },
