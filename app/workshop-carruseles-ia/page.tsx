@@ -1,5 +1,4 @@
 import { ArrowRight, Check, Layers3, Sparkles } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
@@ -12,7 +11,7 @@ export default function WorkshopCarruselesPage() {
     <main className="workshop-page">
       <header className="workshop-header">
         <Link className="workshop-brand" href="/" aria-label="Ir al inicio de AndresGomez OS">
-          <Image src="/andresgomezos-logo.png" alt="" width={28} height={28} />
+          <img src="/andresgomezos-logo.png" alt="Logo de AndresGomez OS" width="28" height="28" />
           <span>AndresGomez[OS]</span>
         </Link>
         <span className="workshop-status"><i /> Lista prioritaria abierta</span>
