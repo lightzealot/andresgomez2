@@ -1,0 +1,20 @@
+{
+  "mode": "built-in image_gen",
+  "prompts": [
+    {
+      "key": "criterio",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial website resource cover, landscape 3:2.\nPrimary request: close still life photograph of a magnifying glass over completely blank white paper and a geometric transparent glass prism, evoking careful analysis and thoughtful AI prompting.\nScene/backdrop: refined studio tabletop, white and silver surfaces.\nStyle/medium: professional monochrome editorial photography with natural fine film grain, real optical materials and convincing reflections.\nComposition/framing: close oblique view, strong graphic arrangement of magnifying glass, paper and prism; landscape 3:2; cover-ready composition.\nLighting/mood: precise studio lighting, soft directional highlights and crisp restrained shadows, thoughtful and calm.\nColor palette: white, silver, black, with one restrained electric blue accent appearing as a subtle refracted edge of the glass prism.\nConstraints: no text, no lettering, no numbers, no logos, no watermarks, no UI mockups; paper is entirely blank; photograph rather than 3D rendering.",
+      "asset": "public/recursos/criterio.jpg"
+    },
+    {
+      "key": "sistema",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial website resource cover, landscape 3:2.\nPrimary request: top-down photograph of an organized creative work desk with a blank weekly planner, a simple timer, one small electric blue card, and a cropped silver laptop with no visible UI, evoking content systems and automation.\nScene/backdrop: clean light gray studio desk.\nStyle/medium: professional monochrome editorial photography with natural fine film grain and tactile paper and brushed metal.\nComposition/framing: precise overhead flat lay, balanced organized desk objects; laptop cropped to show silver body edge and closed lid only; landscape 3:2.\nLighting/mood: exact studio lighting with broad soft shadows and silver highlights, intentional and focused.\nColor palette: white, silver, black, with the small card as the only restrained electric blue accent.\nConstraints: weekly planner is blank paper divided only by faint straight grid lines, no text or numbers; timer has no visible lettering or numerals; no text, logos, watermarks, UI mockups, or screens; photographic realism rather than 3D rendering.",
+      "asset": "public/recursos/sistema.jpg"
+    },
+    {
+      "key": "visual",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial website resource cover, landscape 3:2.\nPrimary request: cinematic creative studio still life photograph with a camera lens, translucent acrylic geometric shapes and a small electric blue illuminated sphere on a graphite surface, evoking image creation and cinematic creative flow.\nScene/backdrop: dark graphite studio surface with a soft dark gray background.\nStyle/medium: professional monochrome editorial photography, natural fine film grain, real glass, acrylic and metal textures.\nComposition/framing: low oblique cinematic close view; camera lens and layered translucent shapes form a precise asymmetric composition, small glowing blue sphere; landscape 3:2.\nLighting/mood: precise sculptural studio lighting, focused highlights, deep controlled shadows, elegant photographic atmosphere.\nColor palette: graphite black, silver, white highlights, with the small sphere as the sole restrained electric blue accent.\nConstraints: unbranded camera lens without any lettering or numerals; no rendered text, logos, watermarks, UI mockups, or humans; real photograph rather than 3D render.",
+      "asset": "public/recursos/visual.jpg"
+    }
+  ]
+}
