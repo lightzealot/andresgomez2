@@ -118,3 +118,28 @@
 .sidebar-collapsed .portfolio-menu{left:calc(56px + 76px)}
 @media(max-width:760px){.sidebar{width:min(300px,86vw)}.conversation,.sidebar-collapsed .conversation{margin-left:0}.topbar{height:60px;padding:0 14px 0 52px}.thread{width:min(calc(100% - 32px),680px)}.welcome{min-height:auto;padding-top:58px;grid-template-columns:1fr;gap:14px}.welcome h1{font-size:clamp(30px,7vw,38px)}.section-block{padding-bottom:56px}.starter-map article{min-height:0}.portfolio-menu{left:52px;top:54px}.sidebar-collapsed .portfolio-menu{left:52px}}
 @media(max-width:420px){.topbar-actions{gap:9px}.theme-toggle svg{display:none}.model-selector{font-size:15px}.contact-pill{padding-inline:12px}.assistant-response{gap:11px}.user-prompt{max-width:92%}}
+
+/* Sidebar readability across widths, heights and text zoom */
+.sidebar{height:100vh;height:100dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--hairline) transparent}
+.sidebar-top{flex:0 0 auto;min-height:40px;height:auto}
+.brand{min-width:0}
+.brand-name{min-width:0;overflow-wrap:anywhere;line-height:1.3}
+.sidebar nav,.recent,.newsletter,.sidebar-footer{flex-shrink:0}
+.sidebar .nav-label{color:#585858;font-size:13px;line-height:1.4}
+.sidebar .nav-item,.sidebar .recent button{min-height:42px;color:#353535;font-size:15px;line-height:1.4}
+.sidebar .nav-item svg,.sidebar .recent button svg{flex:0 0 auto}
+.sidebar .recent button{width:100%;white-space:normal;overflow:visible;text-overflow:clip;align-items:flex-start;overflow-wrap:anywhere}
+.sidebar .recent button svg{margin-top:3px}
+.sidebar .recent button.active,.sidebar .nav-item.active{color:#101010}
+.sidebar-footer{min-width:0;align-items:center;padding-bottom:8px}
+.sidebar-footer div{min-width:0}
+.sidebar-footer strong,.sidebar-footer span{overflow-wrap:anywhere}
+.sidebar-footer span{color:#626262}
+.newsletter>p{color:#5c5c5c;font-size:13px;line-height:1.5}
+.newsletter-field input{font-size:16px}
+.dark .sidebar .nav-label{color:#bcbcbc}
+.dark .sidebar .nav-item,.dark .sidebar .recent button{color:#dedede}
+.dark .sidebar .recent button.active,.dark .sidebar .nav-item.active{color:#fff}
+.dark .sidebar-footer span,.dark .newsletter>p{color:#bcbcbc}
+@media(max-width:760px){.sidebar{width:min(320px,calc(100vw - 24px));padding:15px 14px 20px;visibility:hidden}.sidebar.is-open{visibility:visible}.sidebar-collapsed .sidebar{width:min(320px,calc(100vw - 24px));padding:15px 14px 20px;visibility:hidden}.sidebar-collapsed .sidebar.is-open{visibility:visible}.sidebar .recent button{padding-block:9px}.sidebar-footer{margin-top:24px}}
+@media(max-height:650px){.sidebar-top{margin-bottom:12px}.recent{margin-top:18px}.newsletter{margin-top:16px}.sidebar-footer{margin-top:20px}}

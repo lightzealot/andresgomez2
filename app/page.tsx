@@ -78,16 +78,16 @@ export default function Home() {
   };
 
   return <main className={`portfolio-shell ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-    <button className="mobile-menu" onClick={() => { setSidebarCollapsed(false); setMobileOpen(true); }} aria-label="Abrir menú"><Menu size={20}/></button>
-      <aside className={`sidebar ${mobileOpen ? 'is-open' : ''}`}>
+    <button className="mobile-menu" onClick={() => { setSidebarCollapsed(false); setMobileOpen(true); }} aria-label="Abrir menú" aria-controls="site-sidebar" aria-expanded={mobileOpen}><Menu size={20}/></button>
+      <aside id="site-sidebar" className={`sidebar ${mobileOpen ? 'is-open' : ''}`}>
       <div className="sidebar-top">
         <button className="brand" onClick={() => { setSidebarCollapsed(false); goTo('inicio'); }} aria-label="Ir al inicio"><span className="brand-mark"><img src="/andresgomezos-logo.png" alt=""/></span><span className="brand-name">Andrés Gómez</span><span className="sidebar-tooltip" role="tooltip">Abrir barra lateral</span></button>
         <button className="icon-button desktop-collapse" onClick={() => setSidebarCollapsed(true)} aria-label="Ocultar barra lateral"><PanelLeftClose size={18}/></button>
         <button className="icon-button mobile-close" onClick={() => setMobileOpen(false)} aria-label="Cerrar menú"><X size={19}/></button>
       </div>
       <nav aria-label="Navegación principal"><p className="nav-label">Explorar</p>
-        {nav.map(item => { const Icon = item.icon; return <button key={item.id} className={`nav-item ${active === item.id ? 'active' : ''}`} onClick={() => goTo(item.id)}><Icon size={17}/><span>{item.label}</span></button>; })}
-        <a className="nav-item" href="/recursos"><Library size={17}/><span>Recursos</span></a>
+        {nav.map(item => { const Icon = item.icon; return <button key={item.id} className={`nav-item ${active === item.id ? 'active' : ''}`} onClick={() => goTo(item.id)} aria-label={item.label}><Icon size={17}/><span>{item.label}</span></button>; })}
+        <a className="nav-item" href="/recursos" aria-label="Recursos"><Library size={17}/><span>Recursos</span></a>
       </nav>
       <div className="recent"><p className="nav-label">Labs | Playground</p>{projects.map(project => <button key={project.number} className={openLabs.includes(`resource-${project.number}`) ? 'active' : ''} onClick={() => openLab(project.number)}><Folder size={15}/>{project.title}</button>)}</div>
       <form className="newsletter" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={subscribe}><input type="hidden" name="form-name" value="newsletter"/><input className="newsletter-honeypot" name="bot-field" tabIndex={-1} autoComplete="off" aria-hidden="true"/><div className="newsletter-title"><Mail size={15}/><strong>Newsletter</strong></div>{subscribed ? <p className="newsletter-success" role="status">{newsletterMessage}</p> : <><p>Una idea práctica de IA, sin llenar tu bandeja.</p><div className="newsletter-field"><input type="email" name="email" required autoComplete="email" value={newsletterEmail} onChange={event => { setNewsletterEmail(event.target.value); setNewsletterStatus('idle'); setNewsletterMessage(''); }} placeholder="tu@email.com" aria-label="Correo para el newsletter" aria-describedby={newsletterMessage ? 'newsletter-message' : undefined}/><button type="submit" disabled={newsletterStatus === 'submitting'} aria-label={newsletterStatus === 'submitting' ? 'Guardando suscripción' : 'Suscribirme'}><ArrowUp size={15}/></button></div>{newsletterMessage && <p id="newsletter-message" className="newsletter-error" role="alert">{newsletterMessage}</p>}</>}</form>
