@@ -1,6 +1,73 @@
 {
   "mode": "built-in image_gen",
-  "prompts": [
+  "generation_calls": 8,
+  "targeted_edit_calls": 3,
+  "final_asset_count": 8,
+  "format": "JPEG",
+  "dimensions": [
+    1440,
+    960
+  ],
+  "jpeg_quality": 87,
+  "assets": [
+    {
+      "key": "prompt-ia-objetiva",
+      "final_path": "public/recursos/prompt-ia-objetiva.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Close editorial desk scene showing TWO adult collaborators' hands comparing a proposed plan with a printed evidence chart. One adult uses a blue pen to mark a discrepancy on the proposed paper; the other adult points toward the corresponding data on the evidence sheet. A subtly cropped laptop in background. Papers and hands dominate the frame. Charts have schematic unlabeled bars only; no factual numbers or readable words. Constructive critique and practical evidence review.",
+      "edit_prompt": null,
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "sistema-60-minutos-contenido-ia",
+      "final_path": "public/recursos/sistema-60-minutos-contenido-ia.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Top-down ACTUAL physical content planning session on a white desk. A large weekly planner has exactly FIVE distinct columns, each physical column heading printed clearly and exactly 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE' in simple black sans-serif. The five columns contain visible laid-out cards depicting: two vertical-video thumbnails, one multi-slide carousel contact sheet, and two story-strip thumbnails. Real hands lay out these posts. Beside the planner a compact mechanical countdown timer with the exact large numeral '60' clearly on its dial. No other readable text, no fake branded application. This is a practical one-hour planning session.",
+      "edit_prompt": "Use case: precise-object-edit. Edit this exact photograph. Change ONLY the notebook at the far left: remove all five handwritten words, replacing them with five short abstract straight ink lines, each beside its existing checkbox. Keep everything else identical, especially the five legible planner headers LUN, MAR, MIÉ, JUE, VIE, the five content cards, hands and the numeral 60 on timer. No added words. Preserve 3:2 landscape photo and natural lighting.",
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "10-automatizaciones-chatgpt",
+      "final_path": "public/recursos/10-automatizaciones-chatgpt.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Organized desk with smartphone prominently showing a SIMPLE unbranded graphic: exactly ten blue checklist/reminder rows with small check circles, plus a clearly visible reminder bell icon near the top of the display. There is no readable text. Beside it a physical silver alarm clock and paper notebook with a handwritten checklist rendered as empty horizontal strokes and checks, no readable words. Realistic photo of repeating reminders and practical routines. Not robotic automation.",
+      "edit_prompt": "Use case: precise-object-edit. Edit this exact photograph. Change ONLY smartphone display checklist: it currently contains nine rows. Make exactly TEN blue reminder rows beneath the existing bell icon. Each row consists of one blue check circle and one light-blue horizontal rounded bar. Ten identical rows, evenly spaced, all fully visible, no text. There must be precisely ten blue check circles and ten corresponding horizontal bars. Keep alarm clock, notebook, desk, lighting, phone shape, bell and all other objects unchanged. Preserve 3:2 landscape photo.",
+      "inspection": "Clear unbranded reminder list and bell. Edited result has 11 visible rows; parent explicitly accepted list without exact row count."
+    },
+    {
+      "key": "ia-primer-paso",
+      "final_path": "public/recursos/ia-primer-paso.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Over-the-shoulder view of an adult beginner calmly typing their first question into a laptop at an approachable everyday home desk. Laptop screen shows a single generic unbranded chat-like speech bubble, without readable text. A simple notebook beside laptop has one short task represented by a checkbox and neutral ink lines, no readable words. Soft natural light, adult posture relaxed and focused, practical everyday learning. No futuristic machinery.",
+      "edit_prompt": null,
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "mejores-resultados-ia",
+      "final_path": "public/recursos/mejores-resultados-ia.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Close tabletop editorial photograph on white desk. THREE neatly organized physical paper cards are prominent, with EXACT clearly legible printed uppercase labels 'CONTEXTO', 'OBJETIVO', 'FORMATO', each label on its own card, simple charcoal sans-serif. Real adult hand holding a blue pen fills in an example prompt on a larger sheet beneath, using tiny indistinct handwritten lines only, no other readable text. The physical cards are literal building blocks for a clear instruction. Natural side light, premium tactile paper, restrained electric-blue accents.",
+      "edit_prompt": "Use case: precise-object-edit. Edit this exact photograph. Change ONLY the stack of three books at upper left: remove all text from their spines, leaving plain unmarked charcoal and white cloth spines. Keep everything else identical, especially the three large card labels CONTEXTO, OBJETIVO, FORMATO, the hand with blue pen, paper and natural light. The handwritten prompt stays small indistinct handwriting. No other readable words, no branding. Preserve the 3:2 landscape photo.",
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "30-atajos-imagenes-ia",
+      "final_path": "public/recursos/30-atajos-imagenes-ia.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. A carefully composed premium photographic 2x2 CONTACT SHEET filling the image, four equal panels separated by narrow white gutters. All four panels feature the SAME unbranded cobalt-blue reusable coffee bottle with the same shape and silver cap. Panel 1: pristine studio product photograph on white. Panel 2: overhead ingredient flatlay with coffee beans. Panel 3: playful miniature-world scene of the same bottle towering over a tiny crafted landscape. Panel 4: dramatic high-speed splash photograph of the same bottle with splashing dark coffee against charcoal. Each style immediately visually distinct and professionally art-directed. No words, no labels, no logos, no camera lens. Overall landscape 3:2.",
+      "edit_prompt": null,
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "plantilla-google-flow",
+      "final_path": "public/recursos/plantilla-google-flow.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Overhead professional physical image art-direction board on a light tabletop. Central large photographic reference shows a simple unbranded amber skincare bottle. Around it FOUR PHOTOGRAPHIC printed swatches clearly depict respectively a location/background, material/texture style, lighting setup, and camera framing, all referring to the same amber bottle. Subtle silver binder clips and electric-blue tape connect this detailed visual brief. No readable text or labels, no fake app screens. Photographic images pinned to actual paper board, cohesive real-world art direction.",
+      "edit_prompt": null,
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    },
+    {
+      "key": "google-flow-principiantes",
+      "final_path": "public/recursos/google-flow-principiantes.jpg",
+      "generation_prompt": "Use case: photorealistic-natural. Asset type: resource cover photograph. Generate one premium professional editorial photograph, landscape 3:2, a coherent silver/white/charcoal palette with restrained electric-blue accents, natural window light, tactile real materials, detailed but clean composition, realistic adult anatomy. Literal subject specific to this resource. No generic prisms, abstract orbs, robots, branding, logos, watermark. Realistic creative beginner video workspace. A laptop displays a simple NONBRANDED film timeline showing three consecutive thumbnails of one consistent coastal scene, no UI words, no logos. Beside it a physical printed three-panel photographic storyboard shows the SAME coast with one wide frame, one medium frame, one close detail, and a modest realistic compact camera lies beside the storyboard. Focus on the first video project, frames and sequence. Natural window lighting, silver laptop, white paper, charcoal desktop details and restrained electric-blue accent. No unrealistic gear.",
+      "edit_prompt": null,
+      "inspection": "Visually inspected and approved. Requested short printed labels legible when present."
+    }
+  ],
+  "previous_generic_covers": [
     {
       "key": "criterio",
       "prompt": "Use case: photorealistic-natural\nAsset type: editorial website resource cover, landscape 3:2.\nPrimary request: close still life photograph of a magnifying glass over completely blank white paper and a geometric transparent glass prism, evoking careful analysis and thoughtful AI prompting.\nScene/backdrop: refined studio tabletop, white and silver surfaces.\nStyle/medium: professional monochrome editorial photography with natural fine film grain, real optical materials and convincing reflections.\nComposition/framing: close oblique view, strong graphic arrangement of magnifying glass, paper and prism; landscape 3:2; cover-ready composition.\nLighting/mood: precise studio lighting, soft directional highlights and crisp restrained shadows, thoughtful and calm.\nColor palette: white, silver, black, with one restrained electric blue accent appearing as a subtle refracted edge of the glass prism.\nConstraints: no text, no lettering, no numbers, no logos, no watermarks, no UI mockups; paper is entirely blank; photograph rather than 3D rendering.",

@@ -34,7 +34,11 @@ assert.equal(parseMarkdown(content['30-atajos-imagenes-ia']).filter(block => blo
 assert.equal(parseMarkdown(content['10-automatizaciones-chatgpt']).filter(block => block.type === 'code').length, 11);
 assert.equal(parseMarkdown(content['google-flow-principiantes']).filter(block => block.type === 'code').length, 3);
 assert.equal(parseMarkdown(content['sistema-60-minutos-contenido-ia']).filter(block => block.type === 'table').length, 3);
-for (const cover of ['criterio', 'sistema', 'visual']) assert(existsSync(resolve(root, `public/recursos/${cover}.jpg`)));
+for (const slug of Object.keys(content)) {
+  assert(existsSync(resolve(root, `public/recursos/${slug}.jpg`)), `${slug}: missing dedicated cover`);
+  const html = readFileSync(resolve(root, `dist/client/recursos/${slug}.html`), 'utf8');
+  assert(html.includes(`/recursos/${slug}.jpg`), `${slug}: cover does not match resource`);
+}
 
 const library = readFileSync(resolve(root, 'dist/client/recursos.html'), 'utf8');
 for (const slug of Object.keys(content)) assert(library.includes(`/recursos/${slug}/`), `${slug}: missing from library`);

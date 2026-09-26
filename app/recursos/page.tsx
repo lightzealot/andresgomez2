@@ -26,7 +26,7 @@ export default function RecursosPage() {
         <div className={styles.collectionHeading}><h2 id="coleccion">Explora la colección</h2><span>{resources.length} recursos / acceso libre</span></div>
         <div className={styles.grid}>
           {rest.map((resource, index) => <a className={styles.card} key={resource.slug} href={`/recursos/${resource.slug}/`}>
-            <div className={`${styles.cardImage} ${styles['crop' + (index % 3)]}`}><img src={`/recursos/${resource.image}.jpg`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960}/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>
+            <div className={styles.cardImage}><img src={`/recursos/${resource.image}.jpg`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960}/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>
             <div className={styles.cardBody}><span className={styles.cardCategory}>{resource.category} / {resource.type}</span><h3>{resource.title}</h3><p>{resource.description}</p><div className={styles.cardBottom}><span>{readingMinutes(resource.slug)} min de lectura</span><ArrowUpRight size={20} aria-hidden="true"/></div></div>
           </a>)}
         </div>
