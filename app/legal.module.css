@@ -1,0 +1,16 @@
+.shell{min-height:100vh;background:var(--paper);color:var(--ink)}
+.header,.footer{max-width:960px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--hairline);font-size:14px}
+.header a{font-weight:600;text-decoration:none;color:var(--ink)}
+.header span{color:var(--ash)}
+.content{max-width:768px;margin:0 auto;padding:56px 24px 72px;font-size:16px;line-height:1.75;overflow-wrap:anywhere}
+.content h1{max-width:none;font-size:clamp(28px,5vw,40px);line-height:1.2;margin-bottom:20px}
+.content h2{font-size:21px;line-height:1.4;margin:36px 0 12px;font-weight:600;letter-spacing:-.015em}
+.content p{margin:12px 0}
+.content ul,.content ol{padding-left:24px;margin:12px 0;list-style-position:outside}
+.content ul{list-style-type:disc}.content ol{list-style-type:decimal}
+.content li{margin:8px 0}
+.content a,.footer a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.footer{border-bottom:0;border-top:1px solid var(--hairline);flex-wrap:wrap;line-height:1.7}
+.footer nav{display:flex;flex-wrap:wrap;gap:12px 24px}
+.shell a:focus-visible{outline:2px solid currentColor;outline-offset:5px;border-radius:2px}
+@media(max-width:600px){.content{padding-top:36px}.header,.footer{padding:20px 24px}}
