@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import LegalLayout from '../legal-layout';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://andresgomez.store/privacidad' },
   title: "Política de Privacidad | Autochat",
   description: "Política de privacidad de Autochat: datos tratados, uso, seguridad, conservación y derechos de las personas.",
 };
@@ -75,7 +76,7 @@ export default function PrivacidadPage() {
     <h2>{"9. Seguridad"}</h2>
     <p>{"La base de datos está en una red privada, no expuesta a internet. Los tokens de acceso se cifran. El panel usa conexión cifrada (HTTPS), contraseñas con hash, cookies de sesión seguras y límite de intentos de acceso. Verificamos criptográficamente que los eventos recibidos provengan de Meta."}</p>
     <h2>{"10. Tus derechos"}</h2>
-    <p>{"Puedes solicitar en cualquier momento "}<strong>{"conocer, actualizar, rectificar o eliminar"}</strong>{" tus datos, revocar tu autorización y presentar quejas ante la "}<strong>{"Superintendencia de Industria y Comercio (SIC)"}</strong>{" de Colombia o la autoridad de tu país. Para eliminar tus datos sigue las instrucciones de "}<a href="/eliminacion-datos/">{"https://andresgomez.store/eliminacion-datos/"}</a>{""}{" o escríbenos a "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{". Respondemos en un máximo de "}<strong>{"15 días hábiles"}</strong>{"."}</p>
+    <p>{"Puedes solicitar en cualquier momento "}<strong>{"conocer, actualizar, rectificar o eliminar"}</strong>{" tus datos, revocar tu autorización y presentar quejas ante la "}<strong>{"Superintendencia de Industria y Comercio (SIC)"}</strong>{" de Colombia o la autoridad de tu país. Para eliminar tus datos sigue las instrucciones de "}<a href="/eliminacion-datos">{"https://andresgomez.store/eliminacion-datos"}</a>{""}{" o escríbenos a "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{". Respondemos en un máximo de "}<strong>{"15 días hábiles"}</strong>{"."}</p>
     <p>{"También puedes dejar de recibir mensajes en cualquier momento: basta con no volver a comentar la palabra clave, escribirnos \"no más mensajes\" o bloquear la cuenta. Marcamos tu contacto como \"no contactar\" y el servicio no vuelve a escribirte."}</p>
     <p>{"Puedes revisar y quitar el acceso de apps a tu cuenta de Instagram desde la configuración de Instagram (Configuración → Seguridad → Apps y sitios web)."}</p>
     <h2>{"11. Menores de edad"}</h2>
@@ -151,7 +152,7 @@ export default function PrivacidadPage() {
     <h2>{"9. Security"}</h2>
     <p>{"The database runs on a private network, not exposed to the internet. Access tokens are encrypted. The dashboard uses HTTPS, hashed passwords, secure session cookies and login rate limiting. We cryptographically verify that incoming events come from Meta."}</p>
     <h2>{"10. Your rights"}</h2>
-    <p>{"You may at any time request to "}<strong>{"access, update, correct or delete"}</strong>{" your data, withdraw your authorization and file complaints with Colombia's "}<strong>{"Superintendencia de Industria y Comercio (SIC)"}</strong>{" or your local authority. To delete your data follow the instructions at "}<a href="/eliminacion-datos/#english">{"https://andresgomez.store/eliminacion-datos/#english"}</a>{""}{" or email "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{". We respond within "}<strong>{"15 business days"}</strong>{"."}</p>
+    <p>{"You may at any time request to "}<strong>{"access, update, correct or delete"}</strong>{" your data, withdraw your authorization and file complaints with Colombia's "}<strong>{"Superintendencia de Industria y Comercio (SIC)"}</strong>{" or your local authority. To delete your data follow the instructions at "}<a href="/eliminacion-datos#english">{"https://andresgomez.store/eliminacion-datos#english"}</a>{""}{" or email "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{". We respond within "}<strong>{"15 business days"}</strong>{"."}</p>
     <p>{"You can stop receiving messages at any time: simply don't comment the keyword again, message us \"stop\", or block the account. We mark your contact as \"do not contact\" and the service will not message you again."}</p>
     <p>{"You can review and remove app access to your Instagram account in Instagram settings (Settings → Security → Apps and websites)."}</p>
     <h2>{"11. Children"}</h2>

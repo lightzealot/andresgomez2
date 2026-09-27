@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import LegalLayout from '../legal-layout';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://andresgomez.store/condiciones-del-servicio' },
   title: "Términos del Servicio | Autochat",
   description: "Términos de uso de Autochat y su panel de administración para automatizaciones de Instagram.",
 };
@@ -28,7 +29,7 @@ export default function TerminosPage() {
     <h2>{"8. Limitación de responsabilidad"}</h2>
     <p>{"En la medida permitida por la ley, el servicio se ofrece \"tal cual\" y no somos responsables por daños indirectos derivados de su uso o de fallos de plataformas de terceros."}</p>
     <h2>{"9. Privacidad"}</h2>
-    <p>{"El tratamiento de datos personales se rige por nuestra Política de privacidad: "}<a href="/privacidad/">{"https://andresgomez.store/privacidad/"}</a>{""}</p>
+    <p>{"El tratamiento de datos personales se rige por nuestra Política de privacidad: "}<a href="/privacidad">{"https://andresgomez.store/privacidad"}</a>{""}</p>
     <h2>{"10. Terminación"}</h2>
     <p>{"Podemos suspender el acceso al panel ante un uso que incumpla estos términos. Puedes dejar de usar el servicio y solicitar la eliminación de tus datos en cualquier momento."}</p>
     <h2>{"11. Cambios"}</h2>
@@ -59,7 +60,7 @@ export default function TerminosPage() {
     <h2>{"8. Limitation of liability"}</h2>
     <p>{"To the extent permitted by law, the service is provided \"as is\" and we are not liable for indirect damages arising from its use or from third-party platform failures."}</p>
     <h2>{"9. Privacy"}</h2>
-    <p>{"Personal data processing is governed by our Privacy Policy: "}<a href="/privacidad/#english">{"https://andresgomez.store/privacidad/#english"}</a>{""}</p>
+    <p>{"Personal data processing is governed by our Privacy Policy: "}<a href="/privacidad#english">{"https://andresgomez.store/privacidad#english"}</a>{""}</p>
     <h2>{"10. Termination"}</h2>
     <p>{"We may suspend dashboard access for use that breaches these terms. You may stop using the service and request deletion of your data at any time."}</p>
     <h2>{"11. Changes"}</h2>

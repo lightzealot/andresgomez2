@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import LegalLayout from '../legal-layout';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://andresgomez.store/eliminacion-datos' },
   title: "Instrucciones para la eliminación de datos | Autochat",
   description: "Cómo eliminar tus datos de Autochat por correo o mensaje directo y desconectar una cuenta profesional.",
 };
@@ -22,7 +23,7 @@ export default function EliminacionDatosPage() {
     <p>{"Puedes desconectarla desde el panel (Configuración → Desconectar), lo que borra de inmediato el token guardado, o solicitarlo por correo. También puedes quitar el acceso desde Instagram: Configuración → Seguridad → Apps y sitios web → Autochat / andygraph2 → Eliminar."}</p>
     <h2>{"Dejar de recibir mensajes sin borrar datos"}</h2>
     <p>{"Escríbenos \"no más mensajes\" y marcaremos tu contacto como \"no contactar\"."}</p>
-    <p>{"Más información en nuestra Política de privacidad: "}<a href="/privacidad/">{"https://andresgomez.store/privacidad/"}</a>{""}</p>
+    <p>{"Más información en nuestra Política de privacidad: "}<a href="/privacidad">{"https://andresgomez.store/privacidad"}</a>{""}</p>
     </section>
     <section lang="en" id="english" aria-label="Data Deletion Instructions">
       <h2>{"Data Deletion Instructions"}</h2>
@@ -39,7 +40,7 @@ export default function EliminacionDatosPage() {
     <p>{"You can disconnect it from the dashboard (Settings → Disconnect), which immediately deletes the stored token, or request it by email. You can also remove access from Instagram: Settings → Security → Apps and websites → Autochat / andygraph2 → Remove."}</p>
     <h2>{"Stop receiving messages without deleting data"}</h2>
     <p>{"Message us \"stop\" and we will mark your contact as \"do not contact\"."}</p>
-    <p>{"More information in our Privacy Policy: "}<a href="/privacidad/#english">{"https://andresgomez.store/privacidad/#english"}</a>{""}</p>
+    <p>{"More information in our Privacy Policy: "}<a href="/privacidad#english">{"https://andresgomez.store/privacidad#english"}</a>{""}</p>
     </section>
   </LegalLayout>;
 }
