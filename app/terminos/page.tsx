@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function TerminosPage() {
-  return <LegalLayout title="Términos del Servicio">
-    <nav aria-label="Idioma / Language"><a href="#english" lang="en">English version</a></nav>
+  return <LegalLayout title="Términos del Servicio" englishTitle="Terms of Service" spanishContent={
     <section lang="es" id="espanol" aria-label="Términos del Servicio">
     <p><strong>Última actualización:</strong> <time dateTime="2026-09-27">{"27 de septiembre de 2026"}</time></p>
     <h2>{"1. Servicio"}</h2>
@@ -39,9 +38,8 @@ export default function TerminosPage() {
     <h2>{"13. Contacto"}</h2>
     <p><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></p>
     </section>
+  } englishContent={
     <section lang="en" id="english" aria-label="Terms of Service">
-      <h2>{"Terms of Service"}</h2>
-      <p><a href="#espanol" lang="es">Versión en español</a></p>
     <p><strong>Last updated:</strong> <time dateTime="2026-09-27">{"September 27, 2026"}</time></p>
     <h2>{"1. Service"}</h2>
     <p>{"Autochat automates replies to comments and direct messages on Instagram for the professional account @andyontrade and provides an admin dashboard to configure those automations. It is provided by Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
@@ -70,5 +68,5 @@ export default function TerminosPage() {
     <h2>{"13. Contact"}</h2>
     <p><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></p>
     </section>
-  </LegalLayout>;
+  } />;
 }

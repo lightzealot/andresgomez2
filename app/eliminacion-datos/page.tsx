@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function EliminacionDatosPage() {
-  return <LegalLayout title="Instrucciones para la eliminación de datos">
-    <nav aria-label="Idioma / Language"><a href="#english" lang="en">English version</a></nav>
+  return <LegalLayout title="Instrucciones para la eliminación de datos" englishTitle="Data Deletion Instructions" spanishContent={
     <section lang="es" id="espanol" aria-label="Instrucciones para la eliminación de datos">
     <p><strong>Última actualización:</strong> <time dateTime="2026-09-27">{"27 de septiembre de 2026"}</time></p>
     <p>{"Si interactuaste con @andyontrade (comentaste una palabra clave o tocaste un botón en un mensaje) y quieres que eliminemos tus datos, tienes estas opciones:"}</p>
@@ -25,9 +24,8 @@ export default function EliminacionDatosPage() {
     <p>{"Escríbenos \"no más mensajes\" y marcaremos tu contacto como \"no contactar\"."}</p>
     <p>{"Más información en nuestra Política de privacidad: "}<a href="/privacidad">{"https://andresgomez.store/privacidad"}</a>{""}</p>
     </section>
+  } englishContent={
     <section lang="en" id="english" aria-label="Data Deletion Instructions">
-      <h2>{"Data Deletion Instructions"}</h2>
-      <p><a href="#espanol" lang="es">Versión en español</a></p>
     <p><strong>Last updated:</strong> <time dateTime="2026-09-27">{"September 27, 2026"}</time></p>
     <p>{"If you interacted with @andyontrade (commented a keyword or tapped a button in a message) and want us to delete your data, you have these options:"}</p>
     <h2>{"Option 1 — By email"}</h2>
@@ -42,5 +40,5 @@ export default function EliminacionDatosPage() {
     <p>{"Message us \"stop\" and we will mark your contact as \"do not contact\"."}</p>
     <p>{"More information in our Privacy Policy: "}<a href="/privacidad#english">{"https://andresgomez.store/privacidad#english"}</a>{""}</p>
     </section>
-  </LegalLayout>;
+  } />;
 }

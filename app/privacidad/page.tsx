@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacidadPage() {
-  return <LegalLayout title="Política de Privacidad">
-    <nav aria-label="Idioma / Language"><a href="#english" lang="en">English version</a></nav>
+  return <LegalLayout title="Política de Privacidad" englishTitle="Privacy Policy" spanishContent={
     <section lang="es" id="espanol" aria-label="Política de Privacidad">
     <p><strong>Última actualización:</strong> <time dateTime="2026-09-27">{"27 de septiembre de 2026"}</time></p>
     <h2>{"1. Quiénes somos"}</h2>
@@ -84,9 +83,8 @@ export default function PrivacidadPage() {
     <h2>{"12. Cambios"}</h2>
     <p>{"Si cambiamos esta política, actualizaremos la fecha de arriba. Los cambios importantes se anunciarán en esta página."}</p>
     </section>
+  } englishContent={
     <section lang="en" id="english" aria-label="Privacy Policy">
-      <h2>{"Privacy Policy"}</h2>
-      <p><a href="#espanol" lang="es">Versión en español</a></p>
     <p><strong>Last updated:</strong> <time dateTime="2026-09-27">{"September 27, 2026"}</time></p>
     <h2>{"1. Who we are"}</h2>
     <p>{"This policy explains how "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia) (\"we\") processes personal data in connection with "}<strong>{"Autochat"}</strong>{", a service that automates Instagram replies for the professional account "}<strong>{"@andyontrade"}</strong>{", and an admin dashboard at "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" We are the data controller for the data described here."}</p>
@@ -160,5 +158,5 @@ export default function PrivacidadPage() {
     <h2>{"12. Changes"}</h2>
     <p>{"If we change this policy we will update the date above. Material changes will be announced on this page."}</p>
     </section>
-  </LegalLayout>;
+  } />;
 }
