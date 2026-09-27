@@ -11,6 +11,26 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/privacidad/"
+  to = "/privacidad.html"
+  status = 200
+
+[[redirects]]
+  from = "/terminos/"
+  to = "/terminos.html"
+  status = 200
+
+[[redirects]]
+  from = "/condiciones-del-servicio/"
+  to = "/condiciones-del-servicio.html"
+  status = 200
+
+[[redirects]]
+  from = "/eliminacion-datos/"
+  to = "/eliminacion-datos.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

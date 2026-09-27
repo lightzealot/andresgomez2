@@ -10,6 +10,8 @@
 .content ul{list-style-type:disc}.content ol{list-style-type:decimal}
 .content li{margin:8px 0}
 .content a,.footer a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.content section{scroll-margin-top:24px}
+.content section[lang="en"]{margin-top:56px;padding-top:24px;border-top:1px solid var(--hairline)}
 .footer{border-bottom:0;border-top:1px solid var(--hairline);flex-wrap:wrap;line-height:1.7}
 .footer nav{display:flex;flex-wrap:wrap;gap:12px 24px}
 .shell a:focus-visible{outline:2px solid currentColor;outline-offset:5px;border-radius:2px}
