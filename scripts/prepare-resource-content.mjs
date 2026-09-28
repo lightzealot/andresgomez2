@@ -191,6 +191,8 @@ Cuando comparemos opciones, organiza la respuesta en: evidencia disponible, supu
 
 El prompt orienta el estilo de colaboración. Para comprobar una afirmación, pide las fuentes y revisa que realmente la respalden.`;
 
+data['videos-animados-claude'] = read('videos-animados-claude.md').replace(/^# .*\n\n/, '');
+
 writeFileSync(resolve(root, 'app/recursos/resource-content.json'), JSON.stringify(data, null, 2) + '\n');
 writeFileSync(resolve(root, 'public/prompt-ia-objetiva.txt'), 'El prompt para que tu IA sea objetiva\nPor @andyontrade\n\n' + data['prompt-ia-objetiva'] + '\n');
 console.log(Object.entries(data).map(([slug, text]) => ({ slug, characters: text.length, sections: [...text.matchAll(/^## (.+)$/gm)].map(x => x[1]) })));

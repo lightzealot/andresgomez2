@@ -30,7 +30,7 @@ export default async function ResourcePage({ params }: Props) {
     <ResourceHeader article/>
     <main id="contenido">
       <header className={styles.articleHero}>
-        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><img src="/andres-gomez-avatar.png" width={40} height={40} alt="Andrés Gómez"/><div><strong>Por @andyontrade</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
+        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><img src="/andres-gomez-avatar.png" width={40} height={40} alt="Andrés Gómez"/><div><strong>{'shared' in resource && resource.shared ? 'Compartido por @andyontrade' : 'Por @andyontrade'}</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
         <figure className={styles.heroImage}><img src={`/recursos/${resource.image}.jpg`} alt={coverAlt[resource.image]} width={1440} height={960} fetchPriority="high"/></figure>
       </header>
       <div className={styles.articleLayout}>

@@ -2,6 +2,7 @@ import content from './resource-content.json';
 
 export const resources = [
   { slug: 'prompt-ia-objetiva', type: 'Prompt', category: 'Criterio', title: 'El prompt para que tu IA sea objetiva', description: 'Una IA que evalúa tus ideas, señala errores y te ayuda a decidir con evidencia. Incluye los pasos para personalizar ChatGPT.', image: 'prompt-ia-objetiva', download: 'prompt-ia-objetiva.txt', featured: true },
+  { slug: 'videos-animados-claude', type: 'Guía completa', category: 'Video', title: 'Cómo hacer videos animados con Claude', description: 'De una idea a un MP4 con el skill video-pizarra: instalación, storyboard, animación, sonido y render. Sin suscripciones de edición; el uso del modelo puede tener costo.', image: 'videos-animados-claude', download: 'videos-animados-claude.txt', shared: true },
   { slug: 'sistema-60-minutos-contenido-ia', type: 'Guía práctica', category: 'Contenido', title: 'Sistema de 60 minutos para crear una semana de contenido con IA', description: 'De una idea a Reels, carrusel, historias y un calendario semanal listo para producir.', image: 'sistema-60-minutos-contenido-ia', download: 'sistema-60-minutos-contenido-ia.txt' },
   { slug: '10-automatizaciones-chatgpt', type: 'Guía práctica', category: 'Automatización', title: '10 ideas fáciles para automatizar con ChatGPT', description: 'Diez recordatorios listos para adaptar: contenido, estudio, pendientes y proyectos.', image: '10-automatizaciones-chatgpt', download: 'recurso-10-ideas-recordatorios-ia.txt' },
   { slug: 'ia-primer-paso', type: 'Lectura', category: 'Fundamentos', title: 'IA: primer paso', description: 'Empieza con un problema real y una estructura sencilla para obtener mejores respuestas.', image: 'ia-primer-paso', download: 'ia1.txt' },
@@ -19,6 +20,7 @@ export function readingMinutes(slug: string) {
   return Math.max(1, Math.ceil(resourceContent(slug).split(/\s+/).length / 200));
 }
 export const coverAlt: Record<string, string> = {
+  'videos-animados-claude': 'Una persona dibuja un storyboard de tres escenas de un cohete junto a un portátil con una animación tipo pizarra.',
   'prompt-ia-objetiva': 'Dos colaboradores revisan un plan y contrastan la propuesta con un gráfico de evidencia.',
   'sistema-60-minutos-contenido-ia': 'Planificación de cinco publicaciones semanales con un calendario y un temporizador de 60 minutos.',
   '10-automatizaciones-chatgpt': 'Teléfono con una lista de recordatorios, reloj y tareas anotadas sobre un escritorio.',

@@ -1,8 +1,8 @@
 {
   "mode": "built-in image_gen",
-  "generation_calls": 8,
+  "generation_calls": 9,
   "targeted_edit_calls": 3,
-  "final_asset_count": 8,
+  "final_asset_count": 9,
   "format": "JPEG",
   "dimensions": [
     1440,
@@ -10,6 +10,13 @@
   ],
   "jpeg_quality": 87,
   "assets": [
+    {
+      "key": "videos-animados-claude",
+      "final_path": "public/recursos/videos-animados-claude.jpg",
+      "generation_prompt": "Use case: photorealistic-natural\nAsset type: editorial cover image for a Spanish website guide titled \"Cómo hacer videos animados con Claude\"; do not render the title in the image.\nPrimary request: a premium, natural photographic scene showing cinematic planning for a whiteboard animation.\nScene/backdrop: a real professional desk in white, silver and charcoal, with restrained cobalt-blue accents and natural window light.\nSubject: a silver laptop displays a clean, unbranded whiteboard animation frame: one simple cobalt-blue hand-drawn small rocket on a white background, with ink motion trails. Beside the laptop is a physical white storyboard sheet with exactly THREE sketch panels depicting the SAME small rocket in a coherent sequence: first resting on the ground, then rising upward, then flying with motion trails. A realistic adult hand holds a blue marker and finishes the third storyboard panel. Both the laptop screen and all three storyboard panels are clearly visible and dominate the composition.\nStyle/medium: photorealistic editorial photography, authentic human hand anatomy, premium real materials, paper grain, brushed metal, subtle charcoal desk details.\nComposition/framing: landscape 3:2 image, oblique desk-level view from slightly above, laptop and storyboard arranged naturally and legibly as the focal subjects, cinematic but believable composition.\nLighting/mood: soft natural window light, clean and thoughtful working atmosphere.\nColor palette: white, silver, charcoal, restrained cobalt blue.\nConstraints: the rocket's design is identical in the laptop and each storyboard frame; the storyboard progression is unambiguous and physically coherent. This is conceptual cover imagery, not an actual app screenshot.\nAvoid: any readable words, letters, numerals, brands, logos, watermarks, UI text, extra storyboard panels, robots, abstract orbs, unrelated camera equipment, clutter, artificial glossy 3D rendering. Generate exactly one image.",
+      "edit_prompt": null,
+      "inspection": "Generated with built-in image_gen and visually inspected. Three coherent storyboard panels and matching whiteboard-style rocket on laptop; conceptual image rather than an app screenshot."
+    },
     {
       "key": "prompt-ia-objetiva",
       "final_path": "public/recursos/prompt-ia-objetiva.jpg",

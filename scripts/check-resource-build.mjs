@@ -5,7 +5,7 @@ import { parseMarkdown } from '../app/recursos/markdown.ts';
 
 const root = resolve(import.meta.dirname, '..');
 const content = JSON.parse(readFileSync(resolve(root, 'app/recursos/resource-content.json'), 'utf8'));
-assert.equal(Object.keys(content).length, 8, 'All eight resources must be present');
+assert.equal(Object.keys(content).length, 9, 'All nine resources must be present');
 const decode = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
 for (const [slug, markdown] of Object.entries(content)) {
@@ -34,6 +34,12 @@ assert.equal(parseMarkdown(content['30-atajos-imagenes-ia']).filter(block => blo
 assert.equal(parseMarkdown(content['10-automatizaciones-chatgpt']).filter(block => block.type === 'code').length, 11);
 assert.equal(parseMarkdown(content['google-flow-principiantes']).filter(block => block.type === 'code').length, 3);
 assert.equal(parseMarkdown(content['sistema-60-minutos-contenido-ia']).filter(block => block.type === 'table').length, 3);
+const videoGuide = parseMarkdown(content['videos-animados-claude']);
+assert.equal(videoGuide.filter(block => block.type === 'table').length, 5, 'Keep all source tables');
+assert.equal(videoGuide.filter(block => block.type === 'code').length, 10, 'Keep all command and code blocks');
+assert(content['videos-animados-claude'].includes('https://github.com/santmun/video-pizarra'));
+assert(content['videos-animados-claude'].includes('## 8 · Resumen en 10 líneas'));
+assert(content['videos-animados-claude'].includes('## Fuente de la guía'));
 for (const slug of Object.keys(content)) {
   assert(existsSync(resolve(root, `public/recursos/${slug}.jpg`)), `${slug}: missing dedicated cover`);
   const html = readFileSync(resolve(root, `dist/client/recursos/${slug}.html`), 'utf8');
@@ -42,4 +48,4 @@ for (const slug of Object.keys(content)) {
 
 const library = readFileSync(resolve(root, 'dist/client/recursos.html'), 'utf8');
 for (const slug of Object.keys(content)) assert(library.includes(`/recursos/${slug}/`), `${slug}: missing from library`);
-console.log('Verified 8 built resource pages, full prompts, 30 styles, 10 reminders, 3 calendars, anchors, covers and library links.');
+console.log('Verified 9 built resource pages, full prompts, tables, code blocks, anchors, covers and library links.');
