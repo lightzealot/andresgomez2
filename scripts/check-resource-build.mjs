@@ -5,7 +5,7 @@ import { parseMarkdown } from '../app/recursos/markdown.ts';
 
 const root = resolve(import.meta.dirname, '..');
 const content = JSON.parse(readFileSync(resolve(root, 'app/recursos/resource-content.json'), 'utf8'));
-assert.equal(Object.keys(content).length, 9, 'All nine resources must be present');
+assert.equal(Object.keys(content).length, 10, 'All ten resources must be present');
 const decode = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
 for (const [slug, markdown] of Object.entries(content)) {
@@ -48,4 +48,7 @@ for (const slug of Object.keys(content)) {
 
 const library = readFileSync(resolve(root, 'dist/client/recursos.html'), 'utf8');
 for (const slug of Object.keys(content)) assert(library.includes(`/recursos/${slug}/`), `${slug}: missing from library`);
-console.log('Verified 9 built resource pages, full prompts, tables, code blocks, anchors, covers and library links.');
+assert.equal(parseMarkdown(content['formula-buen-prompt']).filter(block => block.type === 'code').length, 5, 'Keep all five copyable prompts');
+assert(content['formula-buen-prompt'].includes('## Regla de oro'));
+assert(existsSync(resolve(root, 'public/formula-buen-prompt.txt')), 'New prompt guide must be downloadable');
+console.log('Verified 10 built resource pages, full prompts, tables, code blocks, anchors, covers and library links.');

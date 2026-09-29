@@ -36,6 +36,7 @@ function cleanText(source) {
 }
 
 const data = {};
+data['formula-buen-prompt'] = read('formula-buen-prompt.md').replace(/^# .*\n\nPor @andyontrade\n\n/, '');
 data['sistema-60-minutos-contenido-ia'] = read('sistema-60-minutos-contenido-ia.md').replace(/^# .*\n\n/, '');
 data['mejores-resultados-ia'] = cleanText(read('3.txt'))
   .replace(/^## Plantilla para obtener mejores resultados con IA\n\n/, '')
@@ -194,5 +195,6 @@ El prompt orienta el estilo de colaboración. Para comprobar una afirmación, pi
 data['videos-animados-claude'] = read('videos-animados-claude.md').replace(/^# .*\n\n/, '');
 
 writeFileSync(resolve(root, 'app/recursos/resource-content.json'), JSON.stringify(data, null, 2) + '\n');
+writeFileSync(resolve(root, 'public/formula-buen-prompt.txt'), 'La fórmula de un buen prompt\nPor @andyontrade\n\n' + data['formula-buen-prompt'] + '\n');
 writeFileSync(resolve(root, 'public/prompt-ia-objetiva.txt'), 'El prompt para que tu IA sea objetiva\nPor @andyontrade\n\n' + data['prompt-ia-objetiva'] + '\n');
 console.log(Object.entries(data).map(([slug, text]) => ({ slug, characters: text.length, sections: [...text.matchAll(/^## (.+)$/gm)].map(x => x[1]) })));

@@ -1,6 +1,7 @@
 import content from './resource-content.json';
 
 export const resources = [
+  { slug: 'formula-buen-prompt', type: 'Guía práctica', category: 'Prompts', title: 'La fórmula de un buen prompt', description: 'Rol, contexto, tarea, formato y ejemplo: una fórmula sencilla y cinco prompts listos para copiar y adaptar.', image: 'formula-buen-prompt', download: 'formula-buen-prompt.txt' },
   { slug: 'prompt-ia-objetiva', type: 'Prompt', category: 'Criterio', title: 'El prompt para que tu IA sea objetiva', description: 'Una IA que evalúa tus ideas, señala errores y te ayuda a decidir con evidencia. Incluye los pasos para personalizar ChatGPT.', image: 'prompt-ia-objetiva', download: 'prompt-ia-objetiva.txt', featured: true },
   { slug: 'videos-animados-claude', type: 'Guía completa', category: 'Video', title: 'Cómo hacer videos animados con Claude', description: 'De una idea a un MP4 con el skill video-pizarra: instalación, storyboard, animación, sonido y render. Sin suscripciones de edición; el uso del modelo puede tener costo.', image: 'videos-animados-claude', download: 'videos-animados-claude.txt', shared: true },
   { slug: 'sistema-60-minutos-contenido-ia', type: 'Guía práctica', category: 'Contenido', title: 'Sistema de 60 minutos para crear una semana de contenido con IA', description: 'De una idea a Reels, carrusel, historias y un calendario semanal listo para producir.', image: 'sistema-60-minutos-contenido-ia', download: 'sistema-60-minutos-contenido-ia.txt' },
@@ -20,6 +21,7 @@ export function readingMinutes(slug: string) {
   return Math.max(1, Math.ceil(resourceContent(slug).split(/\s+/).length / 200));
 }
 export const coverAlt: Record<string, string> = {
+  'formula-buen-prompt': 'Cinco tarjetas con rol, contexto, tarea, formato y ejemplo organizan la escritura de un prompt.',
   'videos-animados-claude': 'Una persona dibuja un storyboard de tres escenas de un cohete junto a un portátil con una animación tipo pizarra.',
   'prompt-ia-objetiva': 'Dos colaboradores revisan un plan y contrastan la propuesta con un gráfico de evidencia.',
   'sistema-60-minutos-contenido-ia': 'Planificación de cinco publicaciones semanales con un calendario y un temporizador de 60 minutos.',
