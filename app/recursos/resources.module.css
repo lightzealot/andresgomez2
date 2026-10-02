@@ -60,3 +60,4 @@
 .featured,.card{position:relative;z-index:1;touch-action:manipulation;cursor:pointer}.featured>*,.card>*{pointer-events:none}
 @media(max-width:1000px) and (min-width:721px){.creatorCard img{width:100px;height:132px}}
 @media(max-width:720px){.creatorCard img{width:68px;height:98px}}
+@media(max-width:720px){.featured{grid-template-columns:minmax(0,1fr)}.featuredCopy{min-width:0}.featured>img{width:100%;height:auto;aspect-ratio:3/2;grid-row:1}.collectionHeading{align-items:stretch}.articleHero{gap:24px}}

@@ -43,6 +43,7 @@
 .os-mail-link{border-color:#38c9ed;color:#38c9ed}.os-mail-link:hover{color:#f8d03b}.os-contact-bottom{border-top-color:#35434c}.os-contact-bottom>div>span,.os-contact-bottom p{color:#96a9b2}.os-email-field{border-color:#51636d;background:#0c1218}.os-email-field input{color:#fff}.os-email-field button{background:#f8d03b;color:#121519}.os-email-field button:hover{background:#ffe16a}.os-contact-bottom output{color:#65d8e6;font-size:11px}
 .os-dock{border-color:#6b869074;background:#1d2a34d9}.os-dock-button i{background:#36d3f6}.os-dock-divider{background:#819ba75e}.os-corner-note span{color:#f8d03b}
 .os-window{margin-left:auto;margin-right:auto}.os-window-bar{cursor:grab;touch-action:none;user-select:none}.os-window-bar.is-dragging{cursor:grabbing}.os-window-title,.os-window-hint{pointer-events:none}.os-window-controls{cursor:default}
+.os-dock-button{touch-action:manipulation}.os-dock-button .os-app-icon{pointer-events:none}
 .os-about-card img{object-position:center 28%}
 .os-profile-frame,.os-about-card{border:1px solid #2a819a;box-shadow:0 0 0 1px #52d9f51c,0 18px 42px #0009}
 @media(max-width:760px){.os-window{margin:19px 12px 0}.os-window-bar{cursor:default;touch-action:auto}.os-window-hint{display:none}}
