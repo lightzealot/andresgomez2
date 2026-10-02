@@ -1,109 +1,108 @@
 'use client';
-import { ArrowRight, ArrowUp, BriefcaseBusiness, ExternalLink, Folder, Library, Mail, Menu, MessageSquare, Moon, PanelLeftClose, Sun, UserRound, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Switch } from '@/components/ui/switch';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
-type Section = 'inicio' | 'sobre-mi' | 'proyectos' | 'labs' | 'contacto';
-const nav = [
-  { id: 'inicio', label: 'Inicio', icon: MessageSquare },
-  { id: 'sobre-mi', label: 'Sobre mí', icon: UserRound },
-  { id: 'proyectos', label: 'Proyectos', icon: BriefcaseBusiness },
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, BriefcaseBusiness, Check, ChevronRight, Clock3, FolderOpen, Mail, Minus, Monitor, Sparkles, UserRound, X } from 'lucide-react';
+import './os.css';
+
+type AppId = 'inicio' | 'sobre-mi' | 'proyectos' | 'aprender' | 'contacto';
+const apps = [
+  { id: 'inicio', label: 'Inicio', icon: Monitor, color: 'mint' },
+  { id: 'sobre-mi', label: 'Sobre mí', icon: UserRound, color: 'lilac' },
+  { id: 'proyectos', label: 'Sistemas', icon: BriefcaseBusiness, color: 'coral' },
+  { id: 'aprender', label: 'Empieza aquí', icon: BookOpen, color: 'sun' },
+  { id: 'contacto', label: 'Contacto', icon: Mail, color: 'sky' },
 ] as const;
+const lessons = [
+  { number: '01', title: 'Planea una semana de contenido', detail: 'Convierte una idea en Reels, carrusel, historias y calendario.', time: 'Sistema', slug: 'sistema-60-minutos-contenido-ia' },
+  { number: '02', title: 'Escribe prompts que sí ayudan', detail: 'Da contexto y dirección para conseguir mejores borradores.', time: 'Guía', slug: 'formula-buen-prompt' },
+  { number: '03', title: 'Crea visuales con intención', detail: 'Prueba estilos y encuadres para tus publicaciones.', time: 'Visuales', slug: '30-atajos-imagenes-ia' },
+  { number: '04', title: 'Produce video con IA', detail: 'Pasa de una idea a un storyboard y una pieza animada.', time: 'Video', slug: 'videos-animados-claude' },
+  { number: '05', title: 'Automatiza tareas repetitivas', detail: 'Libera tiempo para las decisiones creativas.', time: 'Flujo', slug: '10-automatizaciones-chatgpt' },
+];
 const projects = [
-  { number: '01', title: 'IA desde cero', description: 'Entiende qué puede hacer una IA generativa y cómo comenzar sin conocimientos técnicos.', tags: ['Principiantes', 'Fundamentos', '15 min'], lessons: ['Qué diferencia una IA generativa de un buscador tradicional.', 'Cómo funcionan las instrucciones, el contexto y las respuestas.', 'Qué información conviene verificar antes de utilizarla.'], practice: 'Pídele que explique un tema que conozcas en tres niveles: para un niño, para un estudiante y para un profesional.', result: 'Sabrás elegir una tarea adecuada para IA y evaluar mejor su respuesta.' },
-  { number: '02', title: 'Prompts que funcionan', description: 'Aprende una estructura sencilla para obtener respuestas específicas y fáciles de utilizar.', tags: ['ChatGPT', 'Prompts', 'Práctica'], lessons: ['Define el rol o punto de vista que necesitas.', 'Explica el objetivo, añade contexto y limita el formato.', 'Refina el resultado con preguntas de seguimiento.'], practice: 'Usa esta plantilla: Ayúdame a [objetivo]. Contexto: [datos]. Entrega: [formato]. Ten en cuenta: [límites].', result: 'Tendrás una plantilla reutilizable para trabajo, estudio y proyectos personales.' },
-  { number: '03', title: 'Tu primera automatización', description: 'Transforma una tarea repetitiva en un flujo que organiza información y prepara una respuesta.', tags: ['Automatización', 'Sin código', 'Paso a paso'], lessons: ['Detecta tareas repetitivas basadas en reglas.', 'Separa el flujo en entrada, procesamiento y resultado.', 'Añade una revisión humana antes de publicar o enviar.'], practice: 'Crea un flujo que reciba notas desordenadas, extraiga tareas y devuelva una lista con responsable y fecha.', result: 'Diseñarás una automatización pequeña que puedas probar antes de conectarla a otras herramientas.' },
-  { number: '04', title: 'Herramientas IA gratis', description: 'Escoge una herramienta según tu tarea sin instalar una colección de aplicaciones que no utilizarás.', tags: ['Herramientas', 'Gratis', 'Guía'], lessons: ['ChatGPT o Gemini para conversar, resumir y organizar.', 'NotebookLM para estudiar documentos y fuentes propias.', 'Canva o generadores de imagen para piezas visuales.'], practice: 'Elige una sola tarea real y resuélvela con dos herramientas. Compara tiempo, facilidad y calidad.', result: 'Tendrás un conjunto inicial de herramientas elegido por utilidad y no por popularidad.' },
-  { number: '05', title: 'Crea una web con un agente', description: 'Convierte una idea escrita en lenguaje natural en una primera página funcional.', tags: ['Agentes', 'Web', 'Proyecto real'], lessons: ['Describe público, objetivo y contenido antes del estilo.', 'Construye una primera versión pequeña y navegable.', 'Pide cambios concretos y comprueba cada resultado.'], practice: 'Solicita una página personal con presentación, tres proyectos y contacto. Después mejora una sección por vez.', result: 'Publicarás una primera web y aprenderás a dirigir al agente durante las revisiones.' },
+  { number: '01', name: 'Contenido en 60 minutos', kind: 'Planificación', description: 'Un sistema para transformar una idea en una semana de contenido lista para producir.', tags: ['Reels', 'Carruseles', 'Calendario'], className: 'os-project-one', slug: 'sistema-60-minutos-contenido-ia' },
+  { number: '02', name: '30 atajos visuales con IA', kind: 'Dirección creativa', description: 'Treinta puntos de partida para crear imágenes con estilos, escenas y encuadres distintos.', tags: ['Imágenes', 'Ideas', 'Prompts'], className: 'os-project-two', slug: '30-atajos-imagenes-ia' },
 ];
 
 export default function Home() {
-  const [active, setActive] = useState<Section>('inicio');
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [portfolioMenu, setPortfolioMenu] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-  const [themeReady, setThemeReady] = useState(false);
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
-  const [newsletterMessage, setNewsletterMessage] = useState('');
-  const [openLabs, setOpenLabs] = useState<string[]>(['resource-01']);
-  const goTo = (section: Section) => { setActive(section); setMobileOpen(false); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); };
-  const openLab = (number: string) => {
-    const resourceId = `resource-${number}`;
-    setOpenLabs([resourceId]);
-    setActive('labs');
-    setMobileOpen(false);
-    window.setTimeout(() => document.getElementById(resourceId)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
-  };
-
+  const [openApps, setOpenApps] = useState<AppId[]>(['inicio']);
+  const [activeApp, setActiveApp] = useState<AppId>('inicio');
+  const [windowPositions, setWindowPositions] = useState<Record<AppId, { x: number; y: number }>>({
+    inicio: { x: 0, y: 0 }, 'sobre-mi': { x: 0, y: 0 }, proyectos: { x: 0, y: 0 },
+    aprender: { x: 0, y: 0 }, contacto: { x: 0, y: 0 },
+  });
+  const windowRef = useRef<HTMLElement>(null);
+  const dragRef = useRef<{ pointerId: number; app: AppId; startX: number; startY: number; x: number; y: number; baseLeft: number; baseTop: number; width: number } | null>(null);
+  const [time, setTime] = useState('');
+  const [email, setEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
   useEffect(() => {
-    const saved = window.localStorage.getItem('andresgomezos-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(saved ? saved === 'dark' : prefersDark);
-    setThemeReady(true);
+    const update = () => setTime(new Intl.DateTimeFormat('es-CO', { hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()));
+    update();
+    const interval = window.setInterval(update, 60_000);
+    return () => window.clearInterval(interval);
   }, []);
-
   useEffect(() => {
-    if (!themeReady) return;
-    document.documentElement.classList.toggle('dark', darkMode);
-    window.localStorage.setItem('andresgomezos-theme', darkMode ? 'dark' : 'light');
-  }, [darkMode, themeReady]);
-
-  const subscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    const resetMobilePosition = () => {
+      if (window.innerWidth > 760) return;
+      setWindowPositions({ inicio: { x: 0, y: 0 }, 'sobre-mi': { x: 0, y: 0 }, proyectos: { x: 0, y: 0 }, aprender: { x: 0, y: 0 }, contacto: { x: 0, y: 0 } });
+    };
+    window.addEventListener('resize', resetMobilePosition);
+    return () => window.removeEventListener('resize', resetMobilePosition);
+  }, []);
+  const openApp = (id: AppId) => { setOpenApps(current => current.includes(id) ? current : [...current, id]); setActiveApp(id); };
+  const closeApp = (id: AppId) => { const next = openApps.filter(item => item !== id); setOpenApps(next); setActiveApp(next[next.length - 1] ?? 'inicio'); };
+  const minimizeApp = (id: AppId) => { const next = openApps.filter(item => item !== id); setOpenApps(next); setActiveApp(next[next.length - 1] ?? 'inicio'); };
+  const startDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (window.innerWidth <= 760 || event.button !== 0 || (event.target instanceof Element && event.target.closest('button'))) return;
+    const rect = windowRef.current?.getBoundingClientRect();
+    if (!rect) return;
     event.preventDefault();
-    setNewsletterStatus('submitting');
-    setNewsletterMessage('');
-
-    try {
-      const response = await fetch('/newsletter-form.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'newsletter',
-          email: newsletterEmail,
-          'bot-field': '',
-        }).toString(),
-      });
-      if (!response.ok) throw new Error('No pudimos completar la suscripción.');
-      setSubscribed(true);
-      setNewsletterMessage('Listo. Te avisaré cuando haya algo nuevo.');
-      setNewsletterStatus('idle');
-    } catch (error) {
-      setNewsletterStatus('error');
-      setNewsletterMessage(error instanceof Error ? error.message : 'No pudimos completar la suscripción.');
-    }
+    event.currentTarget.classList.add('is-dragging');
+    const position = windowPositions[activeApp];
+    dragRef.current = { pointerId: event.pointerId, app: activeApp, startX: event.clientX, startY: event.clientY, x: position.x, y: position.y, baseLeft: rect.left - position.x, baseTop: rect.top - position.y, width: rect.width };
+    event.currentTarget.setPointerCapture(event.pointerId);
   };
+  const dragWindow = (event: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const minX = 16 - drag.baseLeft;
+    const maxX = window.innerWidth - 16 - drag.width - drag.baseLeft;
+    const minY = 56 - drag.baseTop;
+    const maxY = window.innerHeight - 88 - drag.baseTop;
+    const x = Math.max(minX, Math.min(maxX, drag.x + event.clientX - drag.startX));
+    const y = Math.max(minY, Math.min(maxY, drag.y + event.clientY - drag.startY));
+    setWindowPositions(current => ({ ...current, [drag.app]: { x, y } }));
+  };
+  const stopDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (dragRef.current?.pointerId !== event.pointerId) return;
+    dragRef.current = null;
+    event.currentTarget.classList.remove('is-dragging');
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+  };
+  const subscribe = async (event: React.SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault(); setNewsletterStatus('submitting');
+    try { const response = await fetch('/newsletter-form.html', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'newsletter', email, 'bot-field': '' }).toString() }); if (!response.ok) throw new Error(); setNewsletterStatus('done'); }
+    catch { setNewsletterStatus('error'); }
+  };
+  const current = apps.find(app => app.id === activeApp);
 
-  return <main className={`portfolio-shell ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-    <button className="mobile-menu" onClick={() => { setSidebarCollapsed(false); setMobileOpen(true); }} aria-label="Abrir menú" aria-controls="site-sidebar" aria-expanded={mobileOpen}><Menu size={20}/></button>
-      <aside id="site-sidebar" className={`sidebar ${mobileOpen ? 'is-open' : ''}`}>
-      <div className="sidebar-top">
-        <button className="brand" onClick={() => { setSidebarCollapsed(false); goTo('inicio'); }} aria-label="Ir al inicio"><span className="brand-mark"><img src="/andresgomezos-logo.png" alt=""/></span><span className="brand-name">Andrés Gómez</span><span className="sidebar-tooltip" role="tooltip">Abrir barra lateral</span></button>
-        <button className="icon-button desktop-collapse" onClick={() => setSidebarCollapsed(true)} aria-label="Ocultar barra lateral"><PanelLeftClose size={18}/></button>
-        <button className="icon-button mobile-close" onClick={() => setMobileOpen(false)} aria-label="Cerrar menú"><X size={19}/></button>
+  return <main className="os-shell">
+    <div className="os-wallpaper" aria-hidden="true"><span className="os-orb os-orb-one"/><span className="os-orb os-orb-two"/><span className="os-orb os-orb-three"/><span className="os-grid"/></div>
+    <header className="os-menubar"><button className="os-menu-brand" onClick={() => openApp('inicio')} aria-label="Abrir inicio"><span className="os-mark">A<span>✳</span></span><strong>AndresGomez[OS]</strong></button><div className="os-menubar-right"><span className="os-availability"><i/> Disponible para conversar</span><span className="os-time"><Clock3 size={14}/>{time}</span></div></header>
+    <div className="os-desktop-copy" aria-hidden="true"><span>UNA NUEVA FORMA DE CREAR</span><strong>Ideas que<br/>cobran vida<span>.</span></strong><small>ANDRÉS GÓMEZ · CREADOR DIGITAL</small></div>
+    {openApps.length > 0 && <section ref={windowRef} className="os-window" aria-label={`Ventana: ${current?.label}`} key={activeApp} style={{ translate: `${windowPositions[activeApp].x}px ${windowPositions[activeApp].y}px` }}>
+      <div className="os-window-bar" onPointerDown={startDrag} onPointerMove={dragWindow} onPointerUp={stopDrag} onPointerCancel={stopDrag} onDoubleClick={() => setWindowPositions(current => ({ ...current, [activeApp]: { x: 0, y: 0 } }))}><div className="os-window-controls"><button onClick={() => closeApp(activeApp)} aria-label="Cerrar ventana" className="os-control close"><X size={11}/></button><button onClick={() => minimizeApp(activeApp)} aria-label="Minimizar ventana" className="os-control minimize"><Minus size={11}/></button><span className="os-control maximize" aria-hidden="true"/></div><span className="os-window-title">{current?.icon && <current.icon size={14}/>} {current?.label} — AndresGomez[OS]</span><span className="os-window-hint">ARRASTRA PARA MOVER</span></div>
+      <div className="os-window-body">
+        {activeApp === 'inicio' && <div className="os-home"><div className="os-home-main"><div className="os-kicker"><span className="os-kicker-line"/> IA PARA CREADORES DE CONTENIDO</div><h1>Crea contenido <em>con IA.</em></h1><p>Aprende a planear, escribir y producir contenido con IA: guiones, carruseles, imágenes y flujos que puedes repetir cada semana.</p><div className="os-home-actions"><button className="os-primary" onClick={() => openApp('aprender')}>Empieza a crear <ArrowUpRight size={17}/></button><button className="os-text-button" onClick={() => openApp('sobre-mi')}>Conóceme <ArrowRight size={16}/></button></div><div className="os-home-footer"><span>IDEA / PIEZA / PUBLICACIÓN</span><span>USA LA BARRA INFERIOR <ArrowDownRight size={17}/></span></div></div><div className="os-home-side"><div className="os-profile-frame"><Image src="/4c-contraste.png" alt="Retrato de Andrés Gómez" fill sizes="(max-width: 760px) 100vw, 400px"/><span className="os-profile-badge">CREADOR DIGITAL<br/>+ EDUCADOR IA</span></div><div className="os-side-caption"><span>PARA TU PROCESO</span><strong>Planear.<br/>Crear.<br/>Publicar.</strong></div></div></div>}
+        {activeApp === 'sobre-mi' && <div className="os-inner os-about"><div className="os-section-number">01 / SOBRE MÍ</div><div className="os-about-grid"><div><h2>IA útil para <em>creadores de contenido.</em></h2><p className="os-large-copy">Soy Andrés Gómez, creador digital. Comparto formas prácticas de usar IA para desarrollar ideas, guiones, imágenes y sistemas de publicación.</p><p>En AndresGomez[OS] reúno herramientas y procesos para crear contenido con más claridad y consistencia, desde la primera idea hasta la pieza final.</p><button className="os-inline-link" onClick={() => openApp('contacto')}>Hablemos de tu idea <ArrowUpRight size={17}/></button></div><div className="os-about-card"><Image src="/4c-contraste.png" alt="Andrés Gómez" fill sizes="(max-width: 760px) 100vw, 400px"/><div><span>ANDRÉS GÓMEZ</span><strong>Creo, aprendo y comparto.</strong></div></div></div><div className="os-capabilities"><span>LO QUE EXPLORO</span><div><span>Estrategia de contenido</span><span>Guiones y prompts</span><span>Visuales con IA</span><span>Automatización</span></div></div></div>}
+        {activeApp === 'proyectos' && <div className="os-inner"><div className="os-section-number">02 / SISTEMAS</div><div className="os-section-heading"><h2>Flujos para <em>crear.</em></h2><p>Recursos prácticos para pasar de la idea a la publicación.</p></div><div className="os-projects">{projects.map(project => <article className="os-project" key={project.number}><div className={`os-project-visual ${project.className}`}><span className="os-project-index">{project.number} / 02</span><div className="os-project-art">{project.number === '01' ? <><span className="os-mini-window"><i/><i/><i/></span><strong>60<span>MIN</span></strong></> : <><span className="os-book-spine"/><Sparkles size={74} strokeWidth={1}/></>}</div><span className="os-project-kind">{project.kind}</span></div><div className="os-project-detail"><div><h3>{project.name}</h3><p>{project.description}</p><div className="os-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><Link href={`/recursos/${project.slug}`} aria-label={`Abrir ${project.name}`}><ArrowUpRight size={20}/></Link></div></article>)}</div></div>}
+        {activeApp === 'aprender' && <div className="os-inner"><div className="os-section-number">03 / RUTA CREATIVA</div><div className="os-section-heading"><h2>Crea paso a paso<span className="os-period">.</span></h2><p>Cinco puntos de partida para integrar la IA en tu proceso de contenido.</p></div><div className="os-learning-layout"><div className="os-learning-intro"><Sparkles size={24}/><strong>Empieza con una idea</strong><p>Sigue el flujo que necesitas hoy y adapta cada recurso a tu voz y a tu audiencia.</p><Link href="/recursos">Ver biblioteca de recursos <ArrowUpRight size={16}/></Link></div><div className="os-lessons">{lessons.map(lesson => <Link className="os-lesson" key={lesson.number} href={`/recursos/${lesson.slug}`}><span>{lesson.number}</span><div><strong>{lesson.title}</strong><p>{lesson.detail}</p></div><small>{lesson.time}</small><ChevronRight size={17}/></Link>)}</div></div></div>}
+        {activeApp === 'contacto' && <div className="os-inner os-contact"><div className="os-section-number">04 / CONTACTO</div><h2>Hagamos algo <em>juntos.</em></h2><p>¿Quieres desarrollar un flujo de contenido con IA o explorar una colaboración? Cuéntame qué estás creando.</p><a className="os-mail-link" href="mailto:hello@andresgomez.store">hello@andresgomez.store <ArrowUpRight size={24}/></a><div className="os-contact-bottom"><div><span>NEWSLETTER</span><strong>Ideas para crear contenido con IA en tu correo.</strong><p>Prompts, procesos y recursos que puedes probar en tu próxima publicación.</p></div><form name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={subscribe}><input type="hidden" name="form-name" value="newsletter"/><input className="os-honeypot" name="bot-field" tabIndex={-1} autoComplete="off" aria-hidden="true"/><label htmlFor="os-email">Tu correo electrónico</label><div className="os-email-field"><input id="os-email" type="email" name="email" required autoComplete="email" placeholder="tu@email.com" value={email} onChange={event => setEmail(event.target.value)}/><button type="submit" disabled={newsletterStatus === 'submitting'} aria-label="Suscribirme">{newsletterStatus === 'done' ? <Check size={18}/> : <ArrowRight size={18}/>}</button></div>{newsletterStatus === 'done' && <output>Listo. Te avisaré cuando haya algo nuevo.</output>}{newsletterStatus === 'error' && <small role="alert">No pudimos completar la suscripción. Inténtalo de nuevo.</small>}</form></div></div>}
       </div>
-      <nav aria-label="Navegación principal"><p className="nav-label">Explorar</p>
-        {nav.map(item => { const Icon = item.icon; return <button key={item.id} className={`nav-item ${active === item.id ? 'active' : ''}`} onClick={() => goTo(item.id)} aria-label={item.label}><Icon size={17}/><span>{item.label}</span></button>; })}
-        <a className="nav-item" href="/recursos" aria-label="Recursos"><Library size={17}/><span>Recursos</span></a>
-      </nav>
-      <div className="recent"><p className="nav-label">Labs | Playground</p>{projects.map(project => <button key={project.number} className={openLabs.includes(`resource-${project.number}`) ? 'active' : ''} onClick={() => openLab(project.number)}><Folder size={15}/>{project.title}</button>)}</div>
-      <form className="newsletter" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={subscribe}><input type="hidden" name="form-name" value="newsletter"/><input className="newsletter-honeypot" name="bot-field" tabIndex={-1} autoComplete="off" aria-hidden="true"/><div className="newsletter-title"><Mail size={15}/><strong>Newsletter</strong></div>{subscribed ? <p className="newsletter-success" role="status">{newsletterMessage}</p> : <><p>Una idea práctica de IA, sin llenar tu bandeja.</p><div className="newsletter-field"><input type="email" name="email" required autoComplete="email" value={newsletterEmail} onChange={event => { setNewsletterEmail(event.target.value); setNewsletterStatus('idle'); setNewsletterMessage(''); }} placeholder="tu@email.com" aria-label="Correo para el newsletter" aria-describedby={newsletterMessage ? 'newsletter-message' : undefined}/><button type="submit" disabled={newsletterStatus === 'submitting'} aria-label={newsletterStatus === 'submitting' ? 'Guardando suscripción' : 'Suscribirme'}><ArrowUp size={15}/></button></div>{newsletterMessage && <p id="newsletter-message" className="newsletter-error" role="alert">{newsletterMessage}</p>}</>}</form>
-      <div className="sidebar-footer"><span className="profile-avatar"><img src="/andres-gomez-avatar.png" alt="Retrato de Andrés Gómez"/></span><div><strong>Andrés Gómez</strong><span>Aprende IA sin complicarte</span></div></div>
-    </aside>
-    {mobileOpen && <button className="scrim" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}/>} 
-    <section className="conversation">
-      <header className="topbar"><button className="model-selector" onClick={() => setPortfolioMenu(open => !open)} aria-expanded={portfolioMenu} aria-label="Abrir menú de Andrés Gómez">Andrés Gómez <span>⌄</span></button><div className="topbar-actions"><label className="theme-toggle" title={darkMode ? 'Usar tema claro' : 'Usar tema oscuro'}><Sun size={14}/><Switch size="sm" checked={darkMode} onCheckedChange={setDarkMode} aria-label="Alternar tema claro y oscuro"/><Moon size={14}/></label><button className="contact-pill" onClick={() => goTo('contacto')}>Hablemos</button></div></header>
-      {portfolioMenu && <div className="portfolio-menu">{nav.map(item => { const Icon = item.icon; return <button key={item.id} onClick={() => { goTo(item.id); setPortfolioMenu(false); }}><Icon size={16}/><span>{item.label}</span></button>; })}<a href="/recursos"><Library size={16}/><span>Recursos</span></a><button onClick={() => { goTo('contacto'); setPortfolioMenu(false); }}><Mail size={16}/><span>Contacto</span></button></div>}
-      <div className="thread">
-        <section id="inicio" className="welcome section-block"><div className="assistant-avatar profile-photo">AG</div><div><p className="eyebrow">Andrés Gómez / creador digital</p><h1>Aprende inteligencia artificial sin complicarte.</h1><p className="lead">Si estás comenzando, aquí aprenderás a conversar con una IA, convertir tus ideas en imágenes y automatizar tareas que hoy haces manualmente.</p><div className="starter-map"><article><span>01</span><div><strong>Habla con la IA</strong><p>Escribe instrucciones claras y consigue respuestas que puedas usar.</p></div></article><article><span>02</span><div><strong>Crea con tus ideas</strong><p>Genera textos, imágenes y conceptos aunque no tengas experiencia técnica.</p></div></article><article><span>03</span><div><strong>Ahorra tiempo</strong><p>Conecta herramientas y construye tu primera automatización.</p></div></article></div><div className="quick-actions"><button onClick={() => goTo('labs')}>Explorar las lecciones <ArrowRight size={15}/></button><button onClick={() => goTo('sobre-mi')}>Conoce a Andrés</button></div></div></section>
-        <section id="sobre-mi" className="section-block response-block"><div className="user-prompt">¿Quién es Andrés?</div><div className="assistant-response"><div className="assistant-avatar section-avatar"><UserRound size={15}/></div><div className="response-content prose"><h2>Hola, soy Andrés Gómez.</h2><p>Soy creador digital y enseño inteligencia artificial para principiantes. Explico prompts, generación de imágenes, automatización y agentes con ejemplos que puedes probar.</p><p>AndresGomez[OS] reúne mis guías y proyectos para ayudarte a empezar desde cero y crear con IA.</p></div></div></section>
-        <section id="proyectos" className="section-block response-block"><div className="user-prompt">Muéstrame tus proyectos</div><div className="assistant-response"><div className="assistant-avatar section-avatar"><BriefcaseBusiness size={15}/></div><div className="response-content"><h2>Proyectos</h2><p>Sistemas y experiencias digitales creadas para convertir ideas en herramientas útiles.</p><div className="projects-grid"><article className="project-card"><div className="project-head"><span>01</span><span>Sistema creativo</span></div><h3>AndresGomez[OS]</h3><p>Un espacio personal para aprender, experimentar y construir con inteligencia artificial.</p><div className="tags"><span>IA</span><span>Diseño</span><span>Web</span></div></article><article className="project-card"><div className="project-head"><span>02</span><span>Portal de cliente</span></div><h3>Biblioteca de recursos</h3><p>Guías y materiales prácticos reunidos en un lugar sencillo de consultar y compartir.</p><div className="tags"><span>Recursos</span><span>Educación</span></div></article></div></div></div></section>
-        <section id="labs" className="section-block response-block"><div className="user-prompt">¿Por dónde empiezo a aprender?</div><div className="assistant-response"><div className="assistant-avatar section-avatar"><Folder size={15}/></div><div className="response-content"><h2>Labs | Playground</h2><p>Abre un ejercicio, completa la práctica y continúa con el siguiente cuando puedas explicar el resultado con tus propias palabras.</p><Accordion className="resource-accordion" value={openLabs} onValueChange={setOpenLabs}>{projects.map((project, index) => { const nextProject = projects[index + 1]; return <AccordionItem id={`resource-${project.number}`} key={project.number} value={`resource-${project.number}`}><AccordionTrigger><span className="resource-trigger"><small>{project.number}</small><span><strong>{project.title}</strong><em>{project.description}</em></span></span></AccordionTrigger><AccordionContent><div className="resource-content"><div><h3>Qué aprenderás</h3><ul>{project.lessons.map(lesson => <li key={lesson}>{lesson}</li>)}</ul></div><div className="practice-box"><span>PRÁCTICA</span><p>{project.practice}</p></div><div className="resource-result"><span>AL TERMINAR</span><p>{project.result}</p></div><div className="resource-footer"><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{nextProject && <button className="next-resource" onClick={() => openLab(nextProject.number)}>Continuar: {nextProject.title}<ArrowRight size={14}/></button>}</div></div></AccordionContent></AccordionItem>; })}</Accordion></div></div></section>
-        <section id="contacto" className="section-block response-block contact-section"><div className="user-prompt">Tengo una idea. ¿Hablamos?</div><div className="assistant-response"><div className="assistant-avatar section-avatar"><Mail size={15}/></div><div className="response-content"><h2>Claro. Empecemos por una conversación.</h2><p>Cuéntame qué estás construyendo, dónde estás atascado o qué te gustaría hacer posible.</p><a className="email-link" href="mailto:hello@andresgomez.store"><Mail size={17}/> hello@andresgomez.store</a></div></div></section>
-      </div>
-    </section>
+    </section>}
+    <nav className="os-dock" aria-label="Aplicaciones"><div className="os-dock-apps">{apps.map(app => { const Icon = app.icon; return <button key={app.id} className={`os-dock-button ${activeApp === app.id && openApps.length ? 'is-active' : ''}`} onClick={() => openApp(app.id)} aria-label={`Abrir ${app.label}`} title={app.label}><span className={`os-app-icon ${app.color}`}><Icon size={23} strokeWidth={1.8}/></span><i/></button>; })}<span className="os-dock-divider"/><Link href="/recursos" className="os-dock-button" aria-label="Abrir recursos" title="Recursos"><span className="os-app-icon blue"><FolderOpen size={23} strokeWidth={1.8}/></span></Link></div></nav><div className="os-corner-note">DISEÑADO PARA EXPLORAR <span>✳</span></div>
   </main>;
 }
