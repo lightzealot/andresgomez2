@@ -98,3 +98,5 @@
   .cardBottom{padding-top:6px;font-size:11px}
   .cardBottom svg{width:16px;height:16px}
 }
+
+.featured>img,.cardImage img,.heroImage img{filter:none}

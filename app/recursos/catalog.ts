@@ -21,14 +21,14 @@ export function readingMinutes(slug: string) {
   return Math.max(1, Math.ceil(resourceContent(slug).split(/\s+/).length / 200));
 }
 export const coverAlt: Record<string, string> = {
-  'formula-buen-prompt': 'Cinco tarjetas con rol, contexto, tarea, formato y ejemplo organizan la escritura de un prompt.',
-  'videos-animados-claude': 'Una persona dibuja un storyboard de tres escenas de un cohete junto a un portátil con una animación tipo pizarra.',
-  'prompt-ia-objetiva': 'Dos colaboradores revisan un plan y contrastan la propuesta con un gráfico de evidencia.',
-  'sistema-60-minutos-contenido-ia': 'Planificación de cinco publicaciones semanales con un calendario y un temporizador de 60 minutos.',
-  '10-automatizaciones-chatgpt': 'Teléfono con una lista de recordatorios, reloj y tareas anotadas sobre un escritorio.',
-  'ia-primer-paso': 'Una persona escribe su primera consulta en un portátil con una tarea anotada en su cuaderno.',
-  'mejores-resultados-ia': 'Tres tarjetas con contexto, objetivo y formato organizan una instrucción para la IA.',
-  '30-atajos-imagenes-ia': 'Una misma botella de café en cuatro estilos: estudio, ingredientes, miniatura y salpicaduras.',
-  'plantilla-google-flow': 'Tablero de dirección visual con referencias de sujeto, escena, estilo, luz y encuadre.',
-  'google-flow-principiantes': 'Primer proyecto de video con tres escenas costeras, un storyboard y una línea de tiempo.',
+  'formula-buen-prompt': 'Boceto de cinco tarjetas conectadas para construir un prompt paso a paso.',
+  'videos-animados-claude': 'Storyboard dibujado a mano que transforma un cohete en una animación.',
+  'prompt-ia-objetiva': 'Boceto de una idea examinada con lupa, balanza y marcas de revisión.',
+  'sistema-60-minutos-contenido-ia': 'Calendario semanal y cronómetro dibujados a mano para planear contenido.',
+  '10-automatizaciones-chatgpt': 'Teléfono y tarjetas de recordatorios dibujados como boceto.',
+  'ia-primer-paso': 'Persona con cuaderno y portátil esbozando su primera pregunta para la IA.',
+  'mejores-resultados-ia': 'Tres tarjetas dibujadas a mano conectan contexto, objetivo y formato.',
+  '30-atajos-imagenes-ia': 'Una taza de café reinterpretada en cuatro bocetos visuales.',
+  'plantilla-google-flow': 'Tablero de referencias visuales dibujado con tarjetas y flechas.',
+  'google-flow-principiantes': 'Storyboard costero de tres escenas y línea de tiempo dibujados a mano.',
 };
