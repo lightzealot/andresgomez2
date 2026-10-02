@@ -61,3 +61,40 @@
 @media(max-width:1000px) and (min-width:721px){.creatorCard img{width:100px;height:132px}}
 @media(max-width:720px){.creatorCard img{width:68px;height:98px}}
 @media(max-width:720px){.featured{grid-template-columns:minmax(0,1fr)}.featuredCopy{min-width:0}.featured>img{width:100%;height:auto;aspect-ratio:3/2;grid-row:1}.collectionHeading{align-items:stretch}.articleHero{gap:24px}}
+
+/* Mobile library: a compact, scannable index instead of tall image cards. */
+@media(max-width:720px){
+  .library{padding:24px 16px 48px}
+  .libraryHeading>.libraryIntro{gap:0}
+  .libraryTitle .eyebrow{margin-bottom:10px;font-size:11px}
+  .libraryTitle h1{font-size:clamp(32px,8vw,42px);line-height:1.04;margin:0 0 10px}
+  .libraryTitle>p:last-child{font-size:14px;line-height:1.45}
+  .creatorCard{display:none}
+  .libraryHeading>.libraryMeta{margin-top:18px;padding-top:10px}
+  .featured{grid-template-columns:minmax(0,1fr) 104px;min-height:138px;margin-top:14px}
+  .featuredCopy{padding:17px 16px;justify-content:center}
+  .featuredCopy:before{width:3px}
+  .featuredLabel{font-size:11px;letter-spacing:.07em}
+  .featured h2{font-size:18px;line-height:1.18;letter-spacing:-.035em;margin:9px 0 0}
+  .featured p{display:none}
+  .featuredAction{margin-top:0;padding-top:10px;font-size:12px;gap:8px}
+  .featuredAction svg{width:16px;height:16px}
+  .featured>img{grid-row:auto;width:104px;height:100%;min-height:138px;aspect-ratio:auto;object-fit:cover}
+  .collection{margin-top:27px}
+  .collectionHeading{padding-bottom:11px;gap:3px}
+  .collectionHeading>div{gap:3px}
+  .collectionHeading h2{font-size:24px}
+  .collectionHeading>span{font-size:12px}
+  .grid{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+  .card{display:grid;grid-template-columns:86px minmax(0,1fr);min-height:108px;border-radius:7px;box-shadow:none}
+  .card:hover{transform:none}
+  .cardImage{width:86px;height:100%;min-height:108px;aspect-ratio:auto}
+  .cardImage img{width:100%;height:100%;object-fit:cover}
+  .cardNumber{top:6px;left:6px;width:23px;height:23px;font-size:10px}
+  .cardBody{min-width:0;padding:11px 12px 10px;justify-content:center}
+  .cardCategory{font-size:11px;line-height:1.2;letter-spacing:.04em}
+  .card h3{font-size:16px;line-height:1.2;margin:5px 0 3px}
+  .card p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:13px;line-height:1.35}
+  .cardBottom{padding-top:6px;font-size:11px}
+  .cardBottom svg{width:16px;height:16px}
+}
