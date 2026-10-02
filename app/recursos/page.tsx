@@ -1,3 +1,4 @@
+/* oxlint-disable next/no-html-link-for-pages -- Full document navigation keeps resource cards reliable on mobile. */
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -31,17 +32,17 @@ export default function RecursosPage() {
         </div>
         <div className={styles.libraryMeta}><span>RECURSOS ABIERTOS / 001—{String(resources.length).padStart(3, '0')}</span><span>LEE · COPIA · CREA</span></div>
       </header>
-      <Link className={styles.featured} href={`/recursos/${featured.slug}/`}>
+      <a className={styles.featured} href={`/recursos/${featured.slug}`}>
         <div className={styles.featuredCopy}><span className={styles.featuredLabel}>EMPIEZA AQUÍ / {featured.category.toUpperCase()}</span><h2>{featured.title}</h2><p>{featured.description}</p><span className={styles.featuredAction}>Abrir recurso <ArrowRight size={20}/></span></div>
         <Image src={`/recursos/${featured.image}.jpg`} alt={coverAlt[featured.image]} width={1440} height={960} priority />
-      </Link>
+      </a>
       <section className={styles.collection} aria-labelledby="coleccion">
         <div className={styles.collectionHeading}><div><span className={styles.sectionIndex}>01 / EXPLORA</span><h2 id="coleccion">Tu caja de herramientas<span>.</span></h2></div><span>{resources.length} recursos / acceso libre</span></div>
         <div className={styles.grid}>
-          {rest.map((resource, index) => <Link className={styles.card} key={resource.slug} href={`/recursos/${resource.slug}/`}>
+          {rest.map((resource, index) => <a className={styles.card} key={resource.slug} href={`/recursos/${resource.slug}`}>
             <div className={styles.cardImage}><Image src={`/recursos/${resource.image}.jpg`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960}/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>
             <div className={styles.cardBody}><span className={styles.cardCategory}>{resource.category} / {resource.type}</span><h3>{resource.title}</h3><p>{resource.description}</p><div className={styles.cardBottom}><span>{readingMinutes(resource.slug)} min de lectura</span><ArrowUpRight size={20} aria-hidden="true"/></div></div>
-          </Link>)}
+          </a>)}
         </div>
       </section>
     </main>

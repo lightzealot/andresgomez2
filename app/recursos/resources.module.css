@@ -57,5 +57,6 @@
 @media print{.shell,:global(.dark) .shell{background:#fff;color:#000}.prose,.prose h2,.prose h3,.heroCopy h1{color:#000}.promptBlock{background:#fff}}
 .creatorCard img{border:1px solid #2e95af}
 .creatorCard img{width:82px;height:118px;object-fit:cover;object-position:center 35%}.author img{width:48px;height:48px;object-fit:cover;object-position:center 44%}
+.featured,.card{position:relative;z-index:1;touch-action:manipulation;cursor:pointer}.featured>*,.card>*{pointer-events:none}
 @media(max-width:1000px) and (min-width:721px){.creatorCard img{width:100px;height:132px}}
 @media(max-width:720px){.creatorCard img{width:68px;height:98px}}
