@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'AndresGomez[OS] — IA para creadores de contenido',
-  description: 'Ideas, prompts y sistemas prácticos para planear, crear y publicar contenido con inteligencia artificial.',
+  title: 'AndresGomez[OS] — IA para empresas',
+  description: 'Soluciones de inteligencia artificial para empresas: automatización de procesos, asistentes internos y formación de equipos.',
   icons: { icon: '/andresgomezos-logo.png' },
 };
 

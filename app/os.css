@@ -47,3 +47,16 @@
 .os-about-card img{object-position:center 28%}
 .os-profile-frame,.os-about-card{border:1px solid #2a819a;box-shadow:0 0 0 1px #52d9f51c,0 18px 42px #0009}
 @media(max-width:760px){.os-window{margin:19px 12px 0}.os-window-bar{cursor:default;touch-action:auto}.os-window-hint{display:none}}
+
+/* Business positioning within the existing desktop identity. */
+.os-home h1{font-size:clamp(44px,4.3vw,66px);line-height:1.04;letter-spacing:-.06em}
+.os-home-actions{gap:18px;flex-wrap:wrap}
+.os-primary{background:#32c8eb;border-color:#32c8eb;color:#07151c}
+.os-primary:hover{background:#84e3f7}
+.os-profile-badge{background:#14232ee8;border-color:#3c9ab5;color:#dceef4}
+.os-availability i{background:#32c8eb;box-shadow:none}
+.os-learning-intro .os-inline-link{padding:0;margin-top:10px;font-size:12px;text-align:left}
+button.os-lesson{width:100%;padding:12px 0;border-top:0;border-left:0;border-right:0;background:transparent;text-align:left;font:inherit}
+button.os-lesson:hover{background:#1b2a34}
+.os-dock-button .os-app-icon{box-shadow:inset 0 1px 1px #ffffff45,0 5px 12px #0004}
+@media(max-width:760px){.os-home h1{font-size:clamp(43px,10vw,64px)}.os-home-main{padding-bottom:95px}.os-capabilities{align-items:flex-start;flex-direction:column;gap:15px}}
