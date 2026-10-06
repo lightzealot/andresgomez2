@@ -23,3 +23,8 @@
 @media(max-width:1000px){.contactInner{gap:45px}.footerInner{flex-wrap:wrap}.contact .contactActions .email{font-size:10px}}
 @media(max-width:800px){.contactInner{grid-template-columns:1fr;gap:40px;padding:60px 20px}.contact h2{font-size:clamp(45px,9vw,66px)}.contactActions{align-items:flex-start;max-width:450px;gap:25px}.contact .contactActions .email{font-size:11px}.contactActions .primary{min-height:58px;font-size:16px}.contactActions .eventLink{margin-top:0}.newsletterSection{padding:0 20px 30px}.footerInner{padding:25px 20px;gap:20px}.footerLinks{gap:17px}.footerIdentity{font-size:9px}}
 @media print{.footerBar{display:none}}
+
+.desktopNav .diagnosticNav{display:inline-flex;align-items:center;gap:9px;border:1px solid #1961d5;border-radius:4px;background:#1961d5;color:#fff;padding:11px 16px;font-weight:600}.desktopNav .diagnosticNav:hover{background:#104cab;color:#fff}
+.diagnostic{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:70px;align-items:center}.diagnostic .description{margin-top:23px}.diagnosticAction{padding:30px;border:1px solid #bfd1eb;background:#e3edfc;border-radius:4px}.diagnosticAction>span{font:500 10px/1.7 'IBM Plex Mono',monospace;color:#1552b5;letter-spacing:.06em}.diagnosticAction .primary{display:flex;margin-top:22px;width:100%;min-height:54px}.diagnosticAction p{font-size:13px;line-height:1.6;color:#596779;margin:16px 0 0}
+@media(min-width:801px) and (max-width:1100px){.desktopNav{gap:14px}.desktopNav a{font-size:12px}.desktopNav .headerCta,.desktopNav .diagnosticNav{padding:10px 12px}.brand{font-size:11px;gap:8px}}
+@media(max-width:800px){.diagnostic{grid-template-columns:1fr;gap:28px}.diagnosticAction{padding:25px}.diagnostic h2 br{display:none}}
