@@ -33,7 +33,7 @@ export default async function ResourcePage({ params }: Props) {
     <ResourceHeader article/>
     <main id="contenido">
       <header className={styles.articleHero}>
-        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><Image src="/p3k.jpg" width={48} height={48} alt="Andrés Gómez" unoptimized/><div><strong>{'shared' in resource && resource.shared ? 'Compartido por @andresgomez.ia' : 'Por @andresgomez.ia'}</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
+        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><Image src="/p4k.jpg" width={48} height={48} alt="Andrés Gómez" unoptimized/><div><strong>{'shared' in resource && resource.shared ? 'Compartido por @andresgomez.ia' : 'Por @andresgomez.ia'}</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
         <figure className={styles.heroImage}><Image src={`/recursos/editoriales/${resource.image}.webp`} alt={coverAlt[resource.image]} width={1440} height={960} priority unoptimized/></figure>
       </header>
       <div className={styles.articleLayout}>
