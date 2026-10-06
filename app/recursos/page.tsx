@@ -26,7 +26,7 @@ export default function RecursosPage() {
             <p>Guías, prompts y plantillas para ti y tu equipo. Explora cómo aplicar la IA a tareas, contenido y procesos de tu trabajo.</p>
           </div>
           <div className={styles.creatorCard}>
-            <Image src="/profie-alta-calidad.png" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
+            <Image src="/profie-fondo-blanco.png" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
             <div><span>CURADO POR</span><strong>Andrés Gómez</strong><small>IA aplicada a negocios</small></div>
           </div>
         </div>
