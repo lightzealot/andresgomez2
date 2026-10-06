@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation supports static routes and section anchors. */
 import styles from '@/app/business.module.css';
 
 function InstagramIcon() {
@@ -6,5 +6,5 @@ function InstagramIcon() {
 }
 
 export function CorporateFooter() {
-  return <footer className={styles.footerBar}><div className={styles.footerInner}><Link className={styles.footerIdentity} href="/" aria-label="Andrés Gómez, inicio"><span className={styles.mark}>[<b>AG</b>]</span><span>© {new Date().getFullYear()} ANDRÉS GÓMEZ · IA PARA EMPRESAS</span></Link><nav className={styles.footerLinks} aria-label="Enlaces del pie de página"><a href="https://www.instagram.com/andresgomez.ia/" target="_blank" rel="noopener noreferrer"><InstagramIcon/>Instagram</a><Link href="/recursos">Recursos</Link><span className={styles.footerDivider} aria-hidden="true"/><Link href="/privacidad">Privacidad</Link><Link href="/terminos">Términos</Link></nav></div></footer>;
+  return <footer className={styles.footerBar}><div className={styles.footerInner}><a className={styles.footerIdentity} href="/" aria-label="Andrés Gómez, inicio"><span className={styles.mark}>[<b>AG</b>]</span><span>© {new Date().getFullYear()} ANDRÉS GÓMEZ · IA PARA EMPRESAS</span></a><nav className={styles.footerLinks} aria-label="Enlaces del pie de página"><a href="https://www.instagram.com/andresgomez.ia/" target="_blank" rel="noopener noreferrer"><InstagramIcon/>Instagram</a><a href="/recursos">Recursos</a><span className={styles.footerDivider} aria-hidden="true"/><a href="/privacidad">Privacidad</a><a href="/terminos">Términos</a></nav></div></footer>;
 }
