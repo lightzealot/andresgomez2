@@ -1,35 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { ArrowLeft, Check, Copy, Moon, Sun } from 'lucide-react';
-import { Switch } from '@/components/ui/switch';
+import { Check, Copy } from 'lucide-react';
+import { CorporateHeader } from '@/components/CorporateHeader';
 import styles from './resources.module.css';
 
-export function ResourceHeader({ article = false }: { article?: boolean }) {
-  const [dark, setDark] = useState(true);
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      const saved = localStorage.getItem('andresgomezos-theme');
-      if (saved) setDark(saved === 'dark');
-      setReady(true);
-    });
-    return () => cancelAnimationFrame(frame);
-  }, []);
-  useEffect(() => {
-    if (!ready) return;
-    document.documentElement.classList.toggle('resource-light', !dark);
-    localStorage.setItem('andresgomezos-theme', dark ? 'dark' : 'light');
-    return () => document.documentElement.classList.remove('resource-light');
-  }, [dark, ready]);
-  return <>
-    <a className={styles.skipLink} href="#contenido">Saltar al contenido</a>
-    <header className={styles.header}>
-      <Link className={styles.brand} href="/"><span className={styles.brandMark}>AG<span>✳</span></span><span>AndresGomez[OS]</span></Link>
-      <nav aria-label="Navegación principal"><Link href={article ? '/recursos/' : '/'}><ArrowLeft size={16}/>{article ? 'Biblioteca' : 'Volver al escritorio'}</Link><div className={styles.theme}><Sun size={15}/><Switch size="sm" checked={dark} onCheckedChange={setDark} aria-label="Alternar tema claro y oscuro"/><Moon size={15}/></div></nav>
-    </header>
-  </>;
+export function ResourceHeader(_props: { article?: boolean }) {
+  return <CorporateHeader/>;
 }
 
 export function CopyButton({ text, label = 'Copiar prompt' }: { text: string; label?: string }) {

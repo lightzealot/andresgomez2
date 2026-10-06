@@ -21,14 +21,14 @@ export function readingMinutes(slug: string) {
   return Math.max(1, Math.ceil(resourceContent(slug).split(/\s+/).length / 200));
 }
 export const coverAlt: Record<string, string> = {
-  'formula-buen-prompt': 'Boceto de cinco tarjetas conectadas para construir un prompt paso a paso.',
-  'videos-animados-claude': 'Storyboard dibujado a mano que transforma un cohete en una animación.',
-  'prompt-ia-objetiva': 'Boceto de una idea examinada con lupa, balanza y marcas de revisión.',
-  'sistema-60-minutos-contenido-ia': 'Calendario semanal y cronómetro dibujados a mano para planear contenido.',
-  '10-automatizaciones-chatgpt': 'Teléfono y tarjetas de recordatorios dibujados como boceto.',
-  'ia-primer-paso': 'Persona con cuaderno y portátil esbozando su primera pregunta para la IA.',
-  'mejores-resultados-ia': 'Tres tarjetas dibujadas a mano conectan contexto, objetivo y formato.',
-  '30-atajos-imagenes-ia': 'Una taza de café reinterpretada en cuatro bocetos visuales.',
-  'plantilla-google-flow': 'Tablero de referencias visuales dibujado con tarjetas y flechas.',
-  'google-flow-principiantes': 'Storyboard costero de tres escenas y línea de tiempo dibujados a mano.',
+  'formula-buen-prompt': 'Cinco documentos conectados en un flujo de trabajo, con acentos verdes.',
+  'videos-animados-claude': 'Monitor con storyboard profesional y una línea de tiempo de edición.',
+  'prompt-ia-objetiva': 'Informe de negocio analizado con lupa, balanza y lista de verificación.',
+  'sistema-60-minutos-contenido-ia': 'Calendario editorial, reloj y tarjetas para organizar contenido.',
+  '10-automatizaciones-chatgpt': 'Flujo de automatización que conecta correo, calendario, documentos y reportes.',
+  'ia-primer-paso': 'Profesional trabajando con un portátil y una lista de tareas en una oficina.',
+  'mejores-resultados-ia': 'Tres paneles de documentos para estructurar contexto, objetivo y resultado.',
+  '30-atajos-imagenes-ia': 'Cuatro tableros de dirección visual para fotografía de producto.',
+  'plantilla-google-flow': 'Tablero profesional de referencias, encuadres y muestras de color.',
+  'google-flow-principiantes': 'Monitor con tres escenas y una línea de tiempo de producción visual.',
 };
