@@ -21,14 +21,14 @@ export function readingMinutes(slug: string) {
   return Math.max(1, Math.ceil(resourceContent(slug).split(/\s+/).length / 200));
 }
 export const coverAlt: Record<string, string> = {
-  'formula-buen-prompt': 'Cinco documentos conectados en un flujo de trabajo, con acentos verdes.',
-  'videos-animados-claude': 'Monitor con storyboard profesional y una línea de tiempo de edición.',
-  'prompt-ia-objetiva': 'Informe de negocio analizado con lupa, balanza y lista de verificación.',
-  'sistema-60-minutos-contenido-ia': 'Calendario editorial, reloj y tarjetas para organizar contenido.',
-  '10-automatizaciones-chatgpt': 'Flujo de automatización que conecta correo, calendario, documentos y reportes.',
-  'ia-primer-paso': 'Profesional trabajando con un portátil y una lista de tareas en una oficina.',
-  'mejores-resultados-ia': 'Tres paneles de documentos para estructurar contexto, objetivo y resultado.',
-  '30-atajos-imagenes-ia': 'Cuatro tableros de dirección visual para fotografía de producto.',
-  'plantilla-google-flow': 'Tablero profesional de referencias, encuadres y muestras de color.',
-  'google-flow-principiantes': 'Monitor con tres escenas y una línea de tiempo de producción visual.',
+  'formula-buen-prompt': 'Bloques azules de instrucciones ensamblados en una escalera para estructurar un prompt.',
+  'videos-animados-claude': 'Claqueta y escenas de animación sobre un escenario en tonos coral.',
+  'prompt-ia-objetiva': 'Lupa, gráfica analítica y balanza en un estudio azul oscuro y plateado.',
+  'sistema-60-minutos-contenido-ia': 'Temporizador rodeado por siete tarjetas de calendario sobre un fondo ámbar.',
+  '10-automatizaciones-chatgpt': 'Circuito azul de automatización que conecta correo, calendario, documentos y reportes.',
+  'ia-primer-paso': 'Profesional consultando IA en un portátil en una sala de reuniones luminosa.',
+  'mejores-resultados-ia': 'Paneles transparentes alineados con un objetivo central en tonos lavanda.',
+  '30-atajos-imagenes-ia': 'Un objeto de cerámica azul reinterpretado en cuatro composiciones visuales distintas.',
+  'plantilla-google-flow': 'Collage de referencias, encuadres y muestras de color sobre un fondo rosa.',
+  'google-flow-principiantes': 'Tres escenas costeras conectadas por una línea de tiempo sobre un fondo azul cielo.',
 };

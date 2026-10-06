@@ -26,7 +26,7 @@ export default function RecursosPage() {
             <p>Guías, prompts y plantillas para ti y tu equipo. Explora cómo aplicar la IA a tareas, contenido y procesos de tu trabajo.</p>
           </div>
           <div className={styles.creatorCard}>
-            <Image src="/andres-estudio-ia-empresas.webp" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
+            <Image src="/profie-estilo-azul.webp" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
             <div><span>CURADO POR</span><strong>Andrés Gómez</strong><small>IA aplicada a negocios</small></div>
           </div>
         </div>
@@ -34,13 +34,13 @@ export default function RecursosPage() {
       </header>
       <a className={styles.featured} href={`/recursos/${featured.slug}`}>
         <div className={styles.featuredCopy}><span className={styles.featuredLabel}>EMPIEZA AQUÍ / {featured.category.toUpperCase()}</span><h2>{featured.title}</h2><p>{featured.description}</p><span className={styles.featuredAction}>Abrir recurso <ArrowRight size={20}/></span></div>
-        <Image src={`/recursos/corporativos/${featured.image}.webp`} alt={coverAlt[featured.image]} width={1440} height={960} priority unoptimized />
+        <Image src={`/recursos/editoriales/${featured.image}.webp`} alt={coverAlt[featured.image]} width={1440} height={960} priority unoptimized />
       </a>
       <section className={styles.collection} aria-labelledby="coleccion">
         <div className={styles.collectionHeading}><div><span className={styles.sectionIndex}>01 / EXPLORA</span><h2 id="coleccion">Tu caja de herramientas<span>.</span></h2></div><span>{resources.length} recursos / acceso libre</span></div>
         <div className={styles.grid}>
           {rest.map((resource, index) => <a className={styles.card} key={resource.slug} href={`/recursos/${resource.slug}`}>
-            <div className={styles.cardImage}><Image src={`/recursos/corporativos/${resource.image}.webp`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960} unoptimized/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>
+            <div className={styles.cardImage}><Image src={`/recursos/editoriales/${resource.image}.webp`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960} unoptimized/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>
             <div className={styles.cardBody}><span className={styles.cardCategory}>{resource.category} / {resource.type}</span><h3>{resource.title}</h3><p>{resource.description}</p><div className={styles.cardBottom}><span>{readingMinutes(resource.slug)} min de lectura</span><ArrowUpRight size={20} aria-hidden="true"/></div></div>
           </a>)}
         </div>

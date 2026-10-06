@@ -1,1 +1,1 @@
-export const diagnosticUrl = 'https://diagnostivo.andresgomez.store';
+export const diagnosticUrl = 'https://diagnostico.andresgomez.store';
