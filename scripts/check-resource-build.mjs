@@ -47,7 +47,7 @@ for (const slug of Object.keys(content)) {
 }
 
 const library = readFileSync(resolve(root, 'dist/client/recursos.html'), 'utf8');
-for (const slug of Object.keys(content)) assert(library.includes(`/recursos/${slug}/`), `${slug}: missing from library`);
+for (const slug of Object.keys(content)) assert(new RegExp(`href="/recursos/${slug}/?"`).test(library), `${slug}: missing from library`);
 assert.equal(parseMarkdown(content['formula-buen-prompt']).filter(block => block.type === 'code').length, 5, 'Keep all five copyable prompts');
 assert(content['formula-buen-prompt'].includes('## Regla de oro'));
 assert(existsSync(resolve(root, 'public/formula-buen-prompt.txt')), 'New prompt guide must be downloadable');

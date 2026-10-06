@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function TerminosPage() {
   return <LegalLayout title="Términos del Servicio" englishTitle="Terms of Service" spanishContent={
     <section lang="es" id="espanol" aria-label="Términos del Servicio">
-    <p><strong>Última actualización:</strong> <time dateTime="2026-09-27">{"27 de septiembre de 2026"}</time></p>
+    <p><strong>Última actualización:</strong> <time dateTime="2026-10-06">{"6 de octubre de 2026"}</time></p>
     <h2>{"1. Servicio"}</h2>
-    <p>{"Autochat automatiza respuestas a comentarios y mensajes directos en Instagram para la cuenta profesional @andyontrade y ofrece un panel de administración para configurar esas automatizaciones. Lo presta Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
+    <p>{"Autochat automatiza respuestas a comentarios y mensajes directos en Instagram para la cuenta profesional @andresgomez.ia y ofrece un panel de administración para configurar esas automatizaciones. Lo presta Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
     <h2>{"2. Uso del panel"}</h2>
     <p>{"El acceso al panel está restringido a usuarios autorizados. Eres responsable de mantener la confidencialidad de tus credenciales y de toda actividad realizada con ellas."}</p>
     <h2>{"3. Conexión de cuentas de Instagram"}</h2>
@@ -40,9 +40,9 @@ export default function TerminosPage() {
     </section>
   } englishContent={
     <section lang="en" id="english" aria-label="Terms of Service">
-    <p><strong>Last updated:</strong> <time dateTime="2026-09-27">{"September 27, 2026"}</time></p>
+    <p><strong>Last updated:</strong> <time dateTime="2026-10-06">{"October 6, 2026"}</time></p>
     <h2>{"1. Service"}</h2>
-    <p>{"Autochat automates replies to comments and direct messages on Instagram for the professional account @andyontrade and provides an admin dashboard to configure those automations. It is provided by Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
+    <p>{"Autochat automates replies to comments and direct messages on Instagram for the professional account @andresgomez.ia and provides an admin dashboard to configure those automations. It is provided by Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
     <h2>{"2. Dashboard use"}</h2>
     <p>{"Dashboard access is restricted to authorized users. You are responsible for keeping your credentials confidential and for all activity under them."}</p>
     <h2>{"3. Connecting Instagram accounts"}</h2>

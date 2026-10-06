@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 export default function PrivacidadPage() {
   return <LegalLayout title="Política de Privacidad" englishTitle="Privacy Policy" spanishContent={
     <section lang="es" id="espanol" aria-label="Política de Privacidad">
-    <p><strong>Última actualización:</strong> <time dateTime="2026-09-27">{"27 de septiembre de 2026"}</time></p>
+    <p><strong>Última actualización:</strong> <time dateTime="2026-10-06">{"6 de octubre de 2026"}</time></p>
     <h2>{"1. Quiénes somos"}</h2>
-    <p>{"Esta política explica cómo "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia), en adelante \"nosotros\", trata los datos personales en relación con "}<strong>{"Autochat"}</strong>{", un servicio que automatiza respuestas en Instagram para la cuenta profesional "}<strong>{"@andyontrade"}</strong>{" y un panel de administración disponible en "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" Somos el responsable del tratamiento de los datos descritos aquí."}</p>
+    <p>{"Esta política explica cómo "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia), en adelante \"nosotros\", trata los datos personales en relación con "}<strong>{"Autochat"}</strong>{", un servicio que automatiza respuestas en Instagram para la cuenta profesional "}<strong>{"@andresgomez.ia"}</strong>{" y un panel de administración disponible en "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" Somos el responsable del tratamiento de los datos descritos aquí."}</p>
     <p>{"Contacto para cualquier asunto de privacidad: "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{"."}</p>
     <h2>{"2. Cómo funciona el servicio"}</h2>
-    <p>{"Cuando una persona comenta una palabra clave en una publicación o reel de @andyontrade, el servicio puede:"}</p>
+    <p>{"Cuando una persona comenta una palabra clave en una publicación o reel de @andresgomez.ia, el servicio puede:"}</p>
     <ol>
       <li>{"responder públicamente a su comentario;"}</li>
       <li>{"enviarle un mensaje directo (DM) con un botón;"}</li>
@@ -24,7 +24,7 @@ export default function PrivacidadPage() {
     </ol>
     <p><strong>{"Solo escribimos a personas que iniciaron la interacción"}</strong>{" (comentando la palabra clave o tocando el botón). Nunca enviamos mensajes no solicitados, masivos ni publicitarios. Los mensajes son automatizados."}</p>
     <h2>{"3. Datos que tratamos"}</h2>
-    <p><strong>{"a) De las personas que interactúan con @andyontrade en Instagram"}</strong>{" (recibidos a través de la API oficial de Instagram de Meta):"}</p>
+    <p><strong>{"a) De las personas que interactúan con @andresgomez.ia en Instagram"}</strong>{" (recibidos a través de la API oficial de Instagram de Meta):"}</p>
     <ul>
       <li>{"identificador de usuario de Instagram con alcance de la app (IGSID) y nombre de usuario (@usuario);"}</li>
       <li>{"texto del comentario, identificador del comentario y de la publicación comentada;"}</li>
@@ -85,12 +85,12 @@ export default function PrivacidadPage() {
     </section>
   } englishContent={
     <section lang="en" id="english" aria-label="Privacy Policy">
-    <p><strong>Last updated:</strong> <time dateTime="2026-09-27">{"September 27, 2026"}</time></p>
+    <p><strong>Last updated:</strong> <time dateTime="2026-10-06">{"October 6, 2026"}</time></p>
     <h2>{"1. Who we are"}</h2>
-    <p>{"This policy explains how "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia) (\"we\") processes personal data in connection with "}<strong>{"Autochat"}</strong>{", a service that automates Instagram replies for the professional account "}<strong>{"@andyontrade"}</strong>{", and an admin dashboard at "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" We are the data controller for the data described here."}</p>
+    <p>{"This policy explains how "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia) (\"we\") processes personal data in connection with "}<strong>{"Autochat"}</strong>{", a service that automates Instagram replies for the professional account "}<strong>{"@andresgomez.ia"}</strong>{", and an admin dashboard at "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" We are the data controller for the data described here."}</p>
     <p>{"Privacy contact: "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{"."}</p>
     <h2>{"2. How the service works"}</h2>
-    <p>{"When someone comments a keyword on a post or reel by @andyontrade, the service may:"}</p>
+    <p>{"When someone comments a keyword on a post or reel by @andresgomez.ia, the service may:"}</p>
     <ol>
       <li>{"reply publicly to the comment;"}</li>
       <li>{"send them a direct message (DM) with a button;"}</li>
@@ -99,7 +99,7 @@ export default function PrivacidadPage() {
     </ol>
     <p><strong>{"We only message people who started the interaction"}</strong>{" (by commenting the keyword or tapping the button). We never send unsolicited, bulk or promotional messages. Messages are automated."}</p>
     <h2>{"3. Data we process"}</h2>
-    <p><strong>{"a) People who interact with @andyontrade on Instagram"}</strong>{" (received through Meta's official Instagram API):"}</p>
+    <p><strong>{"a) People who interact with @andresgomez.ia on Instagram"}</strong>{" (received through Meta's official Instagram API):"}</p>
     <ul>
       <li>{"app-scoped Instagram user ID (IGSID) and username;"}</li>
       <li>{"comment text, comment ID and ID of the commented post;"}</li>

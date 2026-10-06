@@ -1,6 +1,6 @@
 # La fórmula de un buen prompt
 
-Por @andyontrade
+Por @andresgomez.ia
 
 **Rol + Contexto + Tarea + Formato + Ejemplo**
 

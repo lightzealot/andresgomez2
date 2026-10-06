@@ -411,4 +411,4 @@ Guía generada con Claude Opus 5.5 a partir del repo `santmun/video-pizarra`.
 
 ## Fuente de la guía
 
-[Ver el documento original](https://docs.google.com/document/d/1ePjdt_CNMhL4pkUszWEeBpn-sU4dolYRlV9tehYy_jA/edit). Recurso compartido por @andyontrade. El skill pertenece al repositorio [santmun/video-pizarra](https://github.com/santmun/video-pizarra).
+[Ver el documento original](https://docs.google.com/document/d/1ePjdt_CNMhL4pkUszWEeBpn-sU4dolYRlV9tehYy_jA/edit). Recurso compartido por @andresgomez.ia. El skill pertenece al repositorio [santmun/video-pizarra](https://github.com/santmun/video-pizarra).

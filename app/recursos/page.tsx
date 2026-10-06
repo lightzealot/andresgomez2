@@ -21,13 +21,13 @@ export default function RecursosPage() {
       <header className={styles.libraryHeading}>
         <div className={styles.libraryIntro}>
           <div className={styles.libraryTitle}>
-            <p className={styles.eyebrow}><Sparkles size={14}/> LA BIBLIOTECA / @ANDYONTRADE</p>
+            <p className={styles.eyebrow}><Sparkles size={14}/> LA BIBLIOTECA / @ANDRESGOMEZ.IA</p>
             <h1>Contenido con IA, <span>a tu manera.</span></h1>
             <p>Recursos para planear publicaciones, escribir mejores prompts y producir piezas visuales sin perder tu voz.</p>
           </div>
           <div className={styles.creatorCard}>
             <Image src="/4c-contraste.png" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
-            <div><span>CURADO POR</span><strong>Andrés Gómez</strong><small>@andyontrade · IA para creadores</small></div>
+            <div><span>CURADO POR</span><strong>Andrés Gómez</strong><small>@andresgomez.ia · IA para creadores</small></div>
           </div>
         </div>
         <div className={styles.libraryMeta}><span>RECURSOS ABIERTOS / 001—{String(resources.length).padStart(3, '0')}</span><span>LEE · COPIA · CREA</span></div>
@@ -46,6 +46,6 @@ export default function RecursosPage() {
         </div>
       </section>
     </main>
-    <footer className={styles.footer}><Link href="/">AndresGomez[OS]</Link><span>Por Andrés Gómez · @andyontrade</span><Link href="/privacidad/">Privacidad</Link></footer>
+    <footer className={styles.footer}><Link href="/">AndresGomez[OS]</Link><span>Por Andrés Gómez · @andresgomez.ia</span><Link href="/privacidad/">Privacidad</Link></footer>
   </div>;
 }

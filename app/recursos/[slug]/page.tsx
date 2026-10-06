@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const resource = resources.find(item => item.slug === slug);
   if (!resource) return {};
-  return { title: `${resource.title} | @andyontrade`, description: resource.description };
+  return { title: `${resource.title} | @andresgomez.ia`, description: resource.description };
 }
 
 export default async function ResourcePage({ params }: Props) {
@@ -32,7 +32,7 @@ export default async function ResourcePage({ params }: Props) {
     <ResourceHeader article/>
     <main id="contenido">
       <header className={styles.articleHero}>
-        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><Image src="/4c-contraste.png" width={48} height={48} alt="Andrés Gómez" unoptimized/><div><strong>{'shared' in resource && resource.shared ? 'Compartido por @andyontrade' : 'Por @andyontrade'}</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
+        <div className={styles.heroCopy}><p className={styles.eyebrow}>{resource.category.toUpperCase()} / {resource.type.toUpperCase()}</p><h1>{resource.title}</h1><p className={styles.heroDescription}>{resource.description}</p><div className={styles.author}><Image src="/4c-contraste.png" width={48} height={48} alt="Andrés Gómez" unoptimized/><div><strong>{'shared' in resource && resource.shared ? 'Compartido por @andresgomez.ia' : 'Por @andresgomez.ia'}</strong><span>{readingMinutes(slug)} min de lectura</span></div></div></div>
         <figure className={styles.heroImage}><Image src={`/recursos/${resource.image}.jpg`} alt={coverAlt[resource.image]} width={1440} height={960} priority unoptimized/></figure>
       </header>
       <div className={styles.articleLayout}>
@@ -40,6 +40,6 @@ export default async function ResourcePage({ params }: Props) {
         <article className={styles.article}><ResourceBody blocks={blocks}/><nav className={styles.articleEnd} aria-label="Continuar leyendo"><Link href="/recursos/"><ArrowLeft size={16}/>Volver a la biblioteca</Link><Link href={`/recursos/${next.slug}/`}><span>Siguiente recurso<strong>{next.title}</strong></span><ArrowRight size={20}/></Link></nav></article>
       </div>
     </main>
-    <footer className={styles.footer}><Link href="/">AndresGomez[OS]</Link><span>Por Andrés Gómez · @andyontrade</span><Link href="/privacidad/">Privacidad</Link></footer>
+    <footer className={styles.footer}><Link href="/">AndresGomez[OS]</Link><span>Por Andrés Gómez · @andresgomez.ia</span><Link href="/privacidad/">Privacidad</Link></footer>
   </div>;
 }
