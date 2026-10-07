@@ -36,3 +36,5 @@
 
 .logo{position:relative;display:block;width:48px;height:30px;overflow:hidden;flex-shrink:0}.logoImage{position:absolute;left:-8px;top:-17px;width:64px;height:64px;max-width:none}
 
+@media(max-width:800px){.heroInner{padding-top:24px;gap:28px}.heroInner>.portrait{grid-row:1;justify-self:center}}
+
