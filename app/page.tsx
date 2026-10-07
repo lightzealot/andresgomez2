@@ -1,4 +1,4 @@
-/* oxlint-disable next/no-html-link-for-pages -- Native navigation supports static routes and section anchors. */
+﻿/* oxlint-disable next/no-html-link-for-pages -- Native navigation supports static routes and section anchors. */
 import Image from 'next/image';
 import { Workflow, MessagesSquare, ChartNoAxesCombined, FileText } from 'lucide-react';
 import { CorporateHeader } from '@/components/CorporateHeader';
@@ -35,7 +35,7 @@ export default function Home() {
       <p className={styles.description}>Ayudo a optimizar tus procesos y a aplicar IA y automatización donde aporten valor. Empezamos por un proceso y medimos qué mejora.</p>
       <div className={styles.heroDiagnostic}><span>ENCUENTRA POR DÓNDE EMPEZAR</span><a className={styles.primary} href={diagnosticUrl}>Evaluar mi empresa</a><p>Un diagnóstico inicial para identificar oportunidades en tu operación.</p></div>
       <a className={styles.secondary} href="#enfoque">Cómo trabajo</a>
-    </div><figure className={styles.portrait}><div className={styles.portraitImage}><Image src="/p4k.jpg" alt="Andrés Gómez" fill sizes="(max-width: 800px) 90vw, 430px" priority unoptimized/></div><figcaption><span>ANDRÉS GÓMEZ · @ANDRESGOMEZ.IA</span><strong>IA CON CRITERIO DE NEGOCIO</strong></figcaption></figure></div></section>
+    </div><figure className={styles.portrait}><div className={styles.portraitImage}><Image src="/andres-fondo-blur.png" alt="Andrés Gómez" fill sizes="(max-width: 800px) 90vw, 430px" priority unoptimized/></div><figcaption><span>ANDRÉS GÓMEZ · @ANDRESGOMEZ.IA</span><strong>IA CON CRITERIO DE NEGOCIO</strong></figcaption></figure></div></section>
     <div className={styles.disciplines}><span>EL PROCESO MARCA EL CAMINO</span><ul><li>Menos tareas manuales</li><li>Menos retrabajo</li><li>Resultados medibles</li></ul></div>
     <section id="soluciones" className={styles.section} aria-labelledby="soluciones-titulo"><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>01 / OPORTUNIDADES</p><h2 id="soluciones-titulo">¿Dónde se van las horas de tu equipo?</h2></div><p>Estas son algunas situaciones que podemos analizar. El diagnóstico permite decidir qué conviene mejorar primero.</p></div><div className={styles.solutions}>{processes.map(({icon: Icon,title,text,tag},index)=><article className={styles.solution} key={title}><div className={styles.solutionTop}><Icon size={25} strokeWidth={1.5} aria-hidden="true"/><span>0{index+1}</span></div><h3>{title}</h3><p>{text}</p><div className={styles.tags}><span>{tag}</span></div></article>)}</div></section>
     <section id="enfoque" className={`${styles.section} ${styles.approach}`} aria-labelledby="enfoque-titulo"><div><p className={styles.eyebrow}>02 / MÉTODO</p><h2 id="enfoque-titulo">Optimiza primero.<br/>Automatiza después.</h2><p className={styles.description}>Añadir IA a un proceso confuso puede multiplicar el problema. Primero mejoramos la forma de trabajar; después elegimos la tecnología que merece la pena implementar.</p></div><ol className={styles.steps}>{steps.map(([title,text],index)=><li key={title}><span>0{index+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol></section>
@@ -46,3 +46,4 @@ export default function Home() {
     <div className={styles.newsletterSection}><CorporateNewsletter/></div>
   </main><CorporateFooter/></div>;
 }
+
