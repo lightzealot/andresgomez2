@@ -31,3 +31,5 @@
 
 .heroDiagnostic{margin:0 0 18px;padding:20px;border:1px solid #aac6ed;border-radius:5px;background:#e4effdcc;max-width:580px}.heroDiagnostic>span{display:block;font:500 10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#1552b5}.heroDiagnostic .primary{display:flex;width:100%;margin-top:12px;min-height:54px;font-size:16px;gap:14px}.heroDiagnostic p{margin:10px 0 0;font-size:12px;line-height:1.6;color:#536a86}.heroDiagnostic~.actions .secondary{min-height:44px;font-size:13px}
 @media(max-width:480px){.heroDiagnostic{padding:16px}.heroDiagnostic .primary{font-size:14px;padding:12px 13px;gap:10px}}
+
+.heroDiagnostic{margin-top:26px}.approach .description+.description{margin-top:18px}.faq{border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{font-size:18px;font-weight:600;cursor:pointer;line-height:1.5}.faq details p{max-width:760px;font-size:16px;line-height:1.7;color:var(--muted);margin:15px 0 0}.sectionHeading>p,.solution p,.steps p{font-size:16px}.tags span{font-family:'DM Sans',sans-serif;font-size:14px}.heroDiagnostic p,.diagnosticAction p{font-size:14px}

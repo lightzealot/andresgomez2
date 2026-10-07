@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Andrés Gómez — IA y automatización para empresas',
-  description: 'Soluciones de inteligencia artificial para empresas: automatización de procesos, asistentes internos y formación de equipos.',
+  description: 'Andrés Gómez: IA aplicada a empresas de servicios. Optimización de procesos para reducir trabajo manual, implementar mejoras y medir resultados.',
   icons: { icon: '/andresgomezos-logo.png' },
 };
 
