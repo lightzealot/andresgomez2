@@ -1,6 +1,6 @@
-# Sistema de 60 minutos para crear una semana de contenido con IA
-
 Una guía práctica para convertir una sola idea en cinco contenidos organizados y listos para producir.
+
+Los 60 minutos son una propuesta para organizar la sesión; el tiempo necesario depende del tema y de las revisiones. En esta guía, **hook** es el gancho inicial, **caption** es el texto de publicación y **CTA** es la llamada a la acción.
 
 > **Resultado realista:** al terminar tendrás la estrategia, las ideas, los primeros borradores, los captions y el calendario de publicación. La grabación, el diseño y la edición pueden requerir tiempo adicional.
 
@@ -118,7 +118,7 @@ Tono: [directo, cercano, educativo, provocador, etc.]
 Estructura:
 - hook de una frase que detenga el scroll;
 - problema explicado sin introducciones largas;
-- 3 puntos prácticos;
+- los puntos prácticos necesarios para explicar la idea;
 - ejemplo breve;
 - CTA de una sola acción.
 
@@ -172,7 +172,7 @@ Escribe un caption de Instagram para esta pieza:
 Debe incluir:
 - una primera línea que despierte curiosidad;
 - contexto o experiencia en 2 a 4 párrafos breves;
-- 3 acciones aplicables;
+- acciones aplicables, cuando el contenido las requiera;
 - una conclusión clara;
 - un CTA de una sola acción: [guardar, comentar, compartir, enviar palabra clave o visitar enlace].
 
@@ -275,4 +275,4 @@ Primero muestra las observaciones. Después entrega una versión revisada sin in
 4. Mantén un banco de hooks, ejemplos y objeciones.
 5. Dedica otra sesión separada a grabar y diseñar por lotes.
 
-La velocidad no viene de pedirle a la IA que haga todo. Viene de tomar menos decisiones, trabajar por bloques y usar la IA para producir mejores primeros borradores.
+Trabaja por bloques y reserva otra sesión para grabar y diseñar.

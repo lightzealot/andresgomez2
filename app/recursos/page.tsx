@@ -22,12 +22,12 @@ export default function RecursosPage() {
         <div className={styles.libraryIntro}>
           <div className={styles.libraryTitle}>
             <p className={styles.eyebrow}><Sparkles size={14}/> CONOCIMIENTO ABIERTO / IA APLICADA</p>
-            <h1>Herramientas para<br/><span>trabajar mejor con IA.</span></h1>
+            <h1>Guías y plantillas para<br/><span>usar IA en tu trabajo.</span></h1>
             <p>Guías, prompts y plantillas para ti y tu equipo. Explora cómo aplicar la IA a tareas, contenido y procesos de tu trabajo.</p>
           </div>
           <div className={styles.creatorCard}>
             <Image src="/p4k.jpg" alt="Retrato de Andrés Gómez" width={82} height={118} priority unoptimized/>
-            <div><span>CURADO POR</span><strong>Andrés Gómez</strong><small>IA aplicada a negocios</small></div>
+            <div><span>SELECCIONADO POR</span><strong>Andrés Gómez</strong><small>IA aplicada a negocios</small></div>
           </div>
         </div>
         <div className={styles.libraryMeta}><span>RECURSOS ABIERTOS / 001—{String(resources.length).padStart(3, '0')}</span><span>EXPLORA · ADAPTA · APLICA</span></div>
@@ -37,7 +37,7 @@ export default function RecursosPage() {
         <Image src={`/recursos/editoriales/${featured.image}.webp`} alt={coverAlt[featured.image]} width={1440} height={960} priority unoptimized />
       </a>
       <section className={styles.collection} aria-labelledby="coleccion">
-        <div className={styles.collectionHeading}><div><span className={styles.sectionIndex}>01 / EXPLORA</span><h2 id="coleccion">Tu caja de herramientas<span>.</span></h2></div><span>{resources.length} recursos / acceso libre</span></div>
+        <div className={styles.collectionHeading}><div><span className={styles.sectionIndex}>01 / EXPLORA</span><h2 id="coleccion">Todos los recursos<span>.</span></h2></div><span>{resources.length} recursos / acceso libre</span></div>
         <div className={styles.grid}>
           {rest.map((resource, index) => <a className={styles.card} key={resource.slug} href={`/recursos/${resource.slug}`}>
             <div className={styles.cardImage}><Image src={`/recursos/editoriales/${resource.image}.webp`} alt={coverAlt[resource.image]} loading="lazy" width={1440} height={960} unoptimized/><span className={styles.cardNumber}>{String(index + 2).padStart(2, '0')}</span></div>

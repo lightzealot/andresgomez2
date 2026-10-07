@@ -1,7 +1,3 @@
-# La fórmula de un buen prompt
-
-Por @andresgomez.ia
-
 **Rol + Contexto + Tarea + Formato + Ejemplo**
 
 ## Los 5 ingredientes
@@ -28,9 +24,9 @@ Por @andresgomez.ia
 
 ## Bonus: deja espacio para las preguntas
 
-Termina siempre con:
+Si faltan datos que cambien la respuesta, añade:
 
-> Antes de responder, hazme las preguntas que necesites.
+> Antes de responder, pregunta solo por la información que necesites.
 
 ---
 
@@ -41,7 +37,7 @@ Cambia lo que está entre **[corchetes]** por tu información.
 ### 1. Contenido
 
 ```text
-Actúa como estratega de contenido para Instagram. Le hablo a [tu audiencia] y quiero que [objetivo]. Escribe 5 ideas de carrusel sobre [tema], cada una con un gancho de máximo 10 palabras, en lista numerada. Estilo: directo, práctico y sin humo. Antes de responder, hazme las preguntas que necesites.
+Actúa como estratega de contenido para Instagram. Le hablo a [tu audiencia] y quiero que [objetivo]. Escribe 5 ideas de carrusel sobre [tema], cada una con un gancho de máximo 10 palabras, en lista numerada. Estilo: directo, práctico y sin humo. Antes de responder, pregunta solo por la información que necesites.
 ```
 
 ### 2. Correos

@@ -1,16 +1,14 @@
-# Cómo hacer videos animados con Claude, sin suscripciones
-
-Guía del skill **video-pizarra** — de cero a un MP4 vertical terminado.
+Guía del skill **video-pizarra** para crear un MP4 vertical. Está dirigida a quienes usan Claude Code y pueden instalar herramientas y ejecutar comandos en su equipo.
 
 Repo: https://github.com/santmun/video-pizarra
 
-## Qué es esto y por qué no pagas suscripciones
+## Cómo se crea el video
 
 El video no se "genera": se **programa**. Cada escena es código que dibuja gráficos vectoriales (SVG) y los anima con GSAP dentro de un navegador. Después un navegador headless captura el resultado cuadro por cuadro y ffmpeg los pega en un MP4, con efectos de sonido sintetizados en Python.
 
-Eso significa que no hay editor de video, ni banco de música, ni plantillas, ni render en la nube. Lo único que cuesta es el uso del modelo que escribe el código.
+El render se ejecuta localmente a partir del código del proyecto. El uso del modelo puede tener costo.
 
-Consecuencia práctica: **todo es modificable**. No estás limitado a lo que trae una plantilla — si quieres algo que no existe, se escribe.
+Puedes editar escenas, texto y tiempos en los archivos del proyecto.
 
 ## 1 · Qué necesitas instalar
 

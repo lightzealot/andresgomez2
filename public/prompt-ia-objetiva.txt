@@ -1,4 +1,4 @@
-El prompt para que tu IA sea objetiva
+Un prompt para evaluar tus ideas con evidencia
 Por @andresgomez.ia
 
 Este prompt le pide a tu IA que evalúe las ideas con criterio, explique sus dudas y proponga alternativas concretas.

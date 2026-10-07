@@ -6,7 +6,7 @@ import { CorporateHeader } from '@/components/CorporateHeader';
 import styles from './resources.module.css';
 
 export function ResourceHeader(_props: { article?: boolean }) {
-  return <CorporateHeader/>;
+  return <CorporateHeader bilingual={false}/>;
 }
 
 export function CopyButton({ text, label = 'Copiar prompt' }: { text: string; label?: string }) {

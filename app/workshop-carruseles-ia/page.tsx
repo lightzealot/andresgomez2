@@ -20,18 +20,18 @@ export default function WorkshopCarruselesPage() {
       <section className="workshop-layout">
         <div className="workshop-copy">
           <p className="workshop-kicker"><Sparkles size={15} /> WORKSHOP GRATUITO · PRÓXIMAMENTE</p>
-          <h1>Crea carruseles que la gente quiera guardar, usando IA.</h1>
-          <p className="workshop-lead">Una sesión práctica para pasar de una idea suelta a un carrusel claro, atractivo y listo para publicar, sin depender de prompts genéricos.</p>
+          <h1>Crea un carrusel paso a paso con ayuda de IA.</h1>
+          <p className="workshop-lead">Trabajaremos el enfoque, el texto y el diseño de un carrusel a partir de una idea.</p>
 
           <div className="workshop-outcomes">
-            <div><Check size={16} /><span>Encontrar un ángulo que conecte con tu audiencia.</span></div>
+            <div><Check size={16} /><span>Elegir el tema y el enfoque según tu audiencia.</span></div>
             <div><Check size={16} /><span>Crear la estructura y el texto con ayuda de IA.</span></div>
-            <div><Check size={16} /><span>Convertirlo en un diseño coherente y publicable.</span></div>
+            <div><Check size={16} /><span>Organizar el texto y los elementos visuales de cada diapositiva.</span></div>
           </div>
 
           <aside className="workshop-note">
             <Layers3 size={18} />
-            <p><strong>No es una clase para mirar.</strong> La idea es que salgas con un carrusel creado y un sistema que puedas repetir.</p>
+            <p>Trabajarás en tu propio carrusel durante la sesión y podrás repetir los pasos con otras ideas.</p>
           </aside>
         </div>
 

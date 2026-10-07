@@ -1,15 +1,22 @@
-PLANTILLA PARA CREAR IMÁGENES EN GOOGLE FLOW
+Plantilla para crear imágenes en Google Flow
+Por @andresgomez.ia
 
-FÓRMULA
+## Fórmula
+
 [Sujeto] + [Escena] + [Estilo visual] + [Iluminación] + [Encuadre]
 
-PLANTILLA COMPLETA
+## Plantilla completa
+
+```text
 Crea una imagen de [SUJETO] en [ESCENA]. Usa un estilo [ESTILO VISUAL], con iluminación [TIPO DE LUZ] y un encuadre [PLANO Y ÁNGULO]. La imagen se utilizará para [USO FINAL]. Mantén [COLORES, TEXTURAS O DETALLES IMPORTANTES].
+```
 
-EJEMPLO
-Botella de café frío sobre una mesa de piedra, fotografía publicitaria premium, luz lateral cálida, plano cercano, fondo desenfocado. La imagen se utilizará como anuncio para Instagram. Mantén una paleta marrón, crema y dorada.
+## Ejemplo
 
-REVISIÓN RÁPIDA
+Botella de café frío sobre una mesa de piedra, fotografía de producto, luz lateral cálida, plano cercano, fondo desenfocado. La imagen se utilizará como anuncio para Instagram. Mantén una paleta marrón, crema y dorada.
+
+## Revisión rápida
+
 1. ¿El sujeto está claramente definido?
 2. ¿La escena tiene contexto?
 3. ¿El estilo coincide con el resultado deseado?
