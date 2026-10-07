@@ -33,3 +33,6 @@
 @media(max-width:480px){.heroDiagnostic{padding:16px}.heroDiagnostic .primary{font-size:14px;padding:12px 13px;gap:10px}}
 
 .heroDiagnostic{margin-top:26px}.approach .description+.description{margin-top:18px}.faq{border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{font-size:18px;font-weight:600;cursor:pointer;line-height:1.5}.faq details p{max-width:760px;font-size:16px;line-height:1.7;color:var(--muted);margin:15px 0 0}.sectionHeading>p,.solution p,.steps p{font-size:16px}.tags span{font-family:'DM Sans',sans-serif;font-size:14px}.heroDiagnostic p,.diagnosticAction p{font-size:14px}
+
+.logo{position:relative;display:block;width:48px;height:30px;overflow:hidden;flex-shrink:0}.logoImage{position:absolute;left:-8px;top:-17px;width:64px;height:64px;max-width:none}
+
