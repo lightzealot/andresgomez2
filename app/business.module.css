@@ -36,7 +36,7 @@
 
 .logo{position:relative;display:block;width:48px;height:30px;overflow:hidden;flex-shrink:0}.logoImage{position:absolute;left:-8px;top:-17px;width:64px;height:64px;max-width:none}
 
-@media(max-width:800px){.heroInner{padding-top:24px;gap:28px}.heroInner>.portrait{grid-row:1;justify-self:center}.heroInner>.portrait .portraitImage{aspect-ratio:16/9}.heroInner>.portrait .portraitImage img{object-fit:contain;object-position:center}}
+@media(max-width:800px){.heroInner{padding-top:24px;gap:28px}.heroInner>.portrait{grid-row:1;justify-self:center}}
 
 .languageSwitch{display:flex;flex-shrink:0;border:1px solid #9bafc9;border-radius:4px;padding:3px;gap:2px}.languageSwitch button{border:0;border-radius:2px;padding:8px 9px;background:transparent;color:#37465b;font:600 14px 'DM Sans',sans-serif;cursor:pointer;min-height:36px}.languageSwitch button[aria-pressed=true]{background:#1961d5;color:white}.desktopNav{margin-left:auto;gap:20px}@media(max-width:1000px) and (min-width:801px){.desktopNav{gap:10px}.headerInner{gap:12px}.languageSwitch button{padding:8px 6px}}@media(max-width:800px){.headerInner{gap:10px}.languageSwitch{margin-left:auto}.brand{gap:8px;font-size:10px}}
 
