@@ -11,6 +11,78 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/recursos"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/recursos/:slug"
+  to = "https://comunidad.andresgomez.store/recursos/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/prompt-ia-objetiva.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/formula-buen-prompt.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/videos-animados-claude.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistema-60-minutos-contenido-ia.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/recurso-10-ideas-recordatorios-ia.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia1.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/3.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/codigos.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/plantilla-prompt-google-flow.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guia-google-flow-para-principiantes.txt"
+  to = "https://comunidad.andresgomez.store/recursos"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/privacidad/"
   to = "/privacidad.html"
   status = 200
