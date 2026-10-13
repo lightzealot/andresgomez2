@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function TerminosPage() {
   return <LegalLayout title="Términos del Servicio" englishTitle="Terms of Service" spanishContent={
     <section lang="es" id="espanol" aria-label="Términos del Servicio">
-    <p><strong>Última actualización:</strong> <time dateTime="2026-10-06">{"6 de octubre de 2026"}</time></p>
+    <p><strong>Última actualización:</strong> <time dateTime="2026-10-13">{"13 de octubre de 2026"}</time></p>
     <h2>{"1. Servicio"}</h2>
     <p>{"Autochat automatiza respuestas a comentarios y mensajes directos en Instagram para la cuenta profesional @andresgomez.ia y ofrece un panel de administración para configurar esas automatizaciones. Lo presta Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
     <h2>{"2. Uso del panel"}</h2>
@@ -40,7 +40,7 @@ export default function TerminosPage() {
     </section>
   } englishContent={
     <section lang="en" id="english" aria-label="Terms of Service">
-    <p><strong>Last updated:</strong> <time dateTime="2026-10-06">{"October 6, 2026"}</time></p>
+    <p><strong>Last updated:</strong> <time dateTime="2026-10-13">{"October 13, 2026"}</time></p>
     <h2>{"1. Service"}</h2>
     <p>{"Autochat automates replies to comments and direct messages on Instagram for the professional account @andresgomez.ia and provides an admin dashboard to configure those automations. It is provided by Andrés Fernando Gómez Padilla (Barranquilla, Colombia)."}</p>
     <h2>{"2. Dashboard use"}</h2>

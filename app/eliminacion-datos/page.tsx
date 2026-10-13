@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function EliminacionDatosPage() {
   return <LegalLayout title="Instrucciones para la eliminación de datos" englishTitle="Data Deletion Instructions" spanishContent={
     <section lang="es" id="espanol" aria-label="Instrucciones para la eliminación de datos">
-    <p><strong>Última actualización:</strong> <time dateTime="2026-10-06">{"6 de octubre de 2026"}</time></p>
+    <p><strong>Última actualización:</strong> <time dateTime="2026-10-13">{"13 de octubre de 2026"}</time></p>
     <p>{"Si interactuaste con @andresgomez.ia (comentaste una palabra clave o tocaste un botón en un mensaje) y quieres que eliminemos tus datos, tienes estas opciones:"}</p>
     <h2>{"Opción 1 — Por correo"}</h2>
     <p>{"Escribe a "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{" con el asunto "}<strong>{"\"Eliminar mis datos\""}</strong>{" e indica tu "}<strong>{"nombre de usuario de Instagram"}</strong>{" (@usuario). Te confirmaremos la eliminación en un máximo de "}<strong>{"15 días hábiles"}</strong>{"."}</p>
@@ -26,7 +26,7 @@ export default function EliminacionDatosPage() {
     </section>
   } englishContent={
     <section lang="en" id="english" aria-label="Data Deletion Instructions">
-    <p><strong>Last updated:</strong> <time dateTime="2026-10-06">{"October 6, 2026"}</time></p>
+    <p><strong>Last updated:</strong> <time dateTime="2026-10-13">{"October 13, 2026"}</time></p>
     <p>{"If you interacted with @andresgomez.ia (commented a keyword or tapped a button in a message) and want us to delete your data, you have these options:"}</p>
     <h2>{"Option 1 — By email"}</h2>
     <p>{"Email "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{" with the subject "}<strong>{"\"Delete my data\""}</strong>{" and include your "}<strong>{"Instagram username"}</strong>{" (@username). We will confirm deletion within "}<strong>{"15 business days"}</strong>{"."}</p>

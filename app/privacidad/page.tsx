@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function PrivacidadPage() {
   return <LegalLayout title="Política de Privacidad" englishTitle="Privacy Policy" spanishContent={
     <section lang="es" id="espanol" aria-label="Política de Privacidad">
-    <p><strong>Última actualización:</strong> <time dateTime="2026-10-06">{"6 de octubre de 2026"}</time></p>
+    <p><strong>Última actualización:</strong> <time dateTime="2026-10-13">{"13 de octubre de 2026"}</time></p>
     <h2>{"1. Quiénes somos"}</h2>
     <p>{"Esta política explica cómo "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia), en adelante \"nosotros\", trata los datos personales en relación con "}<strong>{"Autochat"}</strong>{", un servicio que automatiza respuestas en Instagram para la cuenta profesional "}<strong>{"@andresgomez.ia"}</strong>{" y un panel de administración disponible en "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" Somos el responsable del tratamiento de los datos descritos aquí."}</p>
     <p>{"Contacto para cualquier asunto de privacidad: "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{"."}</p>
@@ -85,7 +85,7 @@ export default function PrivacidadPage() {
     </section>
   } englishContent={
     <section lang="en" id="english" aria-label="Privacy Policy">
-    <p><strong>Last updated:</strong> <time dateTime="2026-10-06">{"October 6, 2026"}</time></p>
+    <p><strong>Last updated:</strong> <time dateTime="2026-10-13">{"October 13, 2026"}</time></p>
     <h2>{"1. Who we are"}</h2>
     <p>{"This policy explains how "}<strong>{"Andrés Fernando Gómez Padilla"}</strong>{" (Barranquilla, Colombia) (\"we\") processes personal data in connection with "}<strong>{"Autochat"}</strong>{", a service that automates Instagram replies for the professional account "}<strong>{"@andresgomez.ia"}</strong>{", and an admin dashboard at "}<a href="https://ryu.andresgomez.store">{"https://ryu.andresgomez.store"}</a>{"."}{" We are the data controller for the data described here."}</p>
     <p>{"Privacy contact: "}<strong><a href="mailto:hello@andresgomez.store">{"hello@andresgomez.store"}</a></strong>{"."}</p>
