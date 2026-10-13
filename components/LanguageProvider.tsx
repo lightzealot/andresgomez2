@@ -8,7 +8,7 @@ const LanguageContext = createContext({ language: 'es' as Language, setLanguage:
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [language, setLanguage] = useState<Language>('es');
-  const activeLanguage = pathname === '/' ? language : 'es';
+  const activeLanguage = pathname === '/freeguidegpt' ? 'en' : pathname === '/' ? language : 'es';
   useEffect(() => {
     try { if (localStorage.getItem('site-language') === 'en') setLanguage('en'); } catch { /* Storage may be unavailable. */ }
   }, []);
