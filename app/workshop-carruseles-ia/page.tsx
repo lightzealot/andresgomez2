@@ -2,6 +2,7 @@ import { ArrowRight, Check, Layers3, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
+  alternates: { canonical: 'https://andresgomez.store/workshop-carruseles-ia' },
   title: 'Workshop: Carruseles con IA | Andrés Gómez',
   description: 'Regístrate gratis al workshop práctico para crear carruseles con inteligencia artificial.',
 };

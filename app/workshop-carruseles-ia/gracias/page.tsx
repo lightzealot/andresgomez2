@@ -1,7 +1,7 @@
 import { ArrowLeft, Check } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = { title: 'Registro recibido | Workshop Carruseles con IA' };
+export const metadata = { robots: { index: false, follow: true }, title: 'Registro recibido | Workshop Carruseles con IA' };
 
 export default function GraciasWorkshopPage() {
   return (
