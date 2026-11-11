@@ -1,11 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Pause, Play } from 'lucide-react';
+import Image from 'next/image';
+import { Bot, MessagesSquare, Pause, Play, Workflow } from 'lucide-react';
 import { useLanguage } from './LanguageProvider';
 import styles from '@/app/business.module.css';
 
-const tools = ['ChatGPT', 'Claude', 'Gemini'];
+const tools = [
+  { label: 'ChatGPT', logo: '/tool-logos/openai.svg' },
+  { label: 'Agentes de IA', icon: Bot },
+  { label: 'Claude Code', logo: '/tool-logos/claude-color.svg' },
+  { label: 'Automatizaciones', icon: Workflow },
+  { label: 'Gemini', logo: '/tool-logos/gemini-color.svg' },
+  { label: 'Asistentes de IA', icon: MessagesSquare },
+];
 
 export function LearningHeadline() {
   const { t } = useLanguage();
@@ -29,10 +37,16 @@ export function LearningHeadline() {
     return () => window.clearInterval(timer);
   }, [paused, reducedMotion]);
 
+  const tool = tools[index];
+  const Icon = tool.icon;
+
   return <div className={styles.learningHeadline}>
-    <h1 id="presentacion" className={styles.learningTitle} aria-label={t('Aprende a usar ChatGPT, Claude y Gemini para tu negocio')}>
+    <h1 id="presentacion" className={styles.learningTitle} aria-label={t('Aprende a usar herramientas, agentes y automatizaciones de IA para tu negocio')}>
       <span className={styles.headlineLine} aria-hidden="true">{t('Aprende a usar')}</span>
-      <span className={styles.changingTool} aria-hidden="true"><span key={index}>{tools[index]}</span></span>
+      <span className={styles.changingTool} aria-hidden="true"><span key={index} className={styles.toolEntry} data-long={t(tool.label).length > 10}>
+        {tool.logo ? <Image src={tool.logo} alt="" width={64} height={64} className={styles.toolLogo} unoptimized/> : Icon && <Icon className={styles.toolLogo} strokeWidth={1.6}/>}
+        <span>{t(tool.label)}</span>
+      </span></span>
       <span className={styles.headlineLine} aria-hidden="true">{t('para tu negocio')}</span>
     </h1>
     {!reducedMotion && <button type="button" className={styles.headlineToggle} onClick={() => setPaused(value => !value)} aria-label={t(paused ? 'Reanudar animación del título' : 'Pausar animación del título')}>

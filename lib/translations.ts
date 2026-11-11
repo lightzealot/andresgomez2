@@ -1,4 +1,8 @@
 export const english: Record<string, string> = {
+  "Agentes de IA": "AI agents",
+  "Automatizaciones": "Automations",
+  "Asistentes de IA": "AI assistants",
+  "Aprende a usar herramientas, agentes y automatizaciones de IA para tu negocio": "Learn to use AI tools, agents and automations for your business",
   "Aprende a usar": "Learn to use",
   "para tu negocio": "for your business",
   "Aprende a usar ChatGPT, Claude y Gemini para tu negocio": "Learn to use ChatGPT, Claude and Gemini for your business",

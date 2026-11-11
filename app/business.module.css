@@ -86,6 +86,9 @@
 .hero .learningTitle .headlineLine{display:block;color:var(--ink);white-space:nowrap}
 .hero .learningTitle .changingTool{display:block;overflow:hidden;color:var(--accent);height:1.15em;margin:6px 0}
 .changingTool>span{display:block;animation:toolArrival .5s cubic-bezier(.2,.7,.2,1) both}
+.changingTool>.toolEntry{display:flex;align-items:center;gap:.2em;height:100%;white-space:nowrap}
+.toolEntry[data-long=true]{font-size:.72em}
+.toolEntry .toolLogo{display:block;width:.7em;height:.7em;flex:0 0 .7em;object-fit:contain}
 .headlineToggle{position:absolute;bottom:0;left:0;display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:var(--muted);padding:4px 0;font:500 11px 'IBM Plex Mono',monospace;cursor:pointer;min-height:28px}
 .headlineToggle:hover{color:var(--accent)}
 @keyframes toolArrival{from{opacity:0;transform:translateY(70%)}to{opacity:1;transform:translateY(0)}}
