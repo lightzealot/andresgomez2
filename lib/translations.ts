@@ -1,4 +1,11 @@
 export const english: Record<string, string> = {
+  "Aprende a usar": "Learn to use",
+  "para tu negocio": "for your business",
+  "Aprende a usar ChatGPT, Claude y Gemini para tu negocio": "Learn to use ChatGPT, Claude and Gemini for your business",
+  "Pausar animación del título": "Pause headline animation",
+  "Reanudar animación del título": "Resume headline animation",
+  "Pausar": "Pause",
+  "Reanudar": "Resume",
   "IA APLICADA A EMPRESAS DE SERVICIOS": "AI FOR SERVICE BUSINESSES",
   "Tu equipo pierde tiempo en tareas que podemos simplificar.": "Your team spends time on tasks we can simplify.",
   "Reviso un proceso de tu empresa, simplifico las tareas manuales e implemento las mejoras acordadas con IA o automatización. Después medimos el cambio.": "I review one process in your business, simplify manual tasks and implement the agreed improvements with AI or automation. Then we measure the change.",

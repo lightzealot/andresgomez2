@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { useHomeMotion } from '@/components/HomeMotion';
+import { LearningHeadline } from '@/components/LearningHeadline';
 import { useLanguage } from '@/components/LanguageProvider';
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation supports static routes and section anchors. */
 import Image from 'next/image';
@@ -37,7 +38,7 @@ export default function Home() {
   useHomeMotion(rootRef);
   return <div ref={rootRef} className={styles.site}><div className={styles.readProgress} aria-hidden="true"/><CorporateHeader/><main id="contenido">
     <section className={styles.hero} aria-labelledby="presentacion"><div className={styles.heroInner}><div className={styles.heroCopy}>
-      <p className={styles.eyebrow}>{t("IA APLICADA A EMPRESAS DE SERVICIOS")}</p><h1 id="presentacion">Andrés Gómez<span>.</span></h1>
+      <p className={styles.eyebrow}>{t("IA APLICADA A EMPRESAS DE SERVICIOS")}</p><LearningHeadline/>
       <p className={styles.statement}>{t("Tu equipo pierde tiempo en tareas que podemos simplificar.")}</p>
       <p className={styles.description}>{t("Reviso un proceso de tu empresa, simplifico las tareas manuales e implemento las mejoras acordadas con IA o automatización. Después medimos el cambio.")}</p>
       <div className={styles.heroDiagnostic}><span>{t("ENCUENTRA POR DÓNDE EMPEZAR")}</span><a className={styles.primary} href={diagnosticUrl}>{t("Evaluar mi empresa")}</a><p>{t("Un diagnóstico inicial para identificar oportunidades en tu operación.")}</p></div>
