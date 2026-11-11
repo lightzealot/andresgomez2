@@ -40,3 +40,44 @@
 
 .languageSwitch{display:flex;flex-shrink:0;border:1px solid #9bafc9;border-radius:4px;padding:3px;gap:2px}.languageSwitch button{border:0;border-radius:2px;padding:8px 9px;background:transparent;color:#37465b;font:600 14px 'DM Sans',sans-serif;cursor:pointer;min-height:36px}.languageSwitch button[aria-pressed=true]{background:#1961d5;color:white}.desktopNav{margin-left:auto;gap:20px}@media(max-width:1000px) and (min-width:801px){.desktopNav{gap:10px}.headerInner{gap:12px}.languageSwitch button{padding:8px 6px}}@media(max-width:800px){.headerInner{gap:10px}.languageSwitch{margin-left:auto}.brand{gap:8px;font-size:10px}}
 
+/* Motion follows the existing blue grid and editorial layout. */
+.readProgress{position:fixed;inset:0 0 auto;height:3px;background:var(--accent);z-index:80;pointer-events:none;transform:scaleX(var(--read-progress,0));transform-origin:left}
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:'';position:absolute;top:0;bottom:0;left:0;width:32%;background:linear-gradient(90deg,transparent,#1961d50b,transparent);transform:translateX(-100%);pointer-events:none;z-index:-1;animation:gridPass 3.5s ease-out both}
+.heroCopy>*{animation:heroArrival .8s cubic-bezier(.2,.7,.2,1) both}
+.heroCopy>:nth-child(2){animation-delay:.08s}.heroCopy>:nth-child(3){animation-delay:.16s}.heroCopy>:nth-child(4){animation-delay:.24s}.heroCopy>:nth-child(5){animation-delay:.32s}.heroCopy>:nth-child(6){animation-delay:.4s}
+.portrait{position:relative;box-shadow:12px 12px 0 #1961d512;animation:portraitArrival 1s cubic-bezier(.2,.7,.2,1) .12s both;transition:box-shadow .4s ease,translate .4s ease}
+.portraitImage{overflow:hidden}.portraitImage img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.primary,.secondary{transition:translate .22s ease,box-shadow .22s ease,background .22s ease}
+.primary::after{content:'↗';font-size:1.2em;transition:transform .22s ease}
+.primary:focus-visible::after{transform:translate(3px,-3px)}
+.solution{position:relative;transition:background .3s ease,box-shadow .3s ease}
+.solution::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.solutionTop svg{transition:transform .35s ease}
+.steps{position:relative;padding-left:20px}
+.steps::before,.steps::after{content:'';position:absolute;left:0;top:4px;bottom:0;width:2px;background:var(--line);transform-origin:top}
+.steps::after{background:var(--accent);transform:scaleY(var(--steps-progress,0))}
+.steps li>span{transition:color .3s ease}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none;transition:color .2s ease}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--accent);font:400 25px 'IBM Plex Mono',monospace;transition:transform .25s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] p{animation:heroArrival .3s ease both}
+@media(hover:hover) and (pointer:fine){
+  .portrait:hover{translate:0 -5px;box-shadow:18px 20px 0 #1961d51c}.portrait:hover img{transform:scale(1.035)}
+  .site .primary:hover,.site .secondary:hover{translate:0 -3px;box-shadow:0 8px 18px #123d7020}
+  .primary:hover::after{transform:translate(3px,-3px)}
+  .solution:hover{background:#fff;box-shadow:inset 0 0 0 1px #1961d526}.solution:hover::after{transform:scaleX(1)}.solution:hover .solutionTop svg{transform:translateY(-3px) rotate(-6deg)}
+  .faq summary:hover{color:var(--accent)}
+}
+@keyframes heroArrival{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portraitArrival{from{opacity:0;transform:translateY(25px) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+@keyframes gridPass{from{transform:translateX(-100%)}to{transform:translateX(420%)}}
+@media(max-width:800px){.portrait{box-shadow:7px 7px 0 #1961d512}.steps{padding-left:16px}}
+@media(prefers-reduced-motion:reduce){
+  .site *, .site *::before, .site *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .readProgress,.hero::before{display:none}.steps::after{transform:scaleY(1)}
+  .portrait:hover,.site .primary:hover,.site .secondary:hover{translate:none}.portrait:hover img,.solution:hover .solutionTop svg,.primary:hover::after{transform:none}
+}
+@media print{.readProgress,.hero::before{display:none}.site *{animation:none!important}}
+
